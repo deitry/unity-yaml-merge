@@ -140,16 +140,24 @@ public static class Merger
         }
 
         // special handling for blocks beyond the end of the original file
-        var oursTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length).ToList();
-        var theirsTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length).ToList();
+        // they are tied to the last index of the original file
+        var oursTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length - 1).ToList();
+        var theirsTrailingBlocks = theirsDiff.Blocks.Where(b => b.Start.Original >= @base.Length - 1).ToList();
 
         if (oursTrailingBlocks.Any())
         {
+            if (oursTrailingBlocks.Count > 1)
+                throw new Exception("Expected only one trailing block");
 
+            merged.AddRange(oursTrailingBlocks.First().ModifiedLines);
         }
 
         if (theirsTrailingBlocks.Any())
         {
+            if (theirsTrailingBlocks.Count > 1)
+                throw new Exception("Expected only one trailing block");
+
+            merged.AddRange(theirsTrailingBlocks.First().ModifiedLines);
 
         }
 

@@ -9,87 +9,81 @@ public class Tests
     {
     }
 
-    [Test]
-    public void Test_01_NoChanges()
+
+    private static IEnumerable<object[]> TestCases => new List<object[]>
     {
-        const string ours = "examples/01_no_changes/01.ours.yml";
-        const string @base = "examples/01_no_changes/01.base.yml";
-        const string theirs = "examples/01_no_changes/01.theirs.yml";
+        new object[]
+        {
+            "examples/01_no_changes/01.ours.yml",
+            "examples/01_no_changes/01.base.yml",
+            "examples/01_no_changes/01.theirs.yml",
+            "examples/01_no_changes/01.expected.yml"
+        },
+        new object[]
+        {
+            "examples/02_only_ours_changes/02.ours.yml",
+            "examples/02_only_ours_changes/02.base.yml",
+            "examples/02_only_ours_changes/02.theirs.yml",
+            "examples/02_only_ours_changes/02.expected.yml"
+        },
+        new object[]
+        {
+            "examples/03_only_theirs_changes/03.ours.yml",
+            "examples/03_only_theirs_changes/03.base.yml",
+            "examples/03_only_theirs_changes/03.theirs.yml",
+            "examples/03_only_theirs_changes/03.expected.yml"
+        },
+        new object[]
+        {
+            "examples/04_ours_and_theirs_non_conflicting_changes/04.ours.yml",
+            "examples/04_ours_and_theirs_non_conflicting_changes/04.base.yml",
+            "examples/04_ours_and_theirs_non_conflicting_changes/04.theirs.yml",
+            "examples/04_ours_and_theirs_non_conflicting_changes/04.expected.yml"
+        },
+        new object[]
+        {
+            "examples/05_ours_and_theirs_conflicting_changes/05.ours.yml",
+            "examples/05_ours_and_theirs_conflicting_changes/05.base.yml",
+            "examples/05_ours_and_theirs_conflicting_changes/05.theirs.yml",
+            "examples/05_ours_and_theirs_conflicting_changes/05.expected.yml"
+        },
+        new object[]
+        {
+            "examples/11_string_merger/ours.yml",
+            "examples/11_string_merger/base.yml",
+            "examples/11_string_merger/theirs.yml",
+            "examples/11_string_merger/expected.yml"
+        },
+        new object[]
+        {
+            "examples/12_only_ours/ours.yml",
+            "examples/12_only_ours/base.yml",
+            "examples/12_only_ours/theirs.yml",
+            "examples/12_only_ours/expected.yml"
+        },
+        new object[]
+        {
+            "examples/13_only_theirs/ours.yml",
+            "examples/13_only_theirs/base.yml",
+            "examples/13_only_theirs/theirs.yml",
+            "examples/13_only_theirs/expected.yml"
+        },
+        new object[]
+        {
+            "examples/14_ours_and_theirs_non_conflicting/ours.yml",
+            "examples/14_ours_and_theirs_non_conflicting/base.yml",
+            "examples/14_ours_and_theirs_non_conflicting/theirs.yml",
+            "examples/14_ours_and_theirs_non_conflicting/expected.yml"
+        },
+    };
 
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/01_no_changes/01.expected.yml");
+    [Test]
+    [TestCaseSource(nameof(TestCases))]
+    public void TestAll(string oursPath, string basePath, string theirsPath, string expectedPath)
+    {
+        var result = Merger.MergeYamls(oursPath, basePath, theirsPath);
+        var expected = File.ReadAllLines(expectedPath);
 
         CollectionAssert.AreEqual(expected: expected, actual: result);
-    }
-
-    [Test]
-    public void Test_02_OnlyOursChanges()
-    {
-        const string ours = "examples/02_only_ours_changes/02.ours.yml";
-        const string @base = "examples/02_only_ours_changes/02.base.yml";
-        const string theirs = "examples/02_only_ours_changes/02.theirs.yml";
-
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/02_only_ours_changes/02.expected.yml");
-
-        CollectionAssert.AreEqual(result, expected);
-    }
-
-    [Test]
-    public void Test_03_OnlyTheirsChanges()
-    {
-        const string ours = "examples/03_only_theirs_changes/03.ours.yml";
-        const string @base = "examples/03_only_theirs_changes/03.base.yml";
-        const string theirs = "examples/03_only_theirs_changes/03.theirs.yml";
-
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/03_only_theirs_changes/03.expected.yml");
-
-        CollectionAssert.AreEqual(result, expected);
-    }
-
-    [Test]
-    public void Test_04_OursAndTheirsNonConflictingChanges()
-    {
-        const string ours = "examples/04_ours_and_theirs_non_conflicting_changes/04.ours.yml";
-        const string @base = "examples/04_ours_and_theirs_non_conflicting_changes/04.base.yml";
-        const string theirs = "examples/04_ours_and_theirs_non_conflicting_changes/04.theirs.yml";
-
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/04_ours_and_theirs_non_conflicting_changes/04.expected.yml");
-
-        CollectionAssert.AreEqual(result, expected);
-    }
-
-    [Test]
-    public void Test_05_OursAndTheirsConflictingChanges()
-    {
-        const string ours = "examples/05_ours_and_theirs_conflicting_changes/05.ours.yml";
-        const string @base = "examples/05_ours_and_theirs_conflicting_changes/05.base.yml";
-        const string theirs = "examples/05_ours_and_theirs_conflicting_changes/05.theirs.yml";
-
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/05_ours_and_theirs_conflicting_changes/05.expected.yml");
-
-        CollectionAssert.AreEqual(result, expected);
-    }
-
-    [Test]
-    public void Test_11_StringMerger()
-    {
-        const string ours = "examples/11_string_merger/ours.yml";
-        const string @base = "examples/11_string_merger/base.yml";
-        const string theirs = "examples/11_string_merger/theirs.yml";
-
-        var result = Merger.MergeYamls(ours, @base, theirs);
-
-        var expected = File.ReadAllLines("examples/11_string_merger/expected.yml");
-
-        CollectionAssert.AreEqual(result, expected);
     }
 }
