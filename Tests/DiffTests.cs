@@ -115,7 +115,7 @@ public class DiffTests
 
         Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
         Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("BABA".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("B".CharsToStringArray()));
     }
 
     [Test]

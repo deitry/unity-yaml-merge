@@ -69,27 +69,27 @@ public class Diff
             if (current.I1 != Indices.EndIndex && current.I2 != Indices.EndIndex
                 && @base[current.I1] == modified[current.I2])
             {
-                var next = GetNextDifference(span1, span2);
+                var next = current + GetNextDifference(span1, span2);
+
                 diff.Add(new Block(BlockType.Unchanged, current)
                 {
-                    OldValue = @base.Take(new Range(current.I1,
-                        next.I1 != Indices.EndIndex ? next.I1 : @base.Length - current.I1)).ToList(),
+                    OldValue = @base.Take(new Range(current.I1, next.I1 != Indices.EndIndex ? next.I1 : @base.Length))
+                        .ToList(),
                     NewValue = modified.Take(new Range(current.I2,
-                        next.I2 != Indices.EndIndex ? next.I2 : modified.Length - current.I2)).ToList(),
+                        next.I2 != Indices.EndIndex ? next.I2 : modified.Length)).ToList(),
                 });
-                current += next;
+                current = next;
             }
             else
             {
-                var next = GetNextEqual(span1, span2);
+                var next = current + GetNextEqual(span1, span2);
                 var oldValue = current.I1 != Indices.EndIndex
-                    ? @base.Take(new Range(current.I1,
-                        next.I1 != Indices.EndIndex ? next.I1 : @base.Length)).ToList()
+                    ? @base.Take(new Range(current.I1, next.I1 != Indices.EndIndex ? next.I1 : @base.Length)).ToList()
                     : new List<string>();
 
                 var newValue = current.I2 != Indices.EndIndex
-                    ? modified.Take(new Range(current.I2,
-                        next.I2 != Indices.EndIndex ? next.I2 : modified.Length)).ToList()
+                    ? modified.Take(new Range(current.I2, next.I2 != Indices.EndIndex ? next.I2 : modified.Length))
+                        .ToList()
                     : new List<string>();
 
                 if (next.I1 == current.I1)
@@ -133,7 +133,7 @@ public class Diff
                     });
                 }
 
-                current += next;
+                current = next;
             }
         }
 
@@ -216,9 +216,9 @@ public class Diff
             return Indices.End;
         }
 
-        for (var i1 = 0; i1 < f1.Length; i1++)
+        for (var i2 = 0; i2 < f2.Length; i2++)
         {
-            for (var i2 = 0; i2 < f2.Length; i2++)
+            for (var i1 = 0; i1 < f1.Length; i1++)
             {
                 var l1 = f1[i1];
                 var l2 = f2[i2];
@@ -284,6 +284,20 @@ public class Block
     public List<string> NewValue { get; init; } = new();
 
     public Indices Start { get; }
+
+    public override string ToString()
+    {
+        var value = Type switch
+        {
+            BlockType.Unchanged => string.Join('\n', NewValue),
+            BlockType.Changed => $"{string.Join('\n', OldValue)} > {string.Join('\n', NewValue)}",
+            BlockType.Added => string.Join('\n', NewValue),
+            BlockType.Removed => string.Join('\n', OldValue),
+            _ => throw new ArgumentOutOfRangeException(),
+        };
+
+        return $"{Type}: {value}";
+    }
 }
 
 public static class EnumerableExtensions
