@@ -152,13 +152,16 @@ public class DiffTests
     {
         var diff = Diff.Make(@base: "ABC", modified: "ACB");
 
-        Assert.That(diff.Blocks.Count, Is.EqualTo(2));
+        Assert.That(diff.Blocks.Count, Is.EqualTo(4));
 
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
-        Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
+        Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Removed));
+        Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
+        Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Added));
 
         Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("BC".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("CB".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].NewValue, Is.EqualTo("B".CharsToStringArray()));
     }
 }
