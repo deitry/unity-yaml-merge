@@ -1,17 +1,22 @@
-﻿using Tests;
+﻿using System.Diagnostics;
+using JetBrains.Annotations;
+using Tests;
 
 namespace unity_yaml_merge;
 
 /// <summary>
 /// Difference between two files
 /// </summary>
+[PublicAPI]
 public class Diff
 {
     public IReadOnlyList<Block> Blocks => _blocks;
 
     private readonly List<Block> _blocks = new();
 
-    private BlockType? LastBlockType => _blocks.Any() ? _blocks.Last().Type : null;
+    public int OriginalLength => Blocks.Sum(b => b.OriginalLength);
+
+    public int ModifiedLength => Blocks.Sum(b => b.ModifiedLength);
 
     private Diff()
     {
@@ -246,7 +251,12 @@ public class Diff
             }
         }
 
-        return new Diff(fixedBlocks);
+        var result = new Diff(fixedBlocks);
+
+        if (result.OriginalLength != @base.Length)
+            throw new Exception("Original length mismatch");
+
+        return result;
     }
 
 
@@ -339,107 +349,5 @@ public class Diff
         }
 
         throw new ArgumentOutOfRangeException(nameof(i), "Line number is outside any block");
-    }
-}
-
-public record Indices(int Original, int Modified)
-{
-    public const int EndIndex = -1;
-
-    public static readonly Indices Zero = new(0, 0);
-    public static readonly Indices End = new(EndIndex, EndIndex);
-
-    public static Indices operator +(Indices a, Indices b)
-    {
-        var i1 = a.Original == EndIndex || b.Original == EndIndex ? EndIndex : a.Original + b.Original;
-        var i2 = a.Modified == EndIndex || b.Modified == EndIndex ? EndIndex : a.Modified + b.Modified;
-
-        return new Indices(i1, i2);
-    }
-
-    public static bool operator <(Indices a, Indices b)
-    {
-        if (a.Original < b.Original)
-            return true;
-
-        if (a.Original == b.Original && a.Modified < b.Modified)
-            return true;
-
-        return false;
-    }
-
-    public static bool operator >(Indices a, Indices b) => !(a < b);
-}
-
-public enum BlockType
-{
-    Unchanged,
-    Changed,
-    Added,
-    Removed,
-}
-
-public class Block
-{
-    public BlockType Type { get; private set; }
-
-    public Block(BlockType blockType, Indices start)
-    {
-        Type = blockType;
-        Start = start;
-    }
-
-    public List<string> OriginalLines { get; init; } = new();
-    public List<string> ModifiedLines { get; init; } = new();
-
-    public Indices Start { get; }
-    public Indices End => new (Start.Original + OriginalLines.Count, Start.Modified + ModifiedLines.Count);
-
-    public override string ToString()
-    {
-        var value = Type switch
-        {
-            BlockType.Unchanged => string.Join('\n', ModifiedLines),
-            BlockType.Changed => $"{string.Join('\n', OriginalLines)} > {string.Join('\n', ModifiedLines)}",
-            BlockType.Added => string.Join('\n', ModifiedLines),
-            BlockType.Removed => string.Join('\n', OriginalLines),
-            _ => throw new ArgumentOutOfRangeException(),
-        };
-
-        return $"{Type}: {value}";
-    }
-}
-
-public static class EnumerableExtensions
-{
-    public static TextEnumerator GetTextEnumerator(this IEnumerable<string> enumerator)
-    {
-        return new TextEnumerator(enumerator);
-    }
-}
-
-public class TextEnumerator : IDisposable
-{
-    private readonly IEnumerator<string> _enumerator;
-    private int _lineNumber = 0;
-    private bool _hasNext = true;
-
-    public TextEnumerator(IEnumerable<string> enumerable)
-    {
-        _enumerator = enumerable.GetEnumerator();
-    }
-
-    public bool MoveNext()
-    {
-        _lineNumber++;
-        return _hasNext = _enumerator.MoveNext();
-    }
-
-    public string Current => _enumerator.Current;
-    public int LineNumber => _lineNumber;
-
-    public void Dispose()
-    {
-        _enumerator.Dispose();
     }
 }
