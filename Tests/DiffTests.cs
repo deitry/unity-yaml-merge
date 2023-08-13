@@ -21,8 +21,8 @@ public class DiffTests
 
         Assert.That(diff.Blocks.Count, Is.EqualTo(1));
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
     }
 
     [Test]
@@ -32,8 +32,8 @@ public class DiffTests
 
         Assert.That(diff.Blocks.Count, Is.EqualTo(1));
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Added));
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo(Empty));
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo(Empty));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
     }
 
     [Test]
@@ -46,9 +46,9 @@ public class DiffTests
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Added));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo(Empty));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo(Empty));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
     }
 
     [Test]
@@ -62,10 +62,10 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Added));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo(Empty));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("B".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo(Empty));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -79,10 +79,10 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Removed));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("B".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo(Empty));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo(Empty));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -96,13 +96,13 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
         Assert.Multiple(() =>
         {
-            Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("B".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("D".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("D".CharsToStringArray()));
         });
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -116,13 +116,13 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
         Assert.Multiple(() =>
         {
-            Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("Bbb".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("Ddd".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("Bbb".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("Ddd".CharsToStringArray()));
         });
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -136,13 +136,13 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
         Assert.Multiple(() =>
         {
-            Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("Bbb".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("D".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("Bbb".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("D".CharsToStringArray()));
         });
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -156,13 +156,13 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("A".CharsToStringArray()));
         Assert.Multiple(() =>
         {
-            Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("B".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("Ddd".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("Ddd".CharsToStringArray()));
         });
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -177,9 +177,9 @@ public class DiffTests
             Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Unchanged));
             Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Removed));
 
-            Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("B".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("ABAB".CharsToStringArray()));
-            Assert.That(diff.Blocks[2].OldValue, Is.EqualTo("A".CharsToStringArray()));
+            Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("ABAB".CharsToStringArray()));
+            Assert.That(diff.Blocks[2].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
         });
     }
 
@@ -194,9 +194,9 @@ public class DiffTests
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Added));
 
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("AB".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("C".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("DE".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("AB".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("DE".CharsToStringArray()));
     }
 
     [Test]
@@ -208,8 +208,8 @@ public class DiffTests
 
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Changed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[0].NewValue, Is.EqualTo("BCDEF".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].ModifiedLines, Is.EqualTo("BCDEF".CharsToStringArray()));
     }
 
     [Test]
@@ -223,9 +223,9 @@ public class DiffTests
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("BC".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("CB".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("BC".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("CB".CharsToStringArray()));
     }
 
     [Test]
@@ -240,10 +240,10 @@ public class DiffTests
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Removed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("C".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("B".CharsToStringArray()));
-        Assert.That(diff.Blocks[3].OldValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -259,10 +259,10 @@ public class DiffTests
             Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
             Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Removed));
 
-            Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-            Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("Cc".CharsToStringArray()));
-            Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("Bb".CharsToStringArray()));
-            Assert.That(diff.Blocks[3].OldValue, Is.EqualTo("Cc".CharsToStringArray()));
+            Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+            Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("Cc".CharsToStringArray()));
+            Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("Bb".CharsToStringArray()));
+            Assert.That(diff.Blocks[3].OriginalLines, Is.EqualTo("Cc".CharsToStringArray()));
         });
     }
 
@@ -279,10 +279,10 @@ public class DiffTests
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Added));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("B".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("Cc".CharsToStringArray()));
-        Assert.That(diff.Blocks[3].NewValue, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("Cc".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
     }
 
     [Test]
@@ -297,10 +297,10 @@ public class DiffTests
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Removed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("Cc".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("B".CharsToStringArray()));
-        Assert.That(diff.Blocks[3].OldValue, Is.EqualTo("Cc".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("Cc".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].OriginalLines, Is.EqualTo("Cc".CharsToStringArray()));
     }
 
     [Test]
@@ -315,10 +315,10 @@ public class DiffTests
         Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Removed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("C".CharsToStringArray()));
-        Assert.That(diff.Blocks[2].NewValue, Is.EqualTo("Bbb".CharsToStringArray()));
-        Assert.That(diff.Blocks[3].OldValue, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].ModifiedLines, Is.EqualTo("Bbb".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
     }
 
     [Test]
@@ -331,8 +331,8 @@ public class DiffTests
         Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
         Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
 
-        Assert.That(diff.Blocks[0].OldValue, Is.EqualTo("A".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].OldValue, Is.EqualTo("BC".CharsToStringArray()));
-        Assert.That(diff.Blocks[1].NewValue, Is.EqualTo("DE".CharsToStringArray()));
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("BC".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("DE".CharsToStringArray()));
     }
 }

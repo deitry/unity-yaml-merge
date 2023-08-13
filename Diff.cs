@@ -44,8 +44,8 @@ public class Diff
         {
             diff.Add(new Block(BlockType.Added, Indices.Zero)
             {
-                OldValue = @base.ToList(),
-                NewValue = modified.ToList(),
+                OriginalLines = @base.ToList(),
+                ModifiedLines = modified.ToList(),
             });
             return diff;
         }
@@ -54,8 +54,8 @@ public class Diff
         {
             diff.Add(new Block(BlockType.Removed, Indices.Zero)
             {
-                OldValue = @base.ToList(),
-                NewValue = modified.ToList(),
+                OriginalLines = @base.ToList(),
+                ModifiedLines = modified.ToList(),
             });
             return diff;
         }
@@ -74,9 +74,9 @@ public class Diff
 
                 diff.Add(new Block(BlockType.Unchanged, current)
                 {
-                    OldValue = @base.Take(new Range(current.Original, next.Original != Indices.EndIndex ? next.Original : @base.Length))
+                    OriginalLines = @base.Take(new Range(current.Original, next.Original != Indices.EndIndex ? next.Original : @base.Length))
                         .ToList(),
-                    NewValue = modified.Take(new Range(current.Modified,
+                    ModifiedLines = modified.Take(new Range(current.Modified,
                         next.Modified != Indices.EndIndex ? next.Modified : modified.Length)).ToList(),
                 });
                 current = next;
@@ -97,36 +97,36 @@ public class Diff
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
-                        NewValue = newValue,
+                        ModifiedLines = newValue,
                     });
                 }
                 else if (next.Modified == current.Modified)
                 {
                     diff.Add(new Block(BlockType.Removed, current)
                     {
-                        OldValue = oldValue,
+                        OriginalLines = oldValue,
                     });
                 }
                 else if (next == Indices.End && current.Original == Indices.EndIndex)
                 {
                     diff.Add(new Block(BlockType.Removed, current)
                     {
-                        OldValue = oldValue,
+                        OriginalLines = oldValue,
                     });
                 }
                 else if (next == Indices.End && current.Modified == Indices.EndIndex)
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
-                        NewValue = newValue,
+                        ModifiedLines = newValue,
                     });
                 }
                 else //?
                 {
                     diff.Add(new Block(BlockType.Changed, current)
                     {
-                        OldValue = oldValue,
-                        NewValue = newValue,
+                        OriginalLines = oldValue,
+                        ModifiedLines = newValue,
                     });
                 }
 
@@ -152,24 +152,24 @@ public class Diff
 
                 var currentBlock = diff.Blocks[i];
                 var nextBlock = diff.Blocks[i + 1];
-                var oldValue = currentBlock.OldValue;
-                var newValue = currentBlock.NewValue;
+                var oldValue = currentBlock.OriginalLines;
+                var newValue = currentBlock.ModifiedLines;
 
                 var suitableForAppendingToChanged = currentBlock.Type == BlockType.Changed;
 
                 if (currentBlock.Type == BlockType.Added
                     && nextBlock.Type == BlockType.Removed
-                    && currentBlock.NewValue.Count == 1)
+                    && currentBlock.ModifiedLines.Count == 1)
                 {
-                    oldValue.AddRange(nextBlock.OldValue);
+                    oldValue.AddRange(nextBlock.OriginalLines);
                     suitableForAppendingToChanged = true;
                 }
 
                 if (currentBlock.Type == BlockType.Removed
                     && nextBlock.Type == BlockType.Added
-                    && currentBlock.OldValue.Count == 1)
+                    && currentBlock.OriginalLines.Count == 1)
                 {
-                    newValue.AddRange(nextBlock.NewValue);
+                    newValue.AddRange(nextBlock.ModifiedLines);
                     suitableForAppendingToChanged = true;
                 }
 
@@ -209,15 +209,15 @@ public class Diff
                     {
                         changedBlock = new Block(BlockType.Changed, currentBlock.Start)
                         {
-                            OldValue = currentBlock.OldValue,
-                            NewValue = currentBlock.NewValue,
+                            OriginalLines = currentBlock.OriginalLines,
+                            ModifiedLines = currentBlock.ModifiedLines,
                         };
                         fixedBlocks.Add(changedBlock);
                     }
                     else
                     {
-                        changedBlock.OldValue.AddRange(currentBlock.OldValue);
-                        changedBlock.NewValue.AddRange(currentBlock.NewValue);
+                        changedBlock.OriginalLines.AddRange(currentBlock.OriginalLines);
+                        changedBlock.ModifiedLines.AddRange(currentBlock.ModifiedLines);
                     }
                 }
                 else
@@ -367,8 +367,8 @@ public class Block
         Start = start;
     }
 
-    public List<string> OldValue { get; init; } = new();
-    public List<string> NewValue { get; init; } = new();
+    public List<string> OriginalLines { get; init; } = new();
+    public List<string> ModifiedLines { get; init; } = new();
 
     public Indices Start { get; }
 
@@ -376,10 +376,10 @@ public class Block
     {
         var value = Type switch
         {
-            BlockType.Unchanged => string.Join('\n', NewValue),
-            BlockType.Changed => $"{string.Join('\n', OldValue)} > {string.Join('\n', NewValue)}",
-            BlockType.Added => string.Join('\n', NewValue),
-            BlockType.Removed => string.Join('\n', OldValue),
+            BlockType.Unchanged => string.Join('\n', ModifiedLines),
+            BlockType.Changed => $"{string.Join('\n', OriginalLines)} > {string.Join('\n', ModifiedLines)}",
+            BlockType.Added => string.Join('\n', ModifiedLines),
+            BlockType.Removed => string.Join('\n', OriginalLines),
             _ => throw new ArgumentOutOfRangeException(),
         };
 
