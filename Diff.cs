@@ -55,11 +55,7 @@ public class Diff
             return diff;
         }
 
-        // using var baseEnumerator = @base.GetTextEnumerator();
-        // using var modifiedEnumerator = modified.GetTextEnumerator();
-
         var current = Indices.Zero;
-        // var end = new Indices(@base.Length, modified.Length);
 
         while (current != Indices.End)
         {
@@ -136,47 +132,6 @@ public class Diff
                 current = next;
             }
         }
-
-        // while (true)
-        // {
-        //     if (!baseEnded)
-        //         baseEnded = !baseEnumerator.MoveNext();
-        //
-        //     if (!modifiedEnded)
-        //         modifiedEnded = !modifiedEnumerator.MoveNext();
-        //
-        //     if (baseEnded && modifiedEnded)
-        //         break;
-        //
-        //     BlockType? currentBlockType = null;
-        //     if (baseEnded && !modifiedEnded)
-        //         currentBlockType = BlockType.Added;
-        //     else if (baseEnumerator.Current == modifiedEnumerator.Current)
-        //         currentBlockType = BlockType.Unchanged;
-        //     else if (!baseEnded && modifiedEnded)
-        //         currentBlockType = BlockType.Removed;
-        //     // else
-        //     //     currentBlockType = BlockType.Changed;
-        //
-        //     if (currentBlockType.HasValue && (!diff._blocks.Any() || currentBlockType != diff.LastBlockType))
-        //     {
-        //         var newBlock = new Block(currentBlockType.Value, baseEnumerator.LineNumber, modifiedEnumerator.LineNumber);
-        //         diff._blocks.Add(newBlock);
-        //     }
-        //
-        //     if (!baseEnded && !modifiedEnded
-        //         && baseEnumerator.Current == modifiedEnumerator.Current)
-        //     {
-        //         diff._blocks.Last().OldValue.Add(baseEnumerator.Current);
-        //         diff._blocks.Last().NewValue.Add(modifiedEnumerator.Current);
-        //     }
-        //
-        //     if (baseEnded && !modifiedEnded)
-        //         diff._blocks.Last().NewValue.Add(modifiedEnumerator.Current);
-        //
-        //     if (!baseEnded && modifiedEnded)
-        //         diff._blocks.Last().OldValue.Add(baseEnumerator.Current);
-        // }
 
         return diff;
     }
