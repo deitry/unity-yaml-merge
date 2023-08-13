@@ -67,6 +67,9 @@ public class Diff
 
         var current = Indices.Zero;
 
+        // -1 so it will be valid index of the last element
+        var length = new Indices(@base.Length - 1, modified.Length - 1);
+
         while (current != Indices.End)
         {
             var span1 = current.Original != Indices.EndIndex ? @base.AsSpan(current.Original) : Span<string>.Empty;
@@ -77,7 +80,7 @@ public class Diff
             {
                 var next = current + GetNextDifference(span1, span2);
 
-                diff.Add(new Block(BlockType.Unchanged, current)
+                diff.Add(new Block(BlockType.Unchanged, current.Fix(length))
                 {
                     OriginalLines = @base.Take(new Range(current.Original, next.Original != Indices.EndIndex ? next.Original : @base.Length))
                         .ToList(),
@@ -100,35 +103,35 @@ public class Diff
 
                 if (next.Original == current.Original)
                 {
-                    diff.Add(new Block(BlockType.Added, current)
+                    diff.Add(new Block(BlockType.Added, current.Fix(length))
                     {
                         ModifiedLines = newValue,
                     });
                 }
                 else if (next.Modified == current.Modified)
                 {
-                    diff.Add(new Block(BlockType.Removed, current)
+                    diff.Add(new Block(BlockType.Removed, current.Fix(length))
                     {
                         OriginalLines = oldValue,
                     });
                 }
                 else if (next == Indices.End && current.Original == Indices.EndIndex)
                 {
-                    diff.Add(new Block(BlockType.Removed, current)
+                    diff.Add(new Block(BlockType.Removed, current.Fix(length))
                     {
                         OriginalLines = oldValue,
                     });
                 }
                 else if (next == Indices.End && current.Modified == Indices.EndIndex)
                 {
-                    diff.Add(new Block(BlockType.Added, current)
+                    diff.Add(new Block(BlockType.Added, current.Fix(length))
                     {
                         ModifiedLines = newValue,
                     });
                 }
                 else //?
                 {
-                    diff.Add(new Block(BlockType.Changed, current)
+                    diff.Add(new Block(BlockType.Changed, current.Fix(length))
                     {
                         OriginalLines = oldValue,
                         ModifiedLines = newValue,
@@ -272,8 +275,12 @@ public class Diff
 
             // 1 is typical
             // 0 is when we have additions
-            if (currentBlock.Start.Original - previousBlock.End.Original < 0
-                || currentBlock.Start.Original - previousBlock.End.Original > 1)
+            if (currentBlock.Start.Original - previousBlock.End.Original == 0)
+            {
+                if (previousBlock.Type != BlockType.Added && currentBlock.Type != BlockType.Added)
+                    throw new Exception("Expected start of new block on the same line as previous block end");
+            }
+            else if (currentBlock.Start.Original - previousBlock.End.Original != 1)
             {
                 throw new Exception("Missed lines in original file");
             }

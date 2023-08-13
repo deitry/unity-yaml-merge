@@ -27,13 +27,35 @@ public static class Merger
 
         var merged = new List<string>();
 
+        using var oursEnumerator = oursDiff.Blocks.GetEnumerator();
+        using var theirsEnumerator = theirsDiff.Blocks.GetEnumerator();
+
+        // start enumerators
+        var oursHasNext = oursEnumerator.MoveNext();
+        var theirsHasNext = theirsEnumerator.MoveNext();
+
         for (var i = 0; i < @base.Length; i++)
         {
             var baseLine = @base[i];
 
-            // we can have more than one block at the same original line because of additions
-            var oursBlock = oursDiff.GetBlockAt(i);
-            var theirsBlock = theirsDiff.GetBlockAt(i);
+            if (oursEnumerator.Current.End.Original < i)
+            {
+                if (!oursHasNext)
+                    throw new Exception("Expected more blocks in ours diff");
+
+                oursHasNext = oursEnumerator.MoveNext();
+            }
+
+            if (theirsEnumerator.Current.End.Original < i)
+            {
+                if (!theirsHasNext)
+                    throw new Exception("Expected more blocks in theirs diff");
+
+                theirsHasNext = theirsEnumerator.MoveNext();
+            }
+
+            var oursBlock = oursEnumerator.Current;
+            var theirsBlock = theirsEnumerator.Current;
 
             var oursChange = oursBlock.Type;
             var theirsChange = theirsBlock.Type;
@@ -69,7 +91,11 @@ public static class Merger
                 // if unchanged in one and has additions in second, merge second first
                 merged.AddRange(theirsBlock.ModifiedLines);
 
+                // -1 so it will hit same line again
                 i = theirsBlock.End.Original - 1;
+
+                // force move to next block
+                theirsEnumerator.MoveNext();
             }
             else if (oursChange == BlockType.Added && theirsChange == BlockType.Unchanged)
             {
@@ -79,7 +105,11 @@ public static class Merger
                 // if unchanged in one and has additions in second, merge second first
                 merged.AddRange(oursBlock.ModifiedLines);
 
-                i = oursBlock.End.Original;
+                // -1 so it will hit same line again
+                i = oursBlock.End.Original - 1;
+
+                // force move to next block
+                oursEnumerator.MoveNext();
             }
             else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Changed
                      && theirsBlock.OriginalLength <= oursBlock.OriginalLength)

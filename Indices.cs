@@ -27,4 +27,12 @@ public record Indices(int Original, int Modified)
     }
 
     public static bool operator >(Indices a, Indices b) => !(a < b);
+
+    public Indices Fix(Indices correct)
+    {
+        return new Indices(
+            Original == EndIndex ? correct.Original : Original,
+            Modified == EndIndex ? correct.Modified : Modified
+        );
+    }
 }
