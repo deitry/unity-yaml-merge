@@ -97,7 +97,6 @@ public class Diff
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
-                        OldValue = oldValue,
                         NewValue = newValue,
                     });
                 }
@@ -106,7 +105,6 @@ public class Diff
                     diff.Add(new Block(BlockType.Removed, current)
                     {
                         OldValue = oldValue,
-                        NewValue = newValue,
                     });
                 }
                 else if (next == Indices.End && current.I1 == Indices.EndIndex)
@@ -114,14 +112,12 @@ public class Diff
                     diff.Add(new Block(BlockType.Removed, current)
                     {
                         OldValue = oldValue,
-                        NewValue = newValue,
                     });
                 }
                 else if (next == Indices.End && current.I2 == Indices.EndIndex)
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
-                        OldValue = oldValue,
                         NewValue = newValue,
                     });
                 }
@@ -140,7 +136,6 @@ public class Diff
 
         // replace removed+added as changed
         var fixedBlocks = new List<Block>(diff.Blocks.Count);
-
         for (var i = 0; i < diff.Blocks.Count; i++)
         {
             if (diff.Blocks[i].Type == BlockType.Unchanged)
@@ -150,17 +145,100 @@ public class Diff
             }
 
             var changedBlock = (Block?) null;
-            while (i < diff.Blocks.Count - 1
-                   && ((diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Removed)
-                        || (diff.Blocks[i].Type == BlockType.Removed && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
-                        || (diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
-                        || (diff.Blocks[i].Type == BlockType.Changed)))
+            while (true)
             {
-                var currentBlock = diff.Blocks[i];
+                if (i >= diff.Blocks.Count - 1)
+                    break;
 
-                changedBlock ??= new Block(BlockType.Changed, currentBlock.Start);
+                var currentBlock = diff.Blocks[i];
+                var nextBlock = diff.Blocks[i + 1];
+                var oldValue = currentBlock.OldValue;
+                var newValue = currentBlock.NewValue;
+
+                var suitableForAppendingToChanged = currentBlock.Type == BlockType.Changed;
+
+                if (currentBlock.Type == BlockType.Added
+                    && nextBlock.Type == BlockType.Removed
+                    && currentBlock.NewValue.Count == 1)
+                {
+                    oldValue.AddRange(nextBlock.OldValue);
+                    suitableForAppendingToChanged = true;
+                }
+
+                if (currentBlock.Type == BlockType.Removed
+                    && nextBlock.Type == BlockType.Added
+                    && currentBlock.OldValue.Count == 1)
+                {
+                    newValue.AddRange(nextBlock.NewValue);
+                    suitableForAppendingToChanged = true;
+                }
+
+                // attempt to improve blocks type detection in hard cases
+                // if (i < diff.Blocks.Count - 2)
+                // {
+                //     var nextNextBlock = diff.Blocks[i + 2];
+                //     if (currentBlock.Type == BlockType.Removed
+                //         && nextBlock.Type == BlockType.Unchanged
+                //         && nextNextBlock.Type == BlockType.Added
+                //         && nextNextBlock.NewValue.SequenceEqual(currentBlock.OldValue))
+                //     {
+                //         oldValue.AddRange(nextBlock.OldValue);
+                //         newValue.AddRange(nextBlock.NewValue);
+                //         newValue.AddRange(nextNextBlock.NewValue);
+                //         suitableForAppendingToChanged = true;
+                //         i++;
+                //     }
+                //
+                //     if (currentBlock.Type == BlockType.Added
+                //         && nextBlock.Type == BlockType.Unchanged
+                //         && nextNextBlock.Type == BlockType.Removed
+                //         && nextNextBlock.OldValue.SequenceEqual(currentBlock.NewValue))
+                //     {
+                //         oldValue.AddRange(nextBlock.OldValue);
+                //         oldValue.AddRange(nextNextBlock.OldValue);
+                //         newValue.AddRange(nextBlock.NewValue);
+                //         suitableForAppendingToChanged = true;
+                //         i++;
+                //     }
+                //     i++;
+                // }
+
+                if (suitableForAppendingToChanged)
+                {
+                    if (changedBlock == null)
+                    {
+                        changedBlock = new Block(BlockType.Changed, currentBlock.Start)
+                        {
+                            OldValue = currentBlock.OldValue,
+                            NewValue = currentBlock.NewValue,
+                        };
+                        fixedBlocks.Add(changedBlock);
+                    }
+                    else
+                    {
+                        changedBlock.OldValue.AddRange(currentBlock.OldValue);
+                        changedBlock.NewValue.AddRange(currentBlock.NewValue);
+                    }
+                }
+                else
+                {
+                    fixedBlocks.Add(currentBlock);
+                }
+
                 i++;
             }
+
+            // while (i < diff.Blocks.Count - 1
+            //        && ((diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Removed)
+            //             || (diff.Blocks[i].Type == BlockType.Removed && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
+            //             || (diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
+            //             || (diff.Blocks[i].Type == BlockType.Changed)))
+            // {
+            //     var currentBlock = diff.Blocks[i];
+            //
+            //     changedBlock ??= new Block(BlockType.Changed, currentBlock.Start);
+            //     i++;
+            // }
 
             if (i == diff.Blocks.Count - 1)
             {
@@ -206,6 +284,23 @@ public class Diff
             return Indices.End;
         }
 
+        var r1 = NextEqualInternal(f1, f2, out var i1);
+        var r2 = NextEqualInternal(f2, f1, out var i2);
+
+        if (r1 && r2)
+            return i1.I1 < i2.I2 ? i1 : new Indices(i2.I2, i2.I1);
+
+        if (r1)
+            return i1;
+
+        if (r2)
+            return i2;
+
+        return Indices.End;
+    }
+
+    private static bool NextEqualInternal(Span<string> f1, Span<string> f2, out Indices indices)
+    {
         for (var i2 = 0; i2 < f2.Length; i2++)
         {
             for (var i1 = 0; i1 < f1.Length; i1++)
@@ -214,12 +309,14 @@ public class Diff
                 var l2 = f2[i2];
                 if (l1 == l2)
                 {
-                    return new(i1, i2);
+                    indices = new(i1, i2);
+                    return true;
                 }
             }
         }
 
-        return Indices.End;
+        indices = Indices.End;
+        return false;
     }
 }
 
