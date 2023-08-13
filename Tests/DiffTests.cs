@@ -335,4 +335,21 @@ public class DiffTests
         Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("BC".CharsToStringArray()));
         Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("DE".CharsToStringArray()));
     }
+
+    [Test]
+    public void Test_15_ChangedWithDifferentLength()
+    {
+        var diff = Diff.Make(@base: "ABC", modified: "ADEFC");
+
+        Assert.That(diff.Blocks.Count, Is.EqualTo(3));
+
+        Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
+        Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
+        Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
+
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("DEF".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
+    }
 }

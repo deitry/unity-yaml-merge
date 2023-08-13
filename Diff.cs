@@ -318,6 +318,28 @@ public class Diff
         indices = Indices.End;
         return false;
     }
+
+    /// <summary>
+    /// Check if original line was modified
+    /// </summary>
+    public BlockType CheckLine(int i)
+    {
+        return GetBlockAt(i).Type;
+    }
+
+    /// <summary>
+    /// Check if original line was modified
+    /// </summary>
+    public Block GetBlockAt(int i)
+    {
+        foreach (var block in Blocks)
+        {
+            if (block.Start.Original <= i && block.End.Original >= i)
+                return block;
+        }
+
+        throw new ArgumentOutOfRangeException(nameof(i), "Line number is outside any block");
+    }
 }
 
 public record Indices(int Original, int Modified)
@@ -371,6 +393,7 @@ public class Block
     public List<string> ModifiedLines { get; init; } = new();
 
     public Indices Start { get; }
+    public Indices End => new (Start.Original + OriginalLines.Count, Start.Modified + ModifiedLines.Count);
 
     public override string ToString()
     {
