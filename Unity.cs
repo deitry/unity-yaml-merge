@@ -11,10 +11,18 @@ public class MonoBehaviour
     [YamlMember(Alias = "m_ObjectHideFlags")]
     public long m_ObjectHideFlags { get; set; }
 
-    public FileReference m_CorrespondingSourceObject { get; set; }
-    public FileReference m_PrefabInstance { get; set; }
-    public FileReference m_PrefabAsset { get; set; }
-    public FileReference m_GameObject { get; set; }
+    [YamlMember(ScalarStyle = YamlDotNet.Core.ScalarStyle.Literal)]
+    public FileReference? m_CorrespondingSourceObject { get; set; }
+
+    [YamlMember(ScalarStyle = YamlDotNet.Core.ScalarStyle.Plain)]
+    public FileReference? m_PrefabInstance { get; set; }
+
+    [YamlMember(ScalarStyle = YamlDotNet.Core.ScalarStyle.Plain)]
+    public FileReference? m_PrefabAsset { get; set; }
+
+    [YamlMember(ScalarStyle = YamlDotNet.Core.ScalarStyle.Plain)]
+    public FileReference? m_GameObject { get; set; }
+
     public long m_Enabled { get; set; }
     public long m_EditorHideFlags { get; set; }
     public FileReference m_Script { get; set; }
@@ -33,10 +41,10 @@ public class FileReference
     public long FileId { get; set; }
 
 
-    [YamlMember(Alias = "guid")]
+    [YamlMember(Alias = "guid", DefaultValuesHandling = DefaultValuesHandling.OmitNull)]
     public string? Guid { get; set; }
 
-    [YamlMember(Alias = "type")]
+    [YamlMember(Alias = "type", DefaultValuesHandling = DefaultValuesHandling.OmitNull)]
     public long? Type { get; set; }
 }
 
@@ -53,6 +61,8 @@ public class Metadata
 public class LocalizationEntry
 {
     public long m_Id { get; set; }
+
+    [YamlMember(ScalarStyle = YamlDotNet.Core.ScalarStyle.SingleQuoted)]
     public string m_Localized { get; set; }
     public Metadata m_Metadata { get; set; }
 }
