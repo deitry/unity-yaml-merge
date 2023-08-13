@@ -17,6 +17,11 @@ public class Diff
     {
     }
 
+    private Diff(List<Block> blocks)
+    {
+        _blocks = blocks;
+    }
+
     private void Add(Block block)
     {
         _blocks.Add(block);
@@ -133,7 +138,37 @@ public class Diff
             }
         }
 
-        return diff;
+        // replace removed+added as changed
+        var fixedBlocks = new List<Block>(diff.Blocks.Count);
+
+        for (var i = 0; i < diff.Blocks.Count; i++)
+        {
+            if (diff.Blocks[i].Type == BlockType.Unchanged)
+            {
+                fixedBlocks.Add(diff.Blocks[i]);
+                continue;
+            }
+
+            var changedBlock = (Block?) null;
+            while (i < diff.Blocks.Count - 1
+                   && ((diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Removed)
+                        || (diff.Blocks[i].Type == BlockType.Removed && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
+                        || (diff.Blocks[i].Type == BlockType.Added && diff.Blocks[i + 1].Type == BlockType.Unchanged && diff.Blocks[i + 1].NewValue.Count > 1)
+                        || (diff.Blocks[i].Type == BlockType.Changed)))
+            {
+                var currentBlock = diff.Blocks[i];
+
+                changedBlock ??= new Block(BlockType.Changed, currentBlock.Start);
+                i++;
+            }
+
+            if (i == diff.Blocks.Count - 1)
+            {
+                fixedBlocks.Add(diff.Blocks[i]);
+            }
+        }
+
+        return new Diff(fixedBlocks);
     }
 
 
@@ -229,9 +264,9 @@ public class Block
 {
     public BlockType Type { get; private set; }
 
-    public Block(BlockType currentBlockType, Indices start)
+    public Block(BlockType blockType, Indices start)
     {
-        Type = currentBlockType;
+        Type = blockType;
         Start = start;
     }
 
