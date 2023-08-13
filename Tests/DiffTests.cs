@@ -352,4 +352,34 @@ public class DiffTests
         Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("DEF".CharsToStringArray()));
         Assert.That(diff.Blocks[2].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
     }
+
+    [Test]
+    public void Test_16_MultipleMinorChanges()
+    {
+        var diff = Diff.Make(@base: "ABCDEFG", modified: "A1C2E34");
+
+        Assert.Multiple(
+            () =>
+        {
+            Assert.That(diff.Blocks, Has.Count.EqualTo(6));
+
+            Assert.That(diff.Blocks[0].Type, Is.EqualTo(BlockType.Unchanged));
+            Assert.That(diff.Blocks[1].Type, Is.EqualTo(BlockType.Changed));
+            Assert.That(diff.Blocks[2].Type, Is.EqualTo(BlockType.Unchanged));
+            Assert.That(diff.Blocks[3].Type, Is.EqualTo(BlockType.Changed));
+            Assert.That(diff.Blocks[4].Type, Is.EqualTo(BlockType.Unchanged));
+            Assert.That(diff.Blocks[5].Type, Is.EqualTo(BlockType.Changed));
+        });
+
+
+        Assert.That(diff.Blocks[0].OriginalLines, Is.EqualTo("A".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].OriginalLines, Is.EqualTo("B".CharsToStringArray()));
+        Assert.That(diff.Blocks[1].ModifiedLines, Is.EqualTo("1".CharsToStringArray()));
+        Assert.That(diff.Blocks[2].OriginalLines, Is.EqualTo("C".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].OriginalLines, Is.EqualTo("D".CharsToStringArray()));
+        Assert.That(diff.Blocks[3].ModifiedLines, Is.EqualTo("2".CharsToStringArray()));
+        Assert.That(diff.Blocks[4].OriginalLines, Is.EqualTo("E".CharsToStringArray()));
+        Assert.That(diff.Blocks[5].OriginalLines, Is.EqualTo("FG".CharsToStringArray()));
+        Assert.That(diff.Blocks[5].ModifiedLines, Is.EqualTo("34".CharsToStringArray()));
+    }
 }

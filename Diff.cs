@@ -143,27 +143,19 @@ public class Diff
         var fixedBlocks = new List<Block>(diff.Blocks.Count);
         for (var i = 0; i < diff.Blocks.Count; i++)
         {
-            if (diff.Blocks[i].Type == BlockType.Unchanged)
-            {
-                fixedBlocks.Add(diff.Blocks[i]);
-                continue;
-            }
-
             var changedBlock = (Block?) null;
-            while (true)
-            {
-                if (i >= diff.Blocks.Count - 1)
-                    break;
 
+            while (i < diff.Blocks.Count)
+            {
                 var currentBlock = diff.Blocks[i];
-                var nextBlock = diff.Blocks[i + 1];
+                var nextBlock = (i < diff.Blocks.Count - 1) ? diff.Blocks[i + 1] : null;
                 var oldValue = currentBlock.OriginalLines;
                 var newValue = currentBlock.ModifiedLines;
 
                 var suitableForAppendingToChanged = currentBlock.Type == BlockType.Changed;
 
                 if (currentBlock.Type == BlockType.Added
-                    && nextBlock.Type == BlockType.Removed
+                    && nextBlock?.Type == BlockType.Removed
                     && currentBlock.ModifiedLines.Count == 1)
                 {
                     oldValue.AddRange(nextBlock.OriginalLines);
@@ -171,7 +163,7 @@ public class Diff
                 }
 
                 if (currentBlock.Type == BlockType.Removed
-                    && nextBlock.Type == BlockType.Added
+                    && nextBlock?.Type == BlockType.Added
                     && currentBlock.OriginalLines.Count == 1)
                 {
                     newValue.AddRange(nextBlock.ModifiedLines);
@@ -228,6 +220,7 @@ public class Diff
                 else
                 {
                     fixedBlocks.Add(currentBlock);
+                    changedBlock = null; // clear it
                 }
 
                 i++;
@@ -245,20 +238,47 @@ public class Diff
             //     i++;
             // }
 
-            if (i == diff.Blocks.Count - 1)
-            {
-                fixedBlocks.Add(diff.Blocks[i]);
-            }
+            // if (i == diff.Blocks.Count - 1)
+            // {
+            //     fixedBlocks.Add(diff.Blocks[i]);
+            // }
         }
 
         var result = new Diff(fixedBlocks);
 
-        if (result.OriginalLength != @base.Length)
-            throw new Exception("Original length mismatch");
+        ValidateDiff(@base, result);
 
         return result;
     }
 
+    /// <summary>
+    /// Validate diff result
+    /// </summary>
+    private static void ValidateDiff(string[] @base, Diff result)
+    {
+        if (result.OriginalLength != @base.Length)
+            throw new Exception("Original length mismatch");
+
+        foreach (var block in result.Blocks)
+        {
+            if (block.End < block.Start)
+                throw new Exception("Block end is less than start");
+        }
+
+        for (var i = 1; i < result.Blocks.Count; i++)
+        {
+            var previousBlock = result.Blocks[i - 1];
+            var currentBlock = result.Blocks[i];
+
+            // 1 is typical
+            // 0 is when we have additions
+            if (currentBlock.Start.Original - previousBlock.End.Original < 0
+                || currentBlock.Start.Original - previousBlock.End.Original > 1)
+            {
+                throw new Exception("Missed lines in original file");
+            }
+        }
+    }
 
     public static Indices GetNextDifference(Span<string> f1, Span<string> f2)
     {

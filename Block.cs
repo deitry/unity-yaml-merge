@@ -14,10 +14,14 @@ public class Block
     public List<string> ModifiedLines { get; init; } = new();
 
     public Indices Start { get; }
-    public Indices End => new (Start.Original + OriginalLength, Start.Modified + ModifiedLength);
+
+    /// <summary>
+    /// Last valid index in block
+    /// </summary>
+    public Indices End => new (Start.Original + Math.Max(0, OriginalLength - 1), Start.Modified + Math.Max(0, ModifiedLength - 1));
 
     public int OriginalLength => OriginalLines.Count;
-    public int ModifiedLength => OriginalLines.Count;
+    public int ModifiedLength => ModifiedLines.Count;
 
     public override string ToString()
     {

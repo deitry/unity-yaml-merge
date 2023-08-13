@@ -1,4 +1,6 @@
-﻿namespace unity_yaml_merge;
+﻿using System.Diagnostics;
+
+namespace unity_yaml_merge;
 
 public static class Merger
 {
@@ -15,6 +17,8 @@ public static class Merger
         var oursDiff = Diff.Make(@base, ours);
         var theirsDiff = Diff.Make(@base, theirs);
 
+        Debug.Assert(oursDiff.OriginalLength == theirsDiff.OriginalLength);
+
         // iterate over diff blocks
         var oursI = 0;
         var oursLine = 0;
@@ -27,38 +31,96 @@ public static class Merger
         {
             var baseLine = @base[i];
 
-            var oursChange = oursDiff.CheckLine(i);
-            var theirsChange = theirsDiff.CheckLine(i);
+            // we can have more than one block at the same original line because of additions
+            var oursBlock = oursDiff.GetBlockAt(i);
+            var theirsBlock = theirsDiff.GetBlockAt(i);
+
+            var oursChange = oursBlock.Type;
+            var theirsChange = theirsBlock.Type;
 
             if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Unchanged)
             {
                 // if unchanged in both blocks
                 merged.Add(baseLine);
             }
-            else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Removed)
+            else if (oursChange == BlockType.Changed && theirsChange == BlockType.Changed
+                && oursBlock.Start.Original == theirsBlock.Start.Original
+                && oursBlock.OriginalLength == theirsBlock.OriginalLength
+                && oursBlock.ModifiedLines.SequenceEqual(theirsBlock.ModifiedLines))
             {
-                // if unchanged in one and removed in second
-                // skip
+                // if both has same changes
+                // TODO: improve in the cases when block are not exactly the same
+
+                merged.AddRange(oursBlock.ModifiedLines);
+
+                i = oursBlock.End.Original;
             }
-            else if (oursChange == BlockType.Removed && theirsChange == BlockType.Unchanged)
+            else if ((oursChange == BlockType.Unchanged && theirsChange == BlockType.Removed)
+                     || (oursChange == BlockType.Removed && theirsChange == BlockType.Unchanged))
             {
                 // if unchanged in one and removed in second
                 // skip
             }
             else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Added)
             {
+                if (i != theirsBlock.Start.Original)
+                    throw new InvalidOperationException("Expected start of block");
+
                 // if unchanged in one and has additions in second, merge second first
-                merged.AddRange(theirsDiff.GetBlockAt(i).ModifiedLines);
+                merged.AddRange(theirsBlock.ModifiedLines);
+
+                i = theirsBlock.End.Original - 1;
             }
             else if (oursChange == BlockType.Added && theirsChange == BlockType.Unchanged)
             {
+                if (i != oursBlock.Start.Original)
+                    throw new InvalidOperationException("Expected start of block");
+
                 // if unchanged in one and has additions in second, merge second first
-                merged.AddRange(oursDiff.GetBlockAt(i).ModifiedLines);
+                merged.AddRange(oursBlock.ModifiedLines);
+
+                i = oursBlock.End.Original;
             }
-            else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Changed)
+            else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Changed
+                     && theirsBlock.OriginalLength <= oursBlock.OriginalLength)
             {
-                // if changed,
+                if (i != theirsBlock.Start.Original)
+                    throw new InvalidOperationException("Expected start of block");
+
+                // if one is changed, apply it
+                merged.AddRange(theirsBlock.ModifiedLines);
+
+                i = theirsBlock.End.Original;
             }
+            else if (oursChange == BlockType.Changed && theirsChange == BlockType.Unchanged
+                     && oursBlock.OriginalLength <= theirsBlock.OriginalLength)
+            {
+                if (i != oursBlock.Start.Original)
+                    throw new InvalidOperationException("Expected start of block");
+
+                // if one is changed, apply it
+                merged.AddRange(oursBlock.ModifiedLines);
+
+                i = oursBlock.End.Original;
+            }
+            else
+            {
+                // output as conflict
+            }
+        }
+
+        // special handling for blocks beyond the end of the original file
+        var oursTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length).ToList();
+        var theirsTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length).ToList();
+
+        if (oursTrailingBlocks.Any())
+        {
+
+        }
+
+        if (theirsTrailingBlocks.Any())
+        {
+
         }
 
         return merged;
