@@ -64,57 +64,57 @@ public class Diff
 
         while (current != Indices.End)
         {
-            var span1 = current.I1 != Indices.EndIndex ? @base.AsSpan(current.I1) : Span<string>.Empty;
-            var span2 = current.I2 != Indices.EndIndex ? modified.AsSpan(current.I2) : Span<string>.Empty;
+            var span1 = current.Original != Indices.EndIndex ? @base.AsSpan(current.Original) : Span<string>.Empty;
+            var span2 = current.Modified != Indices.EndIndex ? modified.AsSpan(current.Modified) : Span<string>.Empty;
 
-            if (current.I1 != Indices.EndIndex && current.I2 != Indices.EndIndex
-                && @base[current.I1] == modified[current.I2])
+            if (current.Original != Indices.EndIndex && current.Modified != Indices.EndIndex
+                && @base[current.Original] == modified[current.Modified])
             {
                 var next = current + GetNextDifference(span1, span2);
 
                 diff.Add(new Block(BlockType.Unchanged, current)
                 {
-                    OldValue = @base.Take(new Range(current.I1, next.I1 != Indices.EndIndex ? next.I1 : @base.Length))
+                    OldValue = @base.Take(new Range(current.Original, next.Original != Indices.EndIndex ? next.Original : @base.Length))
                         .ToList(),
-                    NewValue = modified.Take(new Range(current.I2,
-                        next.I2 != Indices.EndIndex ? next.I2 : modified.Length)).ToList(),
+                    NewValue = modified.Take(new Range(current.Modified,
+                        next.Modified != Indices.EndIndex ? next.Modified : modified.Length)).ToList(),
                 });
                 current = next;
             }
             else
             {
                 var next = current + GetNextEqual(span1, span2);
-                var oldValue = current.I1 != Indices.EndIndex
-                    ? @base.Take(new Range(current.I1, next.I1 != Indices.EndIndex ? next.I1 : @base.Length)).ToList()
+                var oldValue = current.Original != Indices.EndIndex
+                    ? @base.Take(new Range(current.Original, next.Original != Indices.EndIndex ? next.Original : @base.Length)).ToList()
                     : new List<string>();
 
-                var newValue = current.I2 != Indices.EndIndex
-                    ? modified.Take(new Range(current.I2, next.I2 != Indices.EndIndex ? next.I2 : modified.Length))
+                var newValue = current.Modified != Indices.EndIndex
+                    ? modified.Take(new Range(current.Modified, next.Modified != Indices.EndIndex ? next.Modified : modified.Length))
                         .ToList()
                     : new List<string>();
 
-                if (next.I1 == current.I1)
+                if (next.Original == current.Original)
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
                         NewValue = newValue,
                     });
                 }
-                else if (next.I2 == current.I2)
+                else if (next.Modified == current.Modified)
                 {
                     diff.Add(new Block(BlockType.Removed, current)
                     {
                         OldValue = oldValue,
                     });
                 }
-                else if (next == Indices.End && current.I1 == Indices.EndIndex)
+                else if (next == Indices.End && current.Original == Indices.EndIndex)
                 {
                     diff.Add(new Block(BlockType.Removed, current)
                     {
                         OldValue = oldValue,
                     });
                 }
-                else if (next == Indices.End && current.I2 == Indices.EndIndex)
+                else if (next == Indices.End && current.Modified == Indices.EndIndex)
                 {
                     diff.Add(new Block(BlockType.Added, current)
                     {
@@ -288,7 +288,7 @@ public class Diff
         var r2 = NextEqualInternal(f2, f1, out var i2);
 
         if (r1 && r2)
-            return i1.I1 < i2.I2 ? i1 : new Indices(i2.I2, i2.I1);
+            return i1.Original < i2.Modified ? i1 : new Indices(i2.Modified, i2.Original);
 
         if (r1)
             return i1;
@@ -320,7 +320,7 @@ public class Diff
     }
 }
 
-public record Indices(int I1, int I2)
+public record Indices(int Original, int Modified)
 {
     public const int EndIndex = -1;
 
@@ -329,18 +329,18 @@ public record Indices(int I1, int I2)
 
     public static Indices operator +(Indices a, Indices b)
     {
-        var i1 = a.I1 == EndIndex || b.I1 == EndIndex ? EndIndex : a.I1 + b.I1;
-        var i2 = a.I2 == EndIndex || b.I2 == EndIndex ? EndIndex : a.I2 + b.I2;
+        var i1 = a.Original == EndIndex || b.Original == EndIndex ? EndIndex : a.Original + b.Original;
+        var i2 = a.Modified == EndIndex || b.Modified == EndIndex ? EndIndex : a.Modified + b.Modified;
 
         return new Indices(i1, i2);
     }
 
     public static bool operator <(Indices a, Indices b)
     {
-        if (a.I1 < b.I1)
+        if (a.Original < b.Original)
             return true;
 
-        if (a.I1 == b.I1 && a.I2 < b.I2)
+        if (a.Original == b.Original && a.Modified < b.Modified)
             return true;
 
         return false;
