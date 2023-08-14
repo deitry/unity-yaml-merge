@@ -24,7 +24,8 @@
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
-            "request": "attach"
+            "request": "attach",
+            "processName": "unity-yaml-merge.exe"
         }
     ]
 }
