@@ -177,6 +177,13 @@ public static class Merger
                 // actually this is a conflict, but we make a union of that
                 merged.AddRange(oursBlock!.ModifiedLines);
                 merged.AddRange(theirsBlock!.ModifiedLines);
+
+                // -1 so it will hit same line again
+                i--;
+
+                // force move both enumerators to next block
+                oursHasNext = oursEnumerator.MoveNext();
+                theirsHasNext = theirsEnumerator.MoveNext();
             }
             else
             {
