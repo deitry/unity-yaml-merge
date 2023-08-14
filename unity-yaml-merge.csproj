@@ -12,4 +12,16 @@
     <PackageReference Include="YamlDotNet" Version="13.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Tests\**" />
+  </ItemGroup>
+
 </Project>

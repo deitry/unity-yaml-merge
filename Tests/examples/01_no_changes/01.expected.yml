@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
   m_Name: MyProjectLocalizationTable_es
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_LocaleId:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: f216c839d8d038245bbc6ba9e5a1f98e, type: 2}
@@ -16616,22 +16616,6 @@ MonoBehaviour:
     m_Localized: Exportar a Excel
     m_Metadata:
       m_Items: []
-  - m_Id: 48233445195767808
-    m_Localized: "Ubicaci\xF3n geogr\xE1fica"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 54828105619988480
-    m_Localized: Abriendo "{0}"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 54842787831472128
-    m_Localized: Guardando proyecto como "{0}"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55872530055946240
-    m_Localized: Cargando cambios de "{0}"
-    m_Metadata:
-      m_Items: []
   - m_Id: 59898216651415552
     m_Localized: "T\xEDtulo"
     m_Metadata:
@@ -16894,10 +16878,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 66055990057885696
     m_Localized: Compatibilidad
-    m_Metadata:
-      m_Items: []
-  - m_Id: 67064843855716352
-    m_Localized: 'No se pueden importar las plantillas de apariencia. Motivo: {0}'
     m_Metadata:
       m_Items: []
   references:

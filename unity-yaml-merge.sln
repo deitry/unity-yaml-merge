@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unity-yaml-merge", "unity-yaml-merge.csproj", "{5409CC99-1670-40AE-B181-8ADEA56D2A83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{503DF55E-1870-4A48-A9A0-9344DC66A569}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{5409CC99-1670-40AE-B181-8ADEA56D2A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5409CC99-1670-40AE-B181-8ADEA56D2A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5409CC99-1670-40AE-B181-8ADEA56D2A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{503DF55E-1870-4A48-A9A0-9344DC66A569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{503DF55E-1870-4A48-A9A0-9344DC66A569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{503DF55E-1870-4A48-A9A0-9344DC66A569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{503DF55E-1870-4A48-A9A0-9344DC66A569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
   m_Name: MyProjectLocalizationTable_es
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_LocaleId:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: f216c839d8d038245bbc6ba9e5a1f98e, type: 2}

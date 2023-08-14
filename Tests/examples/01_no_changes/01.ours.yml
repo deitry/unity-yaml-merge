@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
   m_Name: MyProjectLocalizationTable_es
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_LocaleId:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: f216c839d8d038245bbc6ba9e5a1f98e, type: 2}
@@ -459,7 +459,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183577432071
-    m_Localized: 'ERROR: No se puede establecer el punto de vista de inicio "{0}".'
+    m_Localized: "ERROR: No se puede establecer el punto de vista dom\xE9stico \"{0}\"."
     m_Metadata:
       m_Items: []
   - m_Id: 25183577432072
@@ -3248,7 +3248,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678274
-    m_Localized: Ancho
+    m_Localized: Peso
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678275
@@ -3861,8 +3861,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183715844104
-    m_Localized: Concede el derecho a agregar y editar puntos de vista, excepto el
-      punto de vista de inicio.
+    m_Localized: "Concede el derecho a agregar y editar puntos de vista, excepto
+      el punto de vista dom\xE9stico."
     m_Metadata:
       m_Items: []
   - m_Id: 25183715844105
@@ -4259,7 +4259,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183732621330
-    m_Localized: "L\xEDnea"
+    m_Localized: Tecla
     m_Metadata:
       m_Items: []
   - m_Id: 25183732621331
@@ -9534,7 +9534,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183971696643
-    m_Localized: Establecer como apariencia de inicio
+    m_Localized: "Establecer como apariencia dom\xE9stica"
     m_Metadata:
       m_Items: []
   - m_Id: 25183971696644
@@ -10195,7 +10195,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25184001056786
-    m_Localized: Establecer punto de vista de inicio
+    m_Localized: "Establecer punto de vista dom\xE9stico"
     m_Metadata:
       m_Items: []
   - m_Id: 25184001056787
@@ -12655,7 +12655,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25184114302976
-    m_Localized: Aprobado por {0} el {1}.
+    m_Localized: Aprobado por {0} a las {1}.
     m_Metadata:
       m_Items: []
   - m_Id: 25184114302977
@@ -16192,7 +16192,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28338255412846592
-    m_Localized: Volver al punto de vista de inicio
+    m_Localized: "Volver al punto de vista dom\xE9stico"
     m_Metadata:
       m_Items: []
   - m_Id: 29075313838997504
@@ -16306,7 +16306,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28339042041978880
-    m_Localized: Aplicar apariencia de inicio
+    m_Localized: "Aplicar apariencia dom\xE9stica"
     m_Metadata:
       m_Items: []
   - m_Id: 29065715539197952
@@ -16531,27 +16531,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 52252046806474752
-    m_Localized: "EE.\_UU. y Canad\xE1"
+    m_Localized: Plantillas de sellos de NA
     m_Metadata:
       m_Items: []
   - m_Id: 52252212871553024
-    m_Localized: "Australia y Nueva\_Zelanda"
+    m_Localized: Plantillas de sellos de APAC
     m_Metadata:
       m_Items: []
   - m_Id: 52252339279486976
-    m_Localized: "Reino Unido (construcci\xF3n)"
+    m_Localized: "Plantillas de sellos de construcci\xF3n del Reino Unido"
     m_Metadata:
       m_Items: []
   - m_Id: 52252494779113472
-    m_Localized: "Reino Unido (dise\xF1o)"
+    m_Localized: "Plantillas de sellos de dise\xF1o del Reino Unido"
     m_Metadata:
       m_Items: []
   - m_Id: 52252612777467904
-    m_Localized: "Alemania, Austria, Suiza (dise\xF1o)"
+    m_Localized: "Plantillas de sellos de dise\xF1o de DACH (alem\xE1n)"
     m_Metadata:
       m_Items: []
   - m_Id: 52252711951785984
-    m_Localized: Francia
+    m_Localized: "Plantillas de sellos de FR (franc\xE9s)"
     m_Metadata:
       m_Items: []
   - m_Id: 53745743217811456
@@ -16873,110 +16873,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66050142329888768
-    m_Localized: '{0} o versiones posteriores'
+    m_Localized: MyProject {0} y versiones posteriores
     m_Metadata:
       m_Items: []
   - m_Id: 66055990057885696
-    m_Localized: "Versi\xF3n de MyProject requerida"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 68912716230680576
-    m_Localized: "Las zonas se utilizan para las etiquetas de ubicaci\xF3n de incidencias
-      y conflictos, y para la agrupaci\xF3n de conflictos.Cualquier objeto 3D puede
-      servir de zona. Puede crear objetos especiales que abarquen zonas del proyecto
-      en una herramienta de autor y luego exportarlos a MyProject. Seleccione un conjunto
-      de b\xFAsqueda que encuentre estos objetos. Cada objeto encontrado mediante
-      este conjunto de b\xFAsqueda se tratar\xE1 como una zona."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 68916546473287680
-    m_Localized: "Las zonas son objetos virtuales que no forman parte del modelo
-      f\xEDsico.Todos los objetos encontrados mediante el conjunto de b\xFAsqueda
-      se ocultar\xE1n de todas las vistas del proyecto."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 68932074378092544
-    m_Localized: "Desconocido (requiere actualizaci\xF3n de MyProject)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 68934623168552960
-    m_Localized: "No se puede revertir la prueba de conflictos a la versi\xF3n {0}.
-      Esa versi\xF3n de prueba de conflictos se cre\xF3 en una versi\xF3n m\xE1s
-      reciente de MyProject. Para poder revertir la prueba de conflictos a la versi\xF3n
-      seleccionada, actualice la aplicaci\xF3n de MyProject."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69664778602143744
-    m_Localized: "{0}\_prueba(s) de conflictos se revertir\xE1(n) a las versiones
-      del <b>{1}</b>."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 70005157197242368
-    m_Localized: "No se pueden revertir las pruebas de conflictos seleccionadas.
-      Sus versiones actuales se crearon en una versi\xF3n m\xE1s reciente de MyProject
-      y no se pueden comprobar. Para poder revertir estas pruebas de conflictos,
-      actualice la aplicaci\xF3n de MyProject."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69666224504561664
-    m_Localized: "De <b>{0}</b>\_pruebas de conflictos seleccionadas:"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69666276505542656
-    m_Localized: "<b>{0}</b>\_prueba(s) no se puede(n) revertir. Sus versiones actuales
-      se crearon en una versi\xF3n m\xE1s reciente de MyProject y no se pueden comprobar.
-      Para poder revertir estas pruebas de conflictos, actualice la aplicaci\xF3n
-      de MyProject [{1}]."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69666336735748096
-    m_Localized: "<b>{0}</b> prueba(s) se revertir\xE1(n) a las versiones del <b>{1}</b>
-      [{2}]."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69666476410265600
-    m_Localized: "Se archivar\xE1(n)<b>{0}</b> prueba(s) debido a que estaba(n) archivada(s)
-      desde el <b>{1}</b> [{2}]."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69666528100868096
-    m_Localized: "Se archivar\xE1(n)<b>{0}</b> prueba(s) ya que no exist\xEDa(n)
-      el<b>{1}</b> [{2}]."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69668797198360576
-    m_Localized: Revertir {0} prueba(s)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69664927147614208
-    m_Localized: "No se pueden revertir las pruebas de conflictos seleccionadas a
-      las versiones del <b>{0}</b>.\n\nEstas versiones se crearon en una versi\xF3n
-      m\xE1s reciente de MyProject. Para poder revertir las pruebas de conflictos a
-      esa fecha, actualice la aplicaci\xF3n de MyProject."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69994018006622208
-    m_Localized: "No se puede revertir la prueba de conflictos. Su versi\xF3n actual
-      se cre\xF3 en una versi\xF3n m\xE1s reciente de MyProject y no se puede comprobar.
-      Para poder revertir esta prueba de conflictos, actualice la aplicaci\xF3n de
-      MyProject."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69995357562462208
-    m_Localized: "<b>{0}</b>\_prueba(s) no se puede(n) revertir a las versiones del
-      <b>{1}</b>. Estas versiones se crearon en una versi\xF3n m\xE1s reciente de
-      MyProject. Para poder revertir estas pruebas de conflictos a esa fecha, actualice
-      la aplicaci\xF3n de MyProject [{2}]."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69957671707467776
-    m_Localized: No se puede encontrar la incidencia {0}. La incidencia no existe
-      en el proyecto o usted no tiene derechos suficientes para verla.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 71484870902145024
-    m_Localized: "Se movieron temporalmente algunos objetos. Se regresar\xE1n a sus
-      posiciones originales. \xBFDesea continuar?"
+    m_Localized: Compatibilidad
     m_Metadata:
       m_Items: []
   references:
