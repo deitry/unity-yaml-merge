@@ -3248,7 +3248,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678274
+<<<<<<< ours
+    m_Localized: Ancho
+=======
     m_Localized: "Ancho"
+>>>>>>> theirs
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678275
@@ -16889,7 +16893,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66050142329888768
-    m_Localized: MyProject {0} y versiones posteriores
+    m_Localized: '{0} o versiones posteriores'
     m_Metadata:
       m_Items: []
   - m_Id: 66055990057885696
