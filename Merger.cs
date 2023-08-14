@@ -172,6 +172,12 @@ public static class Merger
                         throw new ArgumentOutOfRangeException();
                 }
             }
+            else if (oursChange == BlockType.Added && theirsChange == BlockType.Added)
+            {
+                // actually this is a conflict, but we make a union of that
+                merged.AddRange(oursBlock!.ModifiedLines);
+                merged.AddRange(theirsBlock!.ModifiedLines);
+            }
             else
             {
                 // output as conflict
