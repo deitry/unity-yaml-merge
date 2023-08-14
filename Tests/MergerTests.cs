@@ -49,10 +49,10 @@ public class Tests
         },
         new object[]
         {
-            "examples/11_string_merger/ours.yml",
-            "examples/11_string_merger/base.yml",
-            "examples/11_string_merger/theirs.yml",
-            "examples/11_string_merger/expected.yml"
+            "examples/11_conflicting_additions_with_trailing_unchanged/ours.yml",
+            "examples/11_conflicting_additions_with_trailing_unchanged/base.yml",
+            "examples/11_conflicting_additions_with_trailing_unchanged/theirs.yml",
+            "examples/11_conflicting_additions_with_trailing_unchanged/expected.yml"
         },
         new object[]
         {
