@@ -20,7 +20,7 @@ public class Tests
 
         var expected = File.ReadAllLines("examples/01_no_changes/01.expected.yml");
 
-        CollectionAssert.AreEqual(result, expected);
+        CollectionAssert.AreEqual(expected: expected, actual: result);
     }
 
     [Test]
@@ -75,6 +75,20 @@ public class Tests
         var result = Merger.MergeYamls(ours, @base, theirs);
 
         var expected = File.ReadAllLines("examples/05_ours_and_theirs_conflicting_changes/05.expected.yml");
+
+        CollectionAssert.AreEqual(result, expected);
+    }
+
+    [Test]
+    public void Test_11_StringMerger()
+    {
+        var ours = "examples/11_string_merger/ours.yml";
+        var @base = "examples/11_string_merger/base.yml";
+        var theirs = "examples/11_string_merger/theirs.yml";
+
+        var result = Merger.MergeYamls(ours, @base, theirs);
+
+        var expected = File.ReadAllLines("examples/11_string_merger/expected.yml");
 
         CollectionAssert.AreEqual(result, expected);
     }
