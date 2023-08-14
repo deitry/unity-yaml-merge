@@ -3248,7 +3248,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678274
-    m_Localized: Peso
+    m_Localized: "Ancho"
     m_Metadata:
       m_Items: []
   - m_Id: 25183690678275
@@ -16896,8 +16896,103 @@ MonoBehaviour:
     m_Localized: Compatibilidad
     m_Metadata:
       m_Items: []
-  - m_Id: 67064843855716352
-    m_Localized: 'No se pueden importar las plantillas de apariencia. Motivo: {0}'
+  - m_Id: 68912716230680576
+    m_Localized: "Las zonas se utilizan para las etiquetas de ubicaci\xF3n de incidencias
+      y conflictos, y para la agrupaci\xF3n de conflictos.Cualquier objeto 3D puede
+      servir de zona. Puede crear objetos especiales que abarquen zonas del proyecto
+      en una herramienta de autor y luego exportarlos a MyProject. Seleccione un conjunto
+      de b\xFAsqueda que encuentre estos objetos. Cada objeto encontrado mediante
+      este conjunto de b\xFAsqueda se tratar\xE1 como una zona."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68916546473287680
+    m_Localized: "Las zonas son objetos virtuales que no forman parte del modelo
+      f\xEDsico.Todos los objetos encontrados mediante el conjunto de b\xFAsqueda
+      se ocultar\xE1n de todas las vistas del proyecto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68932074378092544
+    m_Localized: "Desconocido (requiere actualizaci\xF3n de MyProject)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68934623168552960
+    m_Localized: "No se puede revertir la prueba de conflictos a la versi\xF3n {0}.
+      Esa versi\xF3n de prueba de conflictos se cre\xF3 en una versi\xF3n m\xE1s
+      reciente de MyProject. Para poder revertir la prueba de conflictos a la versi\xF3n
+      seleccionada, actualice la aplicaci\xF3n de MyProject."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69664778602143744
+    m_Localized: "{0}\_prueba(s) de conflictos se revertir\xE1(n) a las versiones
+      del <b>{1}</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70005157197242368
+    m_Localized: "No se pueden revertir las pruebas de conflictos seleccionadas.
+      Sus versiones actuales se crearon en una versi\xF3n m\xE1s reciente de MyProject
+      y no se pueden comprobar. Para poder revertir estas pruebas de conflictos,
+      actualice la aplicaci\xF3n de MyProject."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69666224504561664
+    m_Localized: "De <b>{0}</b>\_pruebas de conflictos seleccionadas:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69666276505542656
+    m_Localized: "<b>{0}</b>\_prueba(s) no se puede(n) revertir. Sus versiones actuales
+      se crearon en una versi\xF3n m\xE1s reciente de MyProject y no se pueden comprobar.
+      Para poder revertir estas pruebas de conflictos, actualice la aplicaci\xF3n
+      de MyProject [{1}]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69666336735748096
+    m_Localized: "<b>{0}</b> prueba(s) se revertir\xE1(n) a las versiones del <b>{1}</b>
+      [{2}]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69666476410265600
+    m_Localized: "Se archivar\xE1(n)<b>{0}</b> prueba(s) debido a que estaba(n) archivada(s)
+      desde el <b>{1}</b> [{2}]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69666528100868096
+    m_Localized: "Se archivar\xE1(n)<b>{0}</b> prueba(s) ya que no exist\xEDa(n)
+      el<b>{1}</b> [{2}]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69668797198360576
+    m_Localized: Revertir {0} prueba(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69664927147614208
+    m_Localized: "No se pueden revertir las pruebas de conflictos seleccionadas a
+      las versiones del <b>{0}</b>.\n\nEstas versiones se crearon en una versi\xF3n
+      m\xE1s reciente de MyProject. Para poder revertir las pruebas de conflictos a
+      esa fecha, actualice la aplicaci\xF3n de MyProject."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69994018006622208
+    m_Localized: "No se puede revertir la prueba de conflictos. Su versi\xF3n actual
+      se cre\xF3 en una versi\xF3n m\xE1s reciente de MyProject y no se puede comprobar.
+      Para poder revertir esta prueba de conflictos, actualice la aplicaci\xF3n de
+      MyProject."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69995357562462208
+    m_Localized: "<b>{0}</b>\_prueba(s) no se puede(n) revertir a las versiones del
+      <b>{1}</b>. Estas versiones se crearon en una versi\xF3n m\xE1s reciente de
+      MyProject. Para poder revertir estas pruebas de conflictos a esa fecha, actualice
+      la aplicaci\xF3n de MyProject [{2}]."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69957671707467776
+    m_Localized: No se puede encontrar la incidencia {0}. La incidencia no existe
+      en el proyecto o usted no tiene derechos suficientes para verla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71484870902145024
+    m_Localized: "Se movieron temporalmente algunos objetos. Se regresar\xE1n a sus
+      posiciones originales. \xBFDesea continuar?"
     m_Metadata:
       m_Items: []
   references:
