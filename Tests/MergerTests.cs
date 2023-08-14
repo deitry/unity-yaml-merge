@@ -75,6 +75,20 @@ public class Tests
             "examples/14_ours_and_theirs_non_conflicting/theirs.yml",
             "examples/14_ours_and_theirs_non_conflicting/expected.yml"
         },
+        new object[]
+        {
+            "examples/15_same_additions_in_the_same_place/ours.yml",
+            "examples/15_same_additions_in_the_same_place/base.yml",
+            "examples/15_same_additions_in_the_same_place/theirs.yml",
+            "examples/15_same_additions_in_the_same_place/expected.yml"
+        },
+        new object[]
+        {
+            "examples/16_different_additions_in_the_same_place/ours.yml",
+            "examples/16_different_additions_in_the_same_place/base.yml",
+            "examples/16_different_additions_in_the_same_place/theirs.yml",
+            "examples/16_different_additions_in_the_same_place/expected.yml"
+        },
     };
 
     [Test]

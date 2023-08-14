@@ -34,11 +34,10 @@ public static class Merger
         var oursHasNext = oursEnumerator.MoveNext();
         var theirsHasNext = theirsEnumerator.MoveNext();
 
-        for (var i = 0; i < @base.Length; i++)
+        for (var i = 0; i < @base.Length || oursHasNext || theirsHasNext; i++)
+        // for (var i = 0; i < @base.Length || oursHasNext || theirsHasNext; i = Math.Min(i + 1, @base.Length - 1))
         {
-            var baseLine = @base[i];
-
-            if (oursEnumerator.Current.End.Original < i)
+            if (oursEnumerator.Current?.End.Original < i)
             {
                 if (!oursHasNext)
                     throw new Exception("Expected more blocks in ours diff");
@@ -46,7 +45,7 @@ public static class Merger
                 oursHasNext = oursEnumerator.MoveNext();
             }
 
-            if (theirsEnumerator.Current.End.Original < i)
+            if (theirsEnumerator.Current?.End.Original < i)
             {
                 if (!theirsHasNext)
                     throw new Exception("Expected more blocks in theirs diff");
@@ -54,11 +53,18 @@ public static class Merger
                 theirsHasNext = theirsEnumerator.MoveNext();
             }
 
-            var oursBlock = oursEnumerator.Current;
-            var theirsBlock = theirsEnumerator.Current;
+            if (!oursHasNext && !theirsHasNext)
+                break;
 
-            var oursChange = oursBlock.Type;
-            var theirsChange = theirsBlock.Type;
+            // fix i for trailing blocks
+            i = Math.Min(i, @base.Length - 1);
+
+            var baseLine = @base[i];
+            var oursBlock = oursHasNext ? oursEnumerator.Current : null;
+            var theirsBlock = theirsHasNext ? theirsEnumerator.Current : null;
+
+            var oursChange = oursBlock?.Type;
+            var theirsChange = theirsBlock?.Type;
 
             if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Unchanged)
             {
@@ -66,7 +72,7 @@ public static class Merger
                 merged.Add(baseLine);
             }
             else if (oursChange == BlockType.Changed && theirsChange == BlockType.Changed
-                && oursBlock.Start.Original == theirsBlock.Start.Original
+                && oursBlock!.Start.Original == theirsBlock!.Start.Original
                 && oursBlock.OriginalLength == theirsBlock.OriginalLength
                 && oursBlock.ModifiedLines.SequenceEqual(theirsBlock.ModifiedLines))
             {
@@ -83,9 +89,9 @@ public static class Merger
                 // if unchanged in one and removed in second
                 // skip
             }
-            else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Added)
+            else if ((oursChange == BlockType.Unchanged || oursBlock == null) && theirsChange == BlockType.Added)
             {
-                if (i != theirsBlock.Start.Original)
+                if (i != theirsBlock!.Start.Original)
                     throw new InvalidOperationException("Expected start of block");
 
                 // if unchanged in one and has additions in second, merge second first
@@ -95,11 +101,11 @@ public static class Merger
                 i = theirsBlock.End.Original - 1;
 
                 // force move to next block
-                theirsEnumerator.MoveNext();
+                theirsHasNext = theirsEnumerator.MoveNext();
             }
-            else if (oursChange == BlockType.Added && theirsChange == BlockType.Unchanged)
+            else if (oursChange == BlockType.Added && (theirsChange == BlockType.Unchanged || theirsBlock == null))
             {
-                if (i != oursBlock.Start.Original)
+                if (i != oursBlock!.Start.Original)
                     throw new InvalidOperationException("Expected start of block");
 
                 // if unchanged in one and has additions in second, merge second first
@@ -109,10 +115,10 @@ public static class Merger
                 i = oursBlock.End.Original - 1;
 
                 // force move to next block
-                oursEnumerator.MoveNext();
+                oursHasNext = oursEnumerator.MoveNext();
             }
             else if (oursChange == BlockType.Unchanged && theirsChange == BlockType.Changed
-                     && theirsBlock.OriginalLength <= oursBlock.OriginalLength)
+                     && theirsBlock!.OriginalLength <= oursBlock!.OriginalLength)
             {
                 if (i != theirsBlock.Start.Original)
                     throw new InvalidOperationException("Expected start of block");
@@ -123,7 +129,7 @@ public static class Merger
                 i = theirsBlock.End.Original;
             }
             else if (oursChange == BlockType.Changed && theirsChange == BlockType.Unchanged
-                     && oursBlock.OriginalLength <= theirsBlock.OriginalLength)
+                     && oursBlock!.OriginalLength <= theirsBlock!.OriginalLength)
             {
                 if (i != oursBlock.Start.Original)
                     throw new InvalidOperationException("Expected start of block");
@@ -133,33 +139,48 @@ public static class Merger
 
                 i = oursBlock.End.Original;
             }
+            else if (oursBlock != null && theirsBlock != null && oursChange == theirsChange
+                     && oursBlock.OriginalLines.SequenceEqual(theirsBlock.OriginalLines)
+                     && oursBlock.ModifiedLines.SequenceEqual(theirsBlock.ModifiedLines))
+            {
+                // if both has same changes
+                switch (oursChange)
+                {
+                    case BlockType.Unchanged:
+                        merged.AddRange(oursBlock.ModifiedLines);
+                        i = oursBlock.End.Original;
+                        break;
+                    case BlockType.Changed:
+                        merged.AddRange(oursBlock.ModifiedLines);
+                        i = oursBlock.End.Original;
+                        break;
+                    case BlockType.Added:
+                        merged.AddRange(oursBlock.ModifiedLines);
+
+                        Debug.Assert(i == oursBlock.End.Original);
+                        i = oursBlock.End.Original - 1;
+
+                        // force move to next block
+                        oursHasNext = oursEnumerator.MoveNext();
+                        theirsHasNext = theirsEnumerator.MoveNext();
+                        break;
+                    case BlockType.Removed:
+                        // skip
+                        i = oursBlock.End.Original;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
             else
             {
                 // output as conflict
+                throw new NotImplementedException();
             }
         }
 
-        // special handling for blocks beyond the end of the original file
-        // they are tied to the last index of the original file
-        var oursTrailingBlocks = oursDiff.Blocks.Where(b => b.Start.Original >= @base.Length - 1).ToList();
-        var theirsTrailingBlocks = theirsDiff.Blocks.Where(b => b.Start.Original >= @base.Length - 1).ToList();
-
-        if (oursTrailingBlocks.Any())
-        {
-            if (oursTrailingBlocks.Count > 1)
-                throw new Exception("Expected only one trailing block");
-
-            merged.AddRange(oursTrailingBlocks.First().ModifiedLines);
-        }
-
-        if (theirsTrailingBlocks.Any())
-        {
-            if (theirsTrailingBlocks.Count > 1)
-                throw new Exception("Expected only one trailing block");
-
-            merged.AddRange(theirsTrailingBlocks.First().ModifiedLines);
-
-        }
+        Debug.Assert(oursHasNext == false);
+        Debug.Assert(theirsHasNext == false);
 
         return merged;
     }
