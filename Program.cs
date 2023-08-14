@@ -15,7 +15,7 @@ public static class Program
         using var output = File.CreateText(ours);
         foreach (var line in merged)
         {
-            output.WriteLine(line);
+            output.Write(line + '\n');
         }
     }
 }
