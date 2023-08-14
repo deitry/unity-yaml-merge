@@ -47,13 +47,14 @@ public class Tests
             "examples/05_ours_and_theirs_conflicting_changes/05.theirs.yml",
             "examples/05_ours_and_theirs_conflicting_changes/05.expected.yml"
         },
-        new object[]
-        {
-            "examples/11_conflicting_additions_with_trailing_unchanged/ours.yml",
-            "examples/11_conflicting_additions_with_trailing_unchanged/base.yml",
-            "examples/11_conflicting_additions_with_trailing_unchanged/theirs.yml",
-            "examples/11_conflicting_additions_with_trailing_unchanged/expected.yml"
-        },
+        // now confliction additions are allowed
+        // new object[]
+        // {
+        //     "examples/11_conflicting_additions_with_trailing_unchanged/ours.yml",
+        //     "examples/11_conflicting_additions_with_trailing_unchanged/base.yml",
+        //     "examples/11_conflicting_additions_with_trailing_unchanged/theirs.yml",
+        //     "examples/11_conflicting_additions_with_trailing_unchanged/expected.yml"
+        // },
         new object[]
         {
             "examples/12_only_ours/ours.yml",
@@ -88,6 +89,13 @@ public class Tests
             "examples/16_different_additions_in_the_same_place/base.yml",
             "examples/16_different_additions_in_the_same_place/theirs.yml",
             "examples/16_different_additions_in_the_same_place/expected.yml"
+        },
+        new object[]
+        {
+            "examples/17_simple_conflict/ours.yml",
+            "examples/17_simple_conflict/base.yml",
+            "examples/17_simple_conflict/theirs.yml",
+            "examples/17_simple_conflict/expected.yml"
         },
     };
 

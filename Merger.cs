@@ -169,7 +169,7 @@ public static class Merger
                         i = oursBlock.End.Original;
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        throw new NotImplementedException();
                 }
             }
             else if (oursChange == BlockType.Added && theirsChange == BlockType.Added)
@@ -181,7 +181,13 @@ public static class Merger
             else
             {
                 // output as conflict
-                throw new NotImplementedException();
+                merged.Add("<<<<<<< ours");
+                if (oursBlock != null)
+                    merged.AddRange(oursBlock.ModifiedLines);
+                merged.Add("=======");
+                if (theirsBlock != null)
+                    merged.AddRange(theirsBlock.ModifiedLines);
+                merged.Add(">>>>>>> theirs");
             }
         }
 
