@@ -20,8 +20,8 @@ public class Diff
     public int ModifiedLength => Blocks.Sum(b => b.ModifiedLength);
 
 #if DEBUG
-    public LocalizationAsset OriginalYaml { get; private set; }
-    public LocalizationAsset ModifiedYaml { get; private set; }
+    public LocalizationAsset? OriginalYaml { get; private set; }
+    public LocalizationAsset? ModifiedYaml { get; private set; }
 #endif
 
     private Diff()
@@ -50,8 +50,21 @@ public class Diff
             .WithTagMapping(LocalizationAsset.Tag, typeof(LocalizationAsset))
             .Build();
 
-        var originalYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', @base).FromUnity());
-        var modifiedYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', modified).FromUnity());
+        LocalizationAsset? originalYaml = null;
+        LocalizationAsset? modifiedYaml = null;
+
+#if DEBUG
+        try
+        {
+            originalYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', @base).FromUnity());
+            modifiedYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', modified).FromUnity());
+        }
+        catch (Exception)
+        {
+            // ignore
+            // may fail for non-YAML test files
+        }
+#endif
 
         var diff = new Diff()
         {
