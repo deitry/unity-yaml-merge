@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using JetBrains.Annotations;
 using Tests;
+using YamlDotNet.Serialization;
 
 namespace unity_yaml_merge;
 
@@ -17,6 +18,11 @@ public class Diff
     public int OriginalLength => Blocks.Sum(b => b.OriginalLength);
 
     public int ModifiedLength => Blocks.Sum(b => b.ModifiedLength);
+
+#if DEBUG
+    public LocalizationAsset OriginalYaml { get; private set; }
+    public LocalizationAsset ModifiedYaml { get; private set; }
+#endif
 
     private Diff()
     {
@@ -40,7 +46,20 @@ public class Diff
     /// </summary>
     public static Diff Make(string[] @base, string[] modified)
     {
-        var diff = new Diff();
+        var deserializer = new DeserializerBuilder()
+            .WithTagMapping(LocalizationAsset.Tag, typeof(LocalizationAsset))
+            .Build();
+
+        var originalYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', @base).FromUnity());
+        var modifiedYaml = deserializer.Deserialize<LocalizationAsset>(string.Join('\n', modified).FromUnity());
+
+        var diff = new Diff()
+        {
+#if DEBUG
+            OriginalYaml = originalYaml,
+            ModifiedYaml = modifiedYaml,
+#endif
+        };
 
         if (!@base.Any() && !modified.Any())
             return diff;
@@ -247,7 +266,13 @@ public class Diff
             // }
         }
 
-        var result = new Diff(fixedBlocks);
+        var result = new Diff(fixedBlocks)
+        {
+#if DEBUG
+            OriginalYaml = originalYaml,
+            ModifiedYaml = modifiedYaml,
+#endif
+        };
 
         ValidateDiff(@base, result);
 
@@ -325,7 +350,17 @@ public class Diff
         var r2 = NextEqualInternal(f2, f1, out var i2);
 
         if (r1 && r2)
+        {
+            // TODO: here some Unity YAML bound logic must reside to correctly get proper diffs of specific fields
+
+            if (i1.Original == i1.Modified)
+                return i1;
+
+            if (i2.Original == i2.Modified)
+                return i2;
+            
             return i1.Original < i2.Modified ? i1 : new Indices(i2.Modified, i2.Original);
+        }
 
         if (r1)
             return i1;

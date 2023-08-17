@@ -1,4 +1,4 @@
-namespace unity_yaml_merge;
+﻿namespace unity_yaml_merge;
 
 public static class Program
 {

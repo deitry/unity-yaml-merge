@@ -19,6 +19,10 @@
             "label": "build Release",
             "command": "dotnet",
             "type": "process",
+            "dependsOn": [
+                // check that Debug build also is successful
+                "build Debug"
+            ],
             "args": [
                 "build",
                 "${workspaceFolder}/unity-yaml-merge.sln",

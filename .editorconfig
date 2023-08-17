@@ -1,3 +1,6 @@
+[*]
+root = true
+end_of_line = lf
+
 [*.yml]
 trim_trailing_whitespace = false
-end_of_line = lf
