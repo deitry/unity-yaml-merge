@@ -97,6 +97,13 @@ public class Tests
             "examples/17_simple_conflict/theirs.yml",
             "examples/17_simple_conflict/expected.yml"
         },
+        new object[]
+        {
+            "examples/100_real_case/ours.yml",
+            "examples/100_real_case/base.yml",
+            "examples/100_real_case/theirs.yml",
+            "examples/100_real_case/expected.yml"
+        },
     };
 
     [Test]
