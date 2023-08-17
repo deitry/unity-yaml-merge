@@ -8,13 +8,13 @@
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build Debug",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/net7.0/unity-yaml-merge.dll",
             "args": [
-                "${workspaceFolder}\\examples\\233.ours.merge_file_bNFg6B",
-                "${workspaceFolder}\\examples\\233.base.merge_file_W589bu",
-                "${workspaceFolder}\\examples\\233.theirs.merge_file_nhI5L2",
+                "${workspaceFolder}\\Tests\\examples\\100_real_case\\ours.yml",
+                "${workspaceFolder}\\Tests\\examples\\100_real_case\\base.yml",
+                "${workspaceFolder}\\Tests\\examples\\100_real_case\\theirs.yml",
             ],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

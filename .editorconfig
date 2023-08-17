@@ -1,0 +1,3 @@
+[*.yml]
+trim_trailing_whitespace = false
+end_of_line = lf
