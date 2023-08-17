@@ -2,5 +2,6 @@
     "dotnet.defaultSolution": "unity-yaml-merge.sln",
     "yaml.customTags": [
         "tag:unity3d.com,2011:114 mapping"
-    ]
+    ],
+    "files.trimTrailingWhitespace": false,
 }

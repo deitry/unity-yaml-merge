@@ -28,6 +28,7 @@ public class Block
         var value = Type switch
         {
             BlockType.Unchanged => string.Join('\n', ModifiedLines),
+            BlockType.Changed when OriginalLength == ModifiedLength => $"Replaced with {string.Join('\n', ModifiedLines)}",
             BlockType.Changed => $"{string.Join('\n', OriginalLines)} > {string.Join('\n', ModifiedLines)}",
             BlockType.Added => string.Join('\n', ModifiedLines),
             BlockType.Removed => string.Join('\n', OriginalLines),

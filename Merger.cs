@@ -19,12 +19,6 @@ public static class Merger
 
         Debug.Assert(oursDiff.OriginalLength == theirsDiff.OriginalLength);
 
-        // iterate over diff blocks
-        var oursI = 0;
-        var oursLine = 0;
-        var theirsI = 0;
-        var theirsLine = 0;
-
         var merged = new List<string>();
 
         using var oursEnumerator = oursDiff.Blocks.GetEnumerator();
