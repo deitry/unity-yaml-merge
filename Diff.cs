@@ -371,7 +371,7 @@ public class Diff
 
             if (i2.Original == i2.Modified)
                 return i2;
-            
+
             return i1.Original < i2.Modified ? i1 : new Indices(i2.Modified, i2.Original);
         }
 
@@ -386,14 +386,24 @@ public class Diff
 
     private static bool NextEqualInternal(Span<string> f1, Span<string> f2, out Indices indices)
     {
+        // when we start to parse a block of data, it is quite important to parse the block as a whole.
+        // in .resx block is between <data></data>
+        var blockStart = f1.Length > 0 && f2.Length > 0
+            && f1[0].Trim().StartsWith("<data")
+            && f2[0].Trim().StartsWith("<data");
+
         for (var i2 = 0; i2 < f2.Length; i2++)
         {
             for (var i1 = 0; i1 < f1.Length; i1++)
             {
                 var l1 = f1[i1];
                 var l2 = f2[i2];
+
                 if (l1 == l2)
                 {
+                    if (blockStart && l1.Trim() == "</data>")
+                        continue;
+
                     indices = new(i1, i2);
                     return true;
                 }

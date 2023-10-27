@@ -99,6 +99,13 @@ public class Tests
         },
         new object[]
         {
+            "examples/18_duplicate_resx_entries/ours.resx",
+            "examples/18_duplicate_resx_entries/base.resx",
+            "examples/18_duplicate_resx_entries/theirs.resx",
+            "examples/18_duplicate_resx_entries/expected.resx"
+        },
+        new object[]
+        {
             "examples/100_real_case/ours.yml",
             "examples/100_real_case/base.yml",
             "examples/100_real_case/theirs.yml",

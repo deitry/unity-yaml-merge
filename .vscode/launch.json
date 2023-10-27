@@ -12,9 +12,9 @@
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Debug/net7.0/unity-yaml-merge.dll",
             "args": [
-                "${workspaceFolder}\\Tests\\examples\\100_real_case\\ours.yml",
-                "${workspaceFolder}\\Tests\\examples\\100_real_case\\base.yml",
-                "${workspaceFolder}\\Tests\\examples\\100_real_case\\theirs.yml",
+                "${workspaceFolder}\\Tests\\examples\\18_exception\\ours.resx",
+                "${workspaceFolder}\\Tests\\examples\\18_exception\\base.resx",
+                "${workspaceFolder}\\Tests\\examples\\18_exception\\theirs.resx",
             ],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

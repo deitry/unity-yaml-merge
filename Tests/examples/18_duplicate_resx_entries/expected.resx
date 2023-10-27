@@ -1,0 +1,4024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Filter_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AttachmentFilter_Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="AttachmentFilter_Pictures" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="Sorting_Recent" xml:space="preserve">
+    <value>Recent</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportTooltip" xml:space="preserve">
+    <value>Export attachment as a file</value>
+  </data>
+  <data name="Attachment_Gallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="Attachment_GalleryTooltip" xml:space="preserve">
+    <value>Show all attachments in a gallery view</value>
+  </data>
+  <data name="Attachment_GoTo" xml:space="preserve">
+    <value>Go to Issue</value>
+  </data>
+  <data name="Attachment_GoToTooltip" xml:space="preserve">
+    <value>Open the issue that contains this attachment</value>
+  </data>
+  <data name="Error_NoCamera" xml:space="preserve">
+    <value>This issue doesn't contain camera position</value>
+  </data>
+  <data name="Error_NoSnapshot" xml:space="preserve">
+    <value>This issue doesn't contain snapshot</value>
+  </data>
+  <data name="IssueStatus_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="IssueStatus_InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="IssueStatus_Open" xml:space="preserve">
+    <value>StatusOpen</value>
+  </data>
+  <data name="IssueStatus_Solved" xml:space="preserve">
+    <value>Solved</value>
+  </data>
+  <data name="Issues_ExternalEditor" xml:space="preserve">
+    <value>External Editor</value>
+  </data>
+  <data name="Issues_LoadImage" xml:space="preserve">
+    <value>Load Image</value>
+  </data>
+  <data name="Issues_LoadTooltip" xml:space="preserve">
+    <value>Load your own image to describe the issue</value>
+  </data>
+  <data name="Issues_NoIssues1" xml:space="preserve">
+    <value>Currently there are no issues in this project.</value>
+  </data>
+  <data name="Issues_NoIssues2" xml:space="preserve">
+    <value>Create your first issue to start the collaboration.</value>
+  </data>
+  <data name="Issues_Paint" xml:space="preserve">
+    <value>Paint</value>
+  </data>
+  <data name="Issues_PaintTooltip" xml:space="preserve">
+    <value>Highlight the problem using the paint tool</value>
+  </data>
+  <data name="Issues_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Issues_RefreshTooltip" xml:space="preserve">
+    <value>Refresh issue image from the current view</value>
+  </data>
+  <data name="Issue_Assignee" xml:space="preserve">
+    <value>Assignee</value>
+  </data>
+  <data name="Issue_Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Issue_Deadline" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="Issue_Reporter" xml:space="preserve">
+    <value>Reporter</value>
+  </data>
+  <data name="Issue_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Issue_Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Issue_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Issue_Visibility" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="Issue_Watchers" xml:space="preserve">
+    <value>Watchers</value>
+  </data>
+  <data name="Issue_WatchingThis" xml:space="preserve">
+    <value>I am watching this</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Menu_DeleteIssuesTooltip" xml:space="preserve">
+    <value>Delete issues</value>
+  </data>
+  <data name="Menu_ExportIssueTooltip" xml:space="preserve">
+    <value>Export issues to file in BCF or Revizto format</value>
+  </data>
+  <data name="Menu_FilterIssues" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Menu_FilterIssuesTooltip" xml:space="preserve">
+    <value>Issue filtering options</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Menu_ImportIssue" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Menu_ImportIssueTooltip" xml:space="preserve">
+    <value>Import issues in BCF or Revizto format</value>
+  </data>
+  <data name="Menu_IssueFeed" xml:space="preserve">
+    <value>Feed</value>
+  </data>
+  <data name="Menu_IssueFeedTooltip" xml:space="preserve">
+    <value>Issue feed with status updates and comments</value>
+  </data>
+  <data name="Menu_IssueInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Menu_NewIssue" xml:space="preserve">
+    <value>New Issue</value>
+  </data>
+  <data name="Menu_NewIssueTooltip" xml:space="preserve">
+    <value>Create new issue</value>
+  </data>
+  <data name="Menu_ProxySettings" xml:space="preserve">
+    <value>Proxy Settings</value>
+  </data>
+  <data name="Menu_Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ProjectFilter_Cloud" xml:space="preserve">
+    <value>Cloud</value>
+  </data>
+  <data name="ProjectFilter_Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="Sorting_ByName" xml:space="preserve">
+    <value>By name</value>
+  </data>
+  <data name="Zoom_FitToScreen" xml:space="preserve">
+    <value>Fit To Screen</value>
+  </data>
+  <data name="Collapse_Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="Comment_AssigneeChanged" xml:space="preserve">
+    <value>Changed assignee to {0}"</value>
+  </data>
+  <data name="Comment_DeadlineChanged" xml:space="preserve">
+    <value>Changed deadline from {0} to {1}</value>
+  </data>
+  <data name="Comment_QuitWatching" xml:space="preserve">
+    <value>Quit watching this issue</value>
+  </data>
+  <data name="Comment_ReporterChanged" xml:space="preserve">
+    <value>Changed reporter to {0}</value>
+  </data>
+  <data name="Comment_StartedWatching" xml:space="preserve">
+    <value>Started watching this issue</value>
+  </data>
+  <data name="Comment_StatusChanged" xml:space="preserve">
+    <value>Changed status from {0} to {1}</value>
+  </data>
+  <data name="Comment_TagsAdded" xml:space="preserve">
+    <value>Added tag(s):</value>
+  </data>
+  <data name="Comment_TagsRemoved" xml:space="preserve">
+    <value>Removed tag(s):</value>
+  </data>
+  <data name="Comment_TitleChanged" xml:space="preserve">
+    <value>Changed title</value>
+  </data>
+  <data name="Comment_VisibilityChanged" xml:space="preserve">
+    <value>Changed visibility to {0}</value>
+  </data>
+  <data name="Comment_WatchersAdded" xml:space="preserve">
+    <value>Added watcher(s):</value>
+  </data>
+  <data name="Comment_WatchersRemoved" xml:space="preserve">
+    <value>Removed from watchers:</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error_DuringExport" xml:space="preserve">
+    <value>An error has occurred during the export of attachment:</value>
+  </data>
+  <data name="FileType_AllDocumentFiles" xml:space="preserve">
+    <value>All Files (*.png;*.jpg;*.pdf)</value>
+  </data>
+  <data name="FileType_AllMarkerFiles" xml:space="preserve">
+    <value>All Files (*.vimmrk;*.bcfzip)</value>
+  </data>
+  <data name="FileType_BCFFiles" xml:space="preserve">
+    <value>BCF Files (*.bcfzip)</value>
+  </data>
+  <data name="FileType_MarkerFiles" xml:space="preserve">
+    <value>Marker Files (*.vimmrk)</value>
+  </data>
+  <data name="FileType_PDFFiles" xml:space="preserve">
+    <value>PDF Files (*.pdf)</value>
+  </data>
+  <data name="FileType_PictureFilesPng" xml:space="preserve">
+    <value>Picture Files (*.png)</value>
+  </data>
+  <data name="FileType_PictureFilesPngJpg" xml:space="preserve">
+    <value>Picture Files (*.png;*.jpg)</value>
+  </data>
+  <data name="Info_InvalidLogin" xml:space="preserve">
+    <value>Invalid login or password!</value>
+  </data>
+  <data name="IssueFilter_Closed" xml:space="preserve">
+    <value>Closed Issues</value>
+  </data>
+  <data name="IssueFilter_Current" xml:space="preserve">
+    <value>Current Issues</value>
+  </data>
+  <data name="IssueFilter_Open" xml:space="preserve">
+    <value>My Open Issues</value>
+  </data>
+  <data name="IssueFilter_Reported" xml:space="preserve">
+    <value>Reported by Me</value>
+  </data>
+  <data name="IssueFilter_Watched" xml:space="preserve">
+    <value>Watched by Me</value>
+  </data>
+  <data name="IssueVisibility_Public" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="NoIssuesFound_Filter" xml:space="preserve">
+    <value>There are no issues that match filter '{0}'</value>
+  </data>
+  <data name="NoIssuesFound_FilterTags" xml:space="preserve">
+    <value>There are no issues that match filter '{0}' and have tags {1}</value>
+  </data>
+  <data name="NoIssuesFound_FilterTagsWatched" xml:space="preserve">
+    <value>There are no issues that match filter '{0}' and have tags {1} and are watched by {2}</value>
+  </data>
+  <data name="NoIssuesFound_FilterWatched" xml:space="preserve">
+    <value>There are no issues that match filter '{0}' and are watched by {1}</value>
+  </data>
+  <data name="NoMatchesFound" xml:space="preserve">
+    <value>No Matches Found</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ProjectFilter_Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="ProjectFilter_Related" xml:space="preserve">
+    <value>Related</value>
+  </data>
+  <data name="ProjectFilter_SharedLocation" xml:space="preserve">
+    <value>Shared Location</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Warning_FailedToOpenCloudProj" xml:space="preserve">
+    <value>An error has occurred while opening the cloud project:</value>
+  </data>
+  <data name="Warning_FailedToOpenLocalProj" xml:space="preserve">
+    <value>An error has occurred while opening the local project:</value>
+  </data>
+  <data name="Warning_FillIssueTitle" xml:space="preserve">
+    <value>Please fill the "Title" field to continue</value>
+  </data>
+  <data name="Warning_LargeAttachment" xml:space="preserve">
+    <value>The size of the attachment cannot exceed {0} Mb</value>
+  </data>
+  <data name="Warning_LargeSnapshot" xml:space="preserve">
+    <value>The size of the snapshot cannot exceed {0} Mb</value>
+  </data>
+  <data name="Warning_NotPaid" xml:space="preserve">
+    <value>Revizto Issue Tracker is not paid for account '{0}' and therefore cannot be opened. You can subscribe to this feature at Revizto website.</value>
+  </data>
+  <data name="Warning_OpenedInDiffApp" xml:space="preserve">
+    <value>The same project is currently opened in {0}. Please close that application prior to opening Issue Tracker here.</value>
+  </data>
+  <data name="Warning_OpenedInViewer" xml:space="preserve">
+    <value>The same project is currently opened in Revizto Viewer. Please close it before proceeding.</value>
+  </data>
+  <data name="Warning_WantToRetry" xml:space="preserve">
+    <value>Do you want to retry?</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="NotAMember" xml:space="preserve">
+    <value>Not a member?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>All Rights Reserved</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="AttachmentsExport" xml:space="preserve">
+    <value>Attachments Export</value>
+  </data>
+  <data name="ChangePicture" xml:space="preserve">
+    <value>Change Picture</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="IssuesExport" xml:space="preserve">
+    <value>Issues Export</value>
+  </data>
+  <data name="PasswordOpt" xml:space="preserve">
+    <value>Password (optional)</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profile_ChangePassword" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Profile_ConfirmPassword" xml:space="preserve">
+    <value>Confirm:</value>
+  </data>
+  <data name="Profile_Email" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="Profile_FirstName" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="Profile_LastName" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="Profile_NewPassword" xml:space="preserve">
+    <value>New:</value>
+  </data>
+  <data name="Profile_OldPassword" xml:space="preserve">
+    <value>Old:</value>
+  </data>
+  <data name="Profile_Password" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="Profile_ReceiveNotif" xml:space="preserve">
+    <value>Receive issue notifications via email</value>
+  </data>
+  <data name="Proxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="ProxyAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ProxyPort" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="ReviztoAccount" xml:space="preserve">
+    <value>Revizto Account</value>
+  </data>
+  <data name="ReviztoSignIn" xml:space="preserve">
+    <value>Revizto Sign in</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="SignupNow" xml:space="preserve">
+    <value>Sign up now!</value>
+  </data>
+  <data name="UseProxyServer" xml:space="preserve">
+    <value>Use proxy server</value>
+  </data>
+  <data name="UsernameOpt" xml:space="preserve">
+    <value>Username (optional)</value>
+  </data>
+  <data name="UseSystemSettings" xml:space="preserve">
+    <value>Use system settings</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>Invite</value>
+  </data>
+  <data name="Invite_CanEdit" xml:space="preserve">
+    <value>Can Edit</value>
+  </data>
+  <data name="Invite_CanView" xml:space="preserve">
+    <value>Can View</value>
+  </data>
+  <data name="Invite_CopyCode" xml:space="preserve">
+    <value>Copy code</value>
+  </data>
+  <data name="Invite_CopyHTML" xml:space="preserve">
+    <value>HTML-code</value>
+  </data>
+  <data name="Invite_CopyLink" xml:space="preserve">
+    <value>Copy link</value>
+  </data>
+  <data name="Invite_EditRights" xml:space="preserve">
+    <value>The person can view, edit and share the project</value>
+  </data>
+  <data name="Invite_EnterEmail" xml:space="preserve">
+    <value>Enter email(s)</value>
+  </data>
+  <data name="Invite_Member" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Invite_Rights" xml:space="preserve">
+    <value>Rights</value>
+  </data>
+  <data name="Invite_Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Invite_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="Invite_PrivateDesc" xml:space="preserve">
+    <value>Only people explicitly granted permissions can access. Log-in required</value>
+  </data>
+  <data name="Invite_ProjectTeam" xml:space="preserve">
+    <value>Project Team</value>
+  </data>
+  <data name="Invite_Public" xml:space="preserve">
+    <value>Public on the web</value>
+  </data>
+  <data name="Invite_PublicDesc" xml:space="preserve">
+    <value>Anyone on the Internet can find and view. No log-in required</value>
+  </data>
+  <data name="Invite_ToProject" xml:space="preserve">
+    <value>Invite to project</value>
+  </data>
+  <data name="Invite_ViewRights" xml:space="preserve">
+    <value>The person can view the project and create issues</value>
+  </data>
+  <data name="Invite_VisibilityOptions" xml:space="preserve">
+    <value>Visibility options</value>
+  </data>
+  <data name="Invite_WithLink" xml:space="preserve">
+    <value>Anyone with link</value>
+  </data>
+  <data name="Invite_WithLinkDesc" xml:space="preserve">
+    <value>Anyone who has the link can view. No log-in required</value>
+  </data>
+  <data name="NoIssuesFound_FilterAssigned" xml:space="preserve">
+    <value>There are no issues that match filter '{0}' and are assigned to {1}</value>
+  </data>
+  <data name="Delivering" xml:space="preserve">
+    <value>Delivering...</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="IssueFilter_ByAssignee" xml:space="preserve">
+    <value>By assignee</value>
+  </data>
+  <data name="IssueFilter_ByTag" xml:space="preserve">
+    <value>By tag</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="WillBeDelivered" xml:space="preserve">
+    <value>Will be delivered when online</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="IssueTrackerTitle" xml:space="preserve">
+    <value>Revizto Issue Tracker</value>
+  </data>
+  <data name="ReportingTitle" xml:space="preserve">
+    <value>Reporting settings</value>
+  </data>
+  <data name="SharingSettingsTitle" xml:space="preserve">
+    <value>Sharing settings</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="ClickCancelToInterrupt" xml:space="preserve">
+    <value>Click "Cancel" to interrupt sync procedure.</value>
+  </data>
+  <data name="ClickNoToDiscardYours" xml:space="preserve">
+    <value>Click "No" to discard your own latest changes.</value>
+  </data>
+  <data name="ClickYesToDiscardCloud" xml:space="preserve">
+    <value>Click "Yes" to discard cloud changes.</value>
+  </data>
+  <data name="ImpossibleToMerge" xml:space="preserve">
+    <value>It is impossible to merge your changes with cloud changes. Do you want to upload your latest changes discarding the cloud changes?</value>
+  </data>
+  <data name="ProjectWasModified" xml:space="preserve">
+    <value>The project was modified on the cloud by:</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="Issues" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="TeamInviteAdded" xml:space="preserve">
+    <value>added to your team as collaborator(s).</value>
+  </data>
+  <data name="TeamInviteGuest1" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="TeamInviteInvited" xml:space="preserve">
+    <value> were invited to the project.</value>
+  </data>
+  <data name="TeamInviteLicenseOverflow" xml:space="preserve">
+    <value>Nobody was invited to the project due to the following reason:
+Current size of your team is {0} of {1}. You tried to add {2} new people ({3}) to the team which would have exceeded your limit. Please contact your team administrator to solve the problem.
+You can find out who is your team administrator here (</value>
+  </data>
+  <data name="TeamInviteLinkToManage" xml:space="preserve">
+    <value>link to manage team</value>
+  </data>
+  <data name="TeamInviteTeamSize" xml:space="preserve">
+    <value>Team size is now {0} of {1}.</value>
+  </data>
+  <data name="TeamInviteGuest2" xml:space="preserve">
+    <value>are paying Revizto customers and are added to your team as guests free of charge.</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AllIssues" xml:space="preserve">
+    <value>All issues</value>
+  </data>
+  <data name="AlreadyLogined" xml:space="preserve">
+    <value>You are logged in as {0}({1}). Are you sure you want to log out?</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="Clashes" xml:space="preserve">
+    <value>Clashes</value>
+  </data>
+  <data name="ClashOfClashes" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="ClashOnlyIssues" xml:space="preserve">
+    <value>Clash only issues</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="ConfirmExit" xml:space="preserve">
+    <value>Do you want to exit the application?</value>
+  </data>
+  <data name="ConfirmPasswordChanges" xml:space="preserve">
+    <value>Do you want to save password changes?</value>
+  </data>
+  <data name="ConfirmProfileChanges" xml:space="preserve">
+    <value>Do you want to save changes to your profile?</value>
+  </data>
+  <data name="ConfirmReadonlyOverwrite" xml:space="preserve">
+    <value>File is readonly. Overwrite?</value>
+  </data>
+  <data name="ErrorWhileSavingProject" xml:space="preserve">
+    <value>Error while saving project ({0})</value>
+  </data>
+  <data name="Error_DuringExportIssues" xml:space="preserve">
+    <value>An error has occurred during the export of issues:</value>
+  </data>
+  <data name="Filter_AllClashes" xml:space="preserve">
+    <value>All clashes</value>
+  </data>
+  <data name="Filter_ByCategory" xml:space="preserve">
+    <value>By category</value>
+  </data>
+  <data name="Filter_ByDiscipline" xml:space="preserve">
+    <value>By discipline</value>
+  </data>
+  <data name="Filter_ByGridX" xml:space="preserve">
+    <value>By grid x</value>
+  </data>
+  <data name="Filter_ByGridY" xml:space="preserve">
+    <value>By grid y</value>
+  </data>
+  <data name="Filter_ByLevel" xml:space="preserve">
+    <value>By level</value>
+  </data>
+  <data name="Filter_BySourceFile" xml:space="preserve">
+    <value>By source file</value>
+  </data>
+  <data name="Filter_ByStatus" xml:space="preserve">
+    <value>By status</value>
+  </data>
+  <data name="Filter_ByTest" xml:space="preserve">
+    <value>By test</value>
+  </data>
+  <data name="Filter_Imported" xml:space="preserve">
+    <value>Imported</value>
+  </data>
+  <data name="Filter_NotImported" xml:space="preserve">
+    <value>Not imported</value>
+  </data>
+  <data name="ImportMarkupsForClashGroups" xml:space="preserve">
+    <value>Import markups for clash groups (requires xml report file)</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Invalid email!</value>
+  </data>
+  <data name="Issues_ExternalEditorTooltip" xml:space="preserve">
+    <value>Highlight the problem using external image editor</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Your login information has expired! Please log in again.</value>
+  </data>
+  <data name="Menu_AutoAssignSettings" xml:space="preserve">
+    <value>Auto-assign settings</value>
+  </data>
+  <data name="Menu_ImportClashesTooltip" xml:space="preserve">
+    <value>Import clashes from Navisworks into Revizto Issue Tracker</value>
+  </data>
+  <data name="Menu_IssueIsolate" xml:space="preserve">
+    <value>Isolate</value>
+  </data>
+  <data name="Menu_IssueIsolateTooltip" xml:space="preserve">
+    <value>Isolate selected objects</value>
+  </data>
+  <data name="Menu_IssueMultiEdit" xml:space="preserve">
+    <value>Multiedit</value>
+  </data>
+  <data name="Menu_IssueMultiEditTooltip" xml:space="preserve">
+    <value>Multiedit issues</value>
+  </data>
+  <data name="Menu_Sync" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="Menu_SyncClashesTooltip" xml:space="preserve">
+    <value>Get the latest list of clash tests from Navisworks</value>
+  </data>
+  <data name="Multiple" xml:space="preserve">
+    <value>multiple</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NextAttachment" xml:space="preserve">
+    <value>Next attachment</value>
+  </data>
+  <data name="NoMatchingIssues" xml:space="preserve">
+    <value>There are no issues that match current filters.
+Try to change filter settings.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NoneClashIssues" xml:space="preserve">
+    <value>None clash issues</value>
+  </data>
+  <data name="NotPaid" xml:space="preserve">
+    <value>Revizto Issue Tracker is not paid for account '{0}' and therefore cannot be opened. You can subscribe to this feature at Revizto website.  Do you want to log in under different Revizto account?</value>
+  </data>
+  <data name="PasswordsDontMatch" xml:space="preserve">
+    <value>New password and password confirmation don't match!</value>
+  </data>
+  <data name="PasswordTooShort" xml:space="preserve">
+    <value>The password must be at least 6 characters long!</value>
+  </data>
+  <data name="PleaseFirstName" xml:space="preserve">
+    <value>Please enter your first name!</value>
+  </data>
+  <data name="PleaseLastName" xml:space="preserve">
+    <value>Please enter your last name!</value>
+  </data>
+  <data name="PleaseNewPassword" xml:space="preserve">
+    <value>Please enter the new password!</value>
+  </data>
+  <data name="PleaseOldPassword" xml:space="preserve">
+    <value>Please enter your old password!</value>
+  </data>
+  <data name="PreviousAttachment" xml:space="preserve">
+    <value>Previous attachment</value>
+  </data>
+  <data name="ResetAll" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="Resolved" xml:space="preserve">
+    <value>Resolved</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="Reviewed" xml:space="preserve">
+    <value>Reviewed</value>
+  </data>
+  <data name="ServiceNotAvailableForAccount" xml:space="preserve">
+    <value>Revizto Issue Tracker service is not available for your account!</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Warning_FailedToConnectToCloud" xml:space="preserve">
+    <value>Failed to connect to Revizto cloud via specified proxy server</value>
+  </data>
+  <data name="Warning_ServerUnreachable" xml:space="preserve">
+    <value>Revizto server is unreachable at the moment</value>
+  </data>
+  <data name="ExportOptions" xml:space="preserve">
+    <value>Export Options</value>
+  </data>
+  <data name="ExportSheets" xml:space="preserve">
+    <value>Export Sheets</value>
+  </data>
+  <data name="Export_ChooseProject" xml:space="preserve">
+    <value>Choose Project</value>
+  </data>
+  <data name="Export_CurrentProject" xml:space="preserve">
+    <value>Current Project</value>
+  </data>
+  <data name="Export_NewProject" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="Export_Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+  </data>
+  <data name="Export_OverwriteTooltip" xml:space="preserve">
+    <value>Specified project's scenes will be replaced with exported one. Material settings and lights settings will be preserved.</value>
+  </data>
+  <data name="Export_RunRevizto" xml:space="preserve">
+    <value>Run Revizto After Export</value>
+  </data>
+  <data name="Export_UpdateAppend" xml:space="preserve">
+    <value>Update / Append</value>
+  </data>
+  <data name="Export_UpdateAppendTooltip" xml:space="preserve">
+    <value>Append scene to project or update it if already present</value>
+  </data>
+  <data name="Textures" xml:space="preserve">
+    <value>Textures</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="SelectSheetsToExport" xml:space="preserve">
+    <value>Select sheets to export</value>
+  </data>
+  <data name="Sheets" xml:space="preserve">
+    <value>Sheets</value>
+  </data>
+  <data name="Export_ConfirmOverwrite" xml:space="preserve">
+    <value>Are you sure you want to overwrite specified project?</value>
+  </data>
+  <data name="SheetPreview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ClashTestNameAndResult" xml:space="preserve">
+    <value>Test name: {0}, result: {1}</value>
+  </data>
+  <data name="CreatePictureOfGroup" xml:space="preserve">
+    <value>Create picture of {0} group</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="GridLocation" xml:space="preserve">
+    <value>Grid Location</value>
+  </data>
+  <data name="IntersectSearchSetsWindowTitle" xml:space="preserve">
+    <value>Intersect Search Sets</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Layer" xml:space="preserve">
+    <value>Layer</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="OpenReportDialogTitle" xml:space="preserve">
+    <value>Select Clash Detective Report - All tests (combined)</value>
+  </data>
+  <data name="SelectSetsToIntersect" xml:space="preserve">
+    <value>Select sets to intersect</value>
+  </data>
+  <data name="SendingClashes" xml:space="preserve">
+    <value>Sending clashes to Issue Tracker</value>
+  </data>
+  <data name="Status_Importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="Status_Syncing" xml:space="preserve">
+    <value>Syncing...</value>
+  </data>
+  <data name="Status_Updating" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ChosenProjectHasOutdated1" xml:space="preserve">
+    <value>Chosen Revizto project has outdated format.
+
+We are going to convert it to the new format. You won't be able to work with this project in Revizto 3 after conversion.</value>
+  </data>
+  <data name="CreateNewProject" xml:space="preserve">
+    <value>Create New Project</value>
+  </data>
+  <data name="ExportToProjectDesc" xml:space="preserve">
+    <value>Your model will become linked to a Revizto project. Each consecutive export will update the same Revizto project by default. If you export to a project containing different model - they will be merged.</value>
+  </data>
+  <data name="ExportToRevizto" xml:space="preserve">
+    <value>Export to Revizto</value>
+  </data>
+  <data name="LinkToExistingProject" xml:space="preserve">
+    <value>Link to existing project</value>
+  </data>
+  <data name="LinkToReviztoProject" xml:space="preserve">
+    <value>Link to Revizto project</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="OperationInProgress" xml:space="preserve">
+    <value>Operation in progress</value>
+  </data>
+  <data name="PleaseProjectName" xml:space="preserve">
+    <value>Please enter the name of the new project</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Wait ...</value>
+  </data>
+  <data name="ReviztoProjectOld" xml:space="preserve">
+    <value>Revizto project in old format</value>
+  </data>
+  <data name="Error_IncorrectLogin" xml:space="preserve">
+    <value>Incorrect login or password</value>
+  </data>
+  <data name="Error_Internal" xml:space="preserve">
+    <value>Internal Error</value>
+  </data>
+  <data name="Error_OpeningProject" xml:space="preserve">
+    <value>Error opening Revizto project</value>
+  </data>
+  <data name="Error_ProjectLocked" xml:space="preserve">
+    <value>Project locked</value>
+  </data>
+  <data name="Error_ProjectLockedDesc" xml:space="preserve">
+    <value>Current project is locked by one of Revizto apps. Please make sure no other app is working with this project at the moment.</value>
+  </data>
+  <data name="Error_RegionMismatch" xml:space="preserve">
+    <value>Region mismatch</value>
+  </data>
+  <data name="Error_RegistrationNotConfirmed" xml:space="preserve">
+    <value>You have not confirmed your registration! Please check your mailbox for the activation letter.</value>
+  </data>
+  <data name="Error_Unexpected" xml:space="preserve">
+    <value>We have encountered an unexpected error.</value>
+  </data>
+  <data name="ExportInProgress" xml:space="preserve">
+    <value>Export to Revizto in progress</value>
+  </data>
+  <data name="ExportModel" xml:space="preserve">
+    <value>Export 3D model</value>
+  </data>
+  <data name="ExportRegionMismatch1" xml:space="preserve">
+    <value>Current project is linked with Revizto project stored in {0}. You are currently logged in to {1} server. Cross-regional export is not allowed.</value>
+  </data>
+  <data name="ExportRegionMismatch2" xml:space="preserve">
+    <value>In order to export to the linked project you have to log out in Revizto Viewer and then log in to {0} region.</value>
+  </data>
+  <data name="ExportScheduler" xml:space="preserve">
+    <value>Export Sheduler</value>
+  </data>
+  <data name="ExportSelection" xml:space="preserve">
+    <value>Export selection</value>
+  </data>
+  <data name="Viewpoints" xml:space="preserve">
+    <value>Viewpoints</value>
+  </data>
+  <data name="ExportWholeView" xml:space="preserve">
+    <value>Export the whole view</value>
+  </data>
+  <data name="Export_AppendAsNew" xml:space="preserve">
+    <value>Append as a new model</value>
+  </data>
+  <data name="Export_ChooseWhat" xml:space="preserve">
+    <value>Choose what to export</value>
+  </data>
+  <data name="Export_ChooseWhatDesc" xml:space="preserve">
+    <value>Curent view has active selection. Do you want to export only selected elements or the whole view?</value>
+  </data>
+  <data name="Export_OverwriteExisting" xml:space="preserve">
+    <value>Overwrite existing model</value>
+  </data>
+  <data name="Export_Progress" xml:space="preserve">
+    <value>{0}% completed</value>
+  </data>
+  <data name="Export_Relink" xml:space="preserve">
+    <value>Re-Link</value>
+  </data>
+  <data name="Export_ScheduleTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Export_ScheduleWeekdays" xml:space="preserve">
+    <value>Weekday(s)</value>
+  </data>
+  <data name="Export_UploadToCloud" xml:space="preserve">
+    <value>Sync after export</value>
+  </data>
+  <data name="InstallNewVersion" xml:space="preserve">
+    <value>You must install the new version</value>
+  </data>
+  <data name="LinkedTo" xml:space="preserve">
+    <value>Linked to</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="PleaseCheckProxy" xml:space="preserve">
+    <value>Please check proxy server settings</value>
+  </data>
+  <data name="PleaseContactService" xml:space="preserve">
+    <value>Please contact service@revizto.com for help.
+Don't forget to describe your problem and attach the logs.</value>
+  </data>
+  <data name="SelectAppendOrOverwrite" xml:space="preserve">
+    <value>The project already contains several models. You can either append current model or overwrite existing one.</value>
+  </data>
+  <data name="SelectTargetModel" xml:space="preserve">
+    <value>Select Target Model</value>
+  </data>
+  <data name="Status_CheckingVersion" xml:space="preserve">
+    <value>Checking project version...</value>
+  </data>
+  <data name="Status_ConvertingProject" xml:space="preserve">
+    <value>Converting the project to the new format...</value>
+  </data>
+  <data name="Status_GettingChanges" xml:space="preserve">
+    <value>Getting changes from the cloud...</value>
+  </data>
+  <data name="Status_GettingIssues" xml:space="preserve">
+    <value>Getting issue list...</value>
+  </data>
+  <data name="Status_LoggingIn" xml:space="preserve">
+    <value>Logging in...</value>
+  </data>
+  <data name="Status_ProjectLocked" xml:space="preserve">
+    <value>The project is locked. Close other Revizto apps to unlock it.</value>
+  </data>
+  <data name="Status_PushingViewer" xml:space="preserve">
+    <value>Pushing changes to the Viewer...</value>
+  </data>
+  <data name="Status_SavingClashes" xml:space="preserve">
+    <value>Saving clashes...</value>
+  </data>
+  <data name="UnlinkProjects" xml:space="preserve">
+    <value>Unlink projects</value>
+  </data>
+  <data name="Weekday_Fri" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="Weekday_Mon" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="Weekday_Sat" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Weekday_Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Weekday_Thu" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="Weekday_Tue" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="Weekday_Wed" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="ElapsedTimeHoursMinutes" xml:space="preserve">
+    <value>{0}h {1}m</value>
+    <comment>Hours and minutes</comment>
+  </data>
+  <data name="ElapsedTimeMinutesOnly" xml:space="preserve">
+    <value>{0}m</value>
+    <comment>Minutes</comment>
+  </data>
+  <data name="Error_LinkedProjectNotFound" xml:space="preserve">
+    <value>Linked Revizto project not found. Do you want to re-link the project?</value>
+  </data>
+  <data name="Error_NetworkPathUnavailable1" xml:space="preserve">
+    <value>Project folder on a network drive is unreachable at the moment at path "{0}"</value>
+  </data>
+  <data name="Error_NetworkPathUnavailable2" xml:space="preserve">
+    <value>You can specify different path if you open this project in the Viewer.</value>
+  </data>
+  <data name="Error_NoInternet1" xml:space="preserve">
+    <value>Unable to connect to the Internet.</value>
+  </data>
+  <data name="Error_NoInternet2" xml:space="preserve">
+    <value>Check the network connection and try again.</value>
+  </data>
+  <data name="Error_NotEnoughRights" xml:space="preserve">
+    <value>You don't have enough rights to access linked Revizto project. Do you want to re-link the project?</value>
+  </data>
+  <data name="Error_ProjectInactive" xml:space="preserve">
+    <value>Linked Revizto project is inactive. You can't export to inactive project. Do you want to re-link the project?</value>
+  </data>
+  <data name="ExportingFile" xml:space="preserve">
+    <value>Exporting: {0} to {1}</value>
+  </data>
+  <data name="NightExport" xml:space="preserve">
+    <value>Scheduled Export</value>
+  </data>
+  <data name="ProjectFilter_Archived" xml:space="preserve">
+    <value>Archived</value>
+  </data>
+  <data name="ProjectFilter_Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="ProjectFilter_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="SelectProjectToLink" xml:space="preserve">
+    <value>Select Project to Link to</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Status_SecondStage" xml:space="preserve">
+    <value>Initializing the second stage of export</value>
+  </data>
+  <data name="ap_northeast_1" xml:space="preserve">
+    <value>ap-northeast-1</value>
+  </data>
+  <data name="ap_southeast_1" xml:space="preserve">
+    <value>ap-southeast-1</value>
+  </data>
+  <data name="ap_southeast_2" xml:space="preserve">
+    <value>ap-southeast-2</value>
+  </data>
+  <data name="eu_central_1" xml:space="preserve">
+    <value>eu-central-1</value>
+  </data>
+  <data name="eu_west_1" xml:space="preserve">
+    <value>eu-west-1</value>
+  </data>
+  <data name="sa_east_1" xml:space="preserve">
+    <value>sa-east-1</value>
+  </data>
+  <data name="us_east_1" xml:space="preserve">
+    <value>us-east-1</value>
+  </data>
+  <data name="ExportScheduleDesc" xml:space="preserve">
+    <value>Schedule automatic export to Revizto on specified weekdays</value>
+  </data>
+  <data name="ExportToRevizto4" xml:space="preserve">
+    <value>Export to Revizto 4</value>
+  </data>
+  <data name="OpenIssueTracker" xml:space="preserve">
+    <value>Open Revizto Issue Tracker</value>
+  </data>
+  <data name="AutoDetect" xml:space="preserve">
+    <value>Auto-Detect</value>
+  </data>
+  <data name="Error_CantExportOffline" xml:space="preserve">
+    <value>You are currenty offline. Can't export to cloud project while offline.</value>
+  </data>
+  <data name="SomeScenesNotFoundLocal" xml:space="preserve">
+    <value>Some of the project scenes weren't found on this computer (project is set to have view-only models on the cloud). They will be removed from the project if you proceed.</value>
+  </data>
+  <data name="UnableToExportView1" xml:space="preserve">
+    <value>Unable to export current view to Revizto.</value>
+  </data>
+  <data name="UnableToExportView2" xml:space="preserve">
+    <value>Please open 3D view first.</value>
+  </data>
+  <data name="SheetFormat" xml:space="preserve">
+    <value>Sheet format</value>
+  </data>
+  <data name="SheetFormatImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="SheetFormatVector" xml:space="preserve">
+    <value>Vector (beta)</value>
+  </data>
+  <data name="Grids" xml:space="preserve">
+    <value>Grids</value>
+  </data>
+  <data name="Levels" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>Rooms</value>
+  </data>
+  <data name="IssueTracker" xml:space="preserve">
+    <value>Issue Tracker</value>
+  </data>
+  <data name="LinkModelTooltip" xml:space="preserve">
+    <value>Link your model to a Revizto project</value>
+  </data>
+  <data name="LinkSettings" xml:space="preserve">
+    <value>Link Settings</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select ...</value>
+  </data>
+  <data name="WaitingForThumbnails" xml:space="preserve">
+    <value>Generating thumbnails...</value>
+  </data>
+  <data name="ExportMaterials" xml:space="preserve">
+    <value>Update materials</value>
+  </data>
+  <data name="ViewpointSelection" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="WorksetSelection" xml:space="preserve">
+    <value>Workset</value>
+  </data>
+  <data name="ConfigureWorksetsToLoad" xml:space="preserve">
+    <value>Worksets to Load...</value>
+  </data>
+  <data name="ReloadLatestFromCentral" xml:space="preserve">
+    <value>Reload latest from central before export</value>
+  </data>
+  <data name="RelinquishAll" xml:space="preserve">
+    <value>Relinquish all elements</value>
+  </data>
+  <data name="ChangeLink" xml:space="preserve">
+    <value>Change Link</value>
+  </data>
+  <data name="ModelIsCurrentlyLinked" xml:space="preserve">
+    <value>Your model is currently linked to the following Revizto project:</value>
+  </data>
+  <data name="LinkToProject" xml:space="preserve">
+    <value>Link</value>
+    <comment>(Link to project), Verb</comment>
+  </data>
+  <data name="ImportTextures" xml:space="preserve">
+    <value>Import textures</value>
+  </data>
+  <data name="ReviztoScheduler" xml:space="preserve">
+    <value>Revizto Export Scheduler</value>
+  </data>
+  <data name="SettingsButton" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="RunButton" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="UnSkipButton" xml:space="preserve">
+    <value>UnSkip</value>
+  </data>
+  <data name="UnscheduleButton" xml:space="preserve">
+    <value>Unschedule</value>
+  </data>
+  <data name="NoScheduledTasks" xml:space="preserve">
+    <value>You have no scheduled tasks.</value>
+  </data>
+  <data name="ScheduledExportCads" xml:space="preserve">
+    <value>You can schedule export from within Revit, Navisworks, AutoCAD, Civil3D or Revizto</value>
+  </data>
+  <data name="ReviztoProject" xml:space="preserve">
+    <value>Revizto Project:</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>Source File:</value>
+  </data>
+  <data name="NextExport" xml:space="preserve">
+    <value>Next Export:</value>
+  </data>
+  <data name="ExportStarted" xml:space="preserve">
+    <value>Export started:</value>
+  </data>
+  <data name="ExportFinished" xml:space="preserve">
+    <value>Export finished:</value>
+  </data>
+  <data name="TotalExportTime" xml:space="preserve">
+    <value>Total export time:</value>
+  </data>
+  <data name="TaskIsCancelled" xml:space="preserve">
+    <value>The task is cancelled.</value>
+  </data>
+  <data name="EncounteredUnexpectedError" xml:space="preserve">
+    <value>We have encountered an unexpected error</value>
+  </data>
+  <data name="ExportFailedLostConnection" xml:space="preserve">
+    <value>Export to Revizto wasn't completed because internet connection was lost.</value>
+  </data>
+  <data name="SyncUnsuccessful" xml:space="preserve">
+    <value>Sync was unsuccessful because you don't have enough rights for some of the operations.</value>
+  </data>
+  <data name="TaskDelayedPreviousTask" xml:space="preserve">
+    <value>The task is delayed because previous task is not completed yet</value>
+  </data>
+  <data name="Scheduled" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="TaskIsCanceled" xml:space="preserve">
+    <value>The task is canceled.</value>
+  </data>
+  <data name="Scheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="NotScheduled" xml:space="preserve">
+    <value>Not scheduled</value>
+  </data>
+  <data name="AsCurrentlyOpen" xml:space="preserve">
+    <value>As currently open</value>
+  </data>
+  <data name="Opened" xml:space="preserve">
+    <value>Opened</value>
+  </data>
+  <data name="Info_ExportOutdatedVersion" xml:space="preserve">
+    <value>The project '{0}' was exported by the newer version of Revizto.\nPlease update Revizto to be able to export to this project.</value>
+  </data>
+  <data name="Info_ExportNotEnoughRightsAnything" xml:space="preserve">
+    <value>You don't have enough rights to export anything to Revizto project '{0}'.</value>
+  </data>
+  <data name="CancellingExport" xml:space="preserve">
+    <value>Cancelling the export. This may take some time...</value>
+  </data>
+  <data name="SheetsInCategories" xml:space="preserve">
+    <value>There are sheets selected in different categories</value>
+  </data>
+  <data name="SaveAndExport" xml:space="preserve">
+    <value>Save and Export</value>
+  </data>
+  <data name="ExportWithoutSaving" xml:space="preserve">
+    <value>Export without saving</value>
+  </data>
+  <data name="Your_Revit_model_has_unsaved_changes" xml:space="preserve">
+    <value>Your Revit model has unsaved changes. Revit may reload the model during the export and all your unsaved changes may be lost.</value>
+  </data>
+  <data name="The_project_is_set_to_have_view_only_scenes_on_the_cloud" xml:space="preserve">
+    <value>The project is set to have view-only scenes on the cloud. Some of the source scenes can't be found on your computer. You can't export to this project unless you have all source files linked locally.</value>
+  </data>
+  <data name="Status_GetViewes" xml:space="preserve">
+    <value>Getting the list of 3D views</value>
+  </data>
+  <data name="Status_ProjectLocking" xml:space="preserve">
+    <value>Opening Revizto project. If this takes long, please make sure all other Revizto instances are closed.</value>
+  </data>
+  <data name="Positioning_Origin" xml:space="preserve">
+    <value>Origin to Origin</value>
+    <comment>Model positioning type</comment>
+  </data>
+  <data name="Positioning_ProjectBase" xml:space="preserve">
+    <value>Project Base Point to PBP</value>
+    <comment>Model positioning type</comment>
+  </data>
+  <data name="Positioning_Shared" xml:space="preserve">
+    <value>By Shared Coordinates</value>
+    <comment>Model positioning type</comment>
+  </data>
+  <data name="Positioning" xml:space="preserve">
+    <value>Positioning:</value>
+  </data>
+  <data name="Export_MergeSimilarSheets" xml:space="preserve">
+    <value>Merge similar sheets from different files</value>
+  </data>
+  <data name="UnavailableShaderLocation" xml:space="preserve">
+    <value>We weren't able to load the project "{0}" on the {1} from the following path:</value>
+  </data>
+  <data name="PathNotNetwork" xml:space="preserve">
+    <value>We weren't able to load the project "{0}". Directory "{1}" is not a network path.</value>
+  </data>
+  <data name="IpadLink_Info" xml:space="preserve">
+    <value>This app allows you to cache Shared Location projects on Apple iPad.</value>
+  </data>
+  <data name="IpadLink_ConnectCable" xml:space="preserve">
+    <value>Connect the iPad to this computer with a cable</value>
+  </data>
+  <data name="IpadLink_OpenRevizto" xml:space="preserve">
+    <value>Open Revizto app on the iPad</value>
+  </data>
+  <data name="IpadLink_OpenAnyShared" xml:space="preserve">
+    <value>Open a shared location project on the iPad and click on the Sync button</value>
+  </data>
+  <data name="IpadLink_DownloadAll" xml:space="preserve">
+    <value>Once the Sync button is not active, you can disconnect the cable.</value>
+  </data>
+  <data name="IpadLink_Title" xml:space="preserve">
+    <value>Revizto Shared Location iPad connector</value>
+  </data>
+  <data name="SpecifyDiffPath" xml:space="preserve">
+    <value>Specify different path</value>
+  </data>
+  <data name="IpadLink_nIpadConnected" xml:space="preserve">
+    <value>{0} iPad(s) connected</value>
+  </data>
+  <data name="IpadLink_niPadReady" xml:space="preserve">
+    <value>{0} iPad(s) ready</value>
+  </data>
+  <data name="IpadLink_ProjectLoaded" xml:space="preserve">
+    <value>Project "{0}" loaded on {1}</value>
+  </data>
+  <data name="AppleMobileDeviceService_not_run" xml:space="preserve">
+    <value>Please make sure iTunes service is running on your computer and re-launch the app.</value>
+  </data>
+  <data name="AppleMobileDeviceService_not_found" xml:space="preserve">
+    <value>This app requires iTunes to be installed on your PC. Please install iTunes and re-launch this app.</value>
+  </data>
+  <data name="MultithreadedExport" xml:space="preserve">
+    <value>Use parallel sheet export (beta)</value>
+  </data>
+  <data name="SheetsFromLinkedDocs" xml:space="preserve">
+    <value>Export sheets from linked files</value>
+  </data>
+  <data name="SheetSet" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="ReviztoModel" xml:space="preserve">
+    <value>Revizto Model</value>
+  </data>
+  <data name="ExportedModel" xml:space="preserve">
+    <value>Model to be exported</value>
+  </data>
+  <data name="ReviewModelMerge" xml:space="preserve">
+    <value>Please review how Revizto detects linkage of models being exported</value>
+  </data>
+  <data name="MergeModelsTabName" xml:space="preserve">
+    <value>Models linkage resolution</value>
+  </data>
+  <data name="InsufficientDiskSpace" xml:space="preserve">
+    <value>There is a chance that you will run out of free disk space during the export. This file requires at least {0} on {1} drive for export approximately. Please either free some space on {1} drive or move Revizto Working Folder to another disk in program preferences.</value>
+  </data>
+  <data name="EditorOutOfMemory" xml:space="preserve">
+    <value>There was not enough RAM to complete the post-processing step of the export process. You can close other programs and try again, or you can choose to run optimized version with slightly decreased image quality.</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="RetryOptimized" xml:space="preserve">
+    <value>Retry optimized</value>
+  </data>
+  <data name="NoLinkToReviztoModel" xml:space="preserve">
+    <value>The model is currently not linked to a Revizto project</value>
+  </data>
+  <data name="Export_UpdateExisting" xml:space="preserve">
+    <value>Update existing model</value>
+  </data>
+  <data name="Import3D" xml:space="preserve">
+    <value>Import 3D model</value>
+  </data>
+  <data name="ImportOptions" xml:space="preserve">
+    <value>Import Options</value>
+  </data>
+  <data name="ImportToRevizto" xml:space="preserve">
+    <value>Import to Revizto</value>
+  </data>
+  <data name="ImportTo" xml:space="preserve">
+    <value>Import to</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="CustomOriginPosition" xml:space="preserve">
+    <value>Custom origin position</value>
+  </data>
+  <data name="Centimeters" xml:space="preserve">
+    <value>Centimeters</value>
+  </data>
+  <data name="Feet" xml:space="preserve">
+    <value>Feet</value>
+  </data>
+  <data name="Inches" xml:space="preserve">
+    <value>Inches</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="Meters" xml:space="preserve">
+    <value>Meters</value>
+  </data>
+  <data name="Microinches" xml:space="preserve">
+    <value>Microinches</value>
+  </data>
+  <data name="Micrometers" xml:space="preserve">
+    <value>Micrometers</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="Millimeters" xml:space="preserve">
+    <value>Millimeters</value>
+  </data>
+  <data name="Mils" xml:space="preserve">
+    <value>Mils</value>
+  </data>
+  <data name="Yards" xml:space="preserve">
+    <value>Yards</value>
+  </data>
+  <data name="ReviztoIsometric" xml:space="preserve">
+    <value>Revizto Isometric</value>
+    <comment>View type</comment>
+  </data>
+  <data name="Warning_UntitledProject" xml:space="preserve">
+    <value>Revizto can't work with untitled {0} projects. Please save your {0} project before using Revizto.</value>
+  </data>
+  <data name="FreeDiskSpace" xml:space="preserve">
+    <value>Please free some space on {0} drive or move Revizto Working Folder to another disk in program preferences.</value>
+  </data>
+  <data name="PointCloud" xml:space="preserve">
+    <value>Point cloud</value>
+  </data>
+  <data name="ExportWithoutPointCloud" xml:space="preserve">
+    <value>Export without point cloud</value>
+  </data>
+  <data name="Warning_PointCloudRecapMissing" xml:space="preserve">
+    <value>Point cloud won't be exported because ReCap library is not currently installed. If you wish to export point cloud, you should reinstall Revizto and make sure that "Point Cloud Importers -&gt; ReCap" option is selected during reinstallation.</value>
+  </data>
+  <data name="AutoCloseDialogs" xml:space="preserve">
+    <value>Extended suppression of model errors</value>
+  </data>
+  <data name="UseDwf" xml:space="preserve">
+    <value>Use DWF instead of DWFx</value>
+  </data>
+  <data name="ExportSheetCoordinatesOnly" xml:space="preserve">
+    <value>Export sheet coordinates only</value>
+  </data>
+  <data name="AlternativeTransformAlgorithm" xml:space="preserve">
+    <value>Alternative transform algorithm</value>
+  </data>
+  <data name="PointCloudCategory" xml:space="preserve">
+    <value>Point Clouds</value>
+  </data>
+  <data name="SchedulerCreateTaskError" xml:space="preserve">
+    <value>Revizto can't create a scheduled task because it doesn't know the path of {0}. Please try to re-install Revizto.</value>
+  </data>
+  <data name="PathToTheCadNotFound" xml:space="preserve">
+    <value>Failed to get the path of {0}. Please run {0} to initialize Revizto plugin. If it doesn't helps, unschedule and re-schedule this task</value>
+  </data>
+  <data name="NavisworksLicenseType" xml:space="preserve">
+    <value>Navisworks license type</value>
+  </data>
+  <data name="PointCloudDistance" xml:space="preserve">
+    <value>Point cloud distance</value>
+  </data>
+  <data name="NwTypeAttribScene" xml:space="preserve">
+    <value>Scene</value>
+  </data>
+  <data name="NwTypeAttribLink" xml:space="preserve">
+    <value>Link</value>
+    <comment>Noun</comment>
+  </data>
+  <data name="NwItemCategoryName" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="NwNameAttribName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ExportToRevizto5" xml:space="preserve">
+    <value>Export to Revizto 5</value>
+  </data>
+  <data name="CommittingScenes" xml:space="preserve">
+    <value>Committing scenes...</value>
+  </data>
+  <data name="NwTypeAttribRooms" xml:space="preserve">
+    <value>Rooms</value>
+  </data>
+  <data name="NwTypeAttribSpaces" xml:space="preserve">
+    <value>Spaces</value>
+  </data>
+  <data name="SelectSheets" xml:space="preserve">
+    <value>Select sheets...</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="ExportTextures" xml:space="preserve">
+    <value>Export textures</value>
+  </data>
+  <data name="Phases" xml:space="preserve">
+    <value>Phases</value>
+  </data>
+  <data name="SelectModels" xml:space="preserve">
+    <value>Select models...</value>
+  </data>
+  <data name="SelectView" xml:space="preserve">
+    <value>Select view</value>
+  </data>
+  <data name="Positioning_SurveyPoint" xml:space="preserve">
+    <value>Survey Point</value>
+  </data>
+  <data name="Positioning_SiteLocation" xml:space="preserve">
+    <value>Site Location</value>
+  </data>
+  <data name="Positioning_BasePoint" xml:space="preserve">
+    <value>Base Point</value>
+  </data>
+  <data name="Positioning_UserOrigin" xml:space="preserve">
+    <value>User Origin</value>
+  </data>
+  <data name="OriginPosition" xml:space="preserve">
+    <value>Origin position</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="Quality" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+  <data name="LcRevitData_Type" xml:space="preserve">
+    <value>Revit Type</value>
+  </data>
+  <data name="NwLayerAttribName" xml:space="preserve">
+    <value>Layer</value>
+  </data>
+  <data name="NwSourceFileAttribName" xml:space="preserve">
+    <value>Source File</value>
+  </data>
+  <data name="NwSourceFileNameAttribName" xml:space="preserve">
+    <value>Source File Name</value>
+  </data>
+  <data name="NwTypeAttribName" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ReviztoAuthoringToolAttribName" xml:space="preserve">
+    <value>Authoring Tool</value>
+  </data>
+  <data name="ReviztoExportAuthorAttribName" xml:space="preserve">
+    <value>Last Exported By</value>
+  </data>
+  <data name="ReviztoExportTimeStampAttribName" xml:space="preserve">
+    <value>Last Export</value>
+    <comment>Date and time</comment>
+  </data>
+  <data name="LinkedScene" xml:space="preserve">
+    <value>Linked scene</value>
+  </data>
+  <data name="Coordinates" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="AlignWithExistingModel" xml:space="preserve">
+    <value>Align with existing model</value>
+  </data>
+  <data name="UseThisModelsCoordinates" xml:space="preserve">
+    <value>Use this model's coordinates</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="PleaseSpecifyModelPositioning" xml:space="preserve">
+    <value>Please specify how the model should be positioned relative to Revizto project</value>
+  </data>
+  <data name="ThisModelsCoordinates" xml:space="preserve">
+    <value>This model's coordinates</value>
+  </data>
+  <data name="SetModelPositioning" xml:space="preserve">
+    <value>Set model positioning</value>
+  </data>
+  <data name="AlignWithExistingModelInReviztoProject" xml:space="preserve">
+    <value>Align with existing model in Revizto project</value>
+  </data>
+  <data name="ModelExportOptions" xml:space="preserve">
+    <value>Model export options</value>
+  </data>
+  <data name="ModelsSelectionAllVisible" xml:space="preserve">
+    <value>All Visible ({0} models)</value>
+  </data>
+  <data name="SceneIsTooFar" xml:space="preserve">
+    <value>Current model coordinates are not aligned with existing Revizto project. If you proceed with the export, this model will be too far away from the others {0}. {2}You can etiher go back and type in the offset values ({1} ) for the coordinates / select different coordinate system, or set this up later in the Revizto app through the Object Tree.</value>
+  </data>
+  <data name="Proceed" xml:space="preserve">
+    <value>Proceed</value>
+  </data>
+  <data name="SelectedModelsCountFormat" xml:space="preserve">
+    <value>Exporting {0} of {1} models</value>
+  </data>
+  <data name="Authenticate" xml:space="preserve">
+    <value>Authenticate</value>
+  </data>
+  <data name="WarningWaitBrowserSSO" xml:space="preserve">
+    <value>A browser window should have opened right now. Please complete your login in your browser and then get back to the app.</value>
+  </data>
+  <data name="ErrorWaitBrowserSSO" xml:space="preserve">
+    <value>Browser login is not completed yet.</value>
+  </data>
+  <data name="IHaveSignedIn" xml:space="preserve">
+    <value>I have signed in</value>
+  </data>
+  <data name="InfoProjectsNeedAdditionalAuth" xml:space="preserve">
+    <value>Some of your projects might not be displayed here. To view all of your projects, please pass additional authentication.</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="SignInWithSSO" xml:space="preserve">
+    <value>Sign in with SSO</value>
+  </data>
+  <data name="TwoFactorAuthentication" xml:space="preserve">
+    <value>Two-Factor Authentication</value>
+  </data>
+  <data name="EnterCodeFromGAuth" xml:space="preserve">
+    <value>Please enter the security code from the Google Authenticator app.</value>
+  </data>
+  <data name="CodeIsntRight" xml:space="preserve">
+    <value>This code isn't right. Please try again.</value>
+  </data>
+  <data name="IDontAccesToGAuth" xml:space="preserve">
+    <value>I don't have access to the Google Authenticator app.</value>
+  </data>
+  <data name="SentEmailCode" xml:space="preserve">
+    <value>We have just sent you an email with the security code. Please enter it below.</value>
+  </data>
+  <data name="WrongCodeTryAgain" xml:space="preserve">
+    <value>Wrong code: That code didn't work. Please check the code and try again.</value>
+  </data>
+  <data name="CantEmailPleaseContact" xml:space="preserve">
+    <value>In case you can't receive the email, please contact our</value>
+  </data>
+  <data name="TechnicalSupport" xml:space="preserve">
+    <value>technical support</value>
+  </data>
+  <data name="SelectRegionOfLicense" xml:space="preserve">
+    <value>Please select the region of your Revizto license. It is listed in your license invitation or project invitation email.</value>
+  </data>
+  <data name="BrowserOpenPleaseLogin" xml:space="preserve">
+    <value>A browser window should have openned right now. Please complete your login browser and then get back to the app.</value>
+  </data>
+  <data name="LinkrdProjectNeedAuth" xml:space="preserve">
+    <value>Linked Revizto project is located in the license that requires additional authentication. You will be able to continue working with that project after you complete the authentication.</value>
+  </data>
+  <data name="SelectTargetModels" xml:space="preserve">
+    <value>Select Target Models</value>
+  </data>
+  <data name="SelectAppendOrOverwriteMultiple" xml:space="preserve">
+    <value>The project already contains several models. Please review if Revizto detected the model mapping correctly, to avoid model duplicates</value>
+  </data>
+  <data name="ImportedFile" xml:space="preserve">
+    <value>Imported File</value>
+  </data>
+  <data name="CorrespondingReviztoModel" xml:space="preserve">
+    <value>Corresponding Revizto Model</value>
+  </data>
+  <data name="ModelPositioningDescription" xml:space="preserve">
+    <value>Please specify the positioning to be used upon export. This will specify which coordinates are used when combining with other models within the same Revizto project or when doing switchback to other authoring tools.
+
+You will be able to change the positioning of this model later within Revizto app's Object Tree dialog, by selecting the current model and applying Scene Transform context menu option.</value>
+  </data>
+  <data name="ModelPositioningImportDescription" xml:space="preserve">
+    <value>Please specify the positioning to be used upon import. This will specify which coordinates are used when combining with other models within the same Revizto project or when doing switchback to other authoring tools.
+
+You will be able to change the positioning of this model later within Revizto app's Object Tree dialog, by selecting the current model and applying Scene Transform context menu option.</value>
+  </data>
+  <data name="HighResolutionTextures" xml:space="preserve">
+    <value>High resolution textures</value>
+  </data>
+  <data name="NoTextures" xml:space="preserve">
+    <value>No textures</value>
+  </data>
+  <data name="StandardTextures" xml:space="preserve">
+    <value>Standard textures</value>
+  </data>
+  <data name="Lines" xml:space="preserve">
+    <value>Lines</value>
+  </data>
+  <data name="UserProperties" xml:space="preserve">
+    <value>User defined properties</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="SkipPendingTasks" xml:space="preserve">
+    <value>Skip Pending Tasks</value>
+  </data>
+  <data name="Status_GetLinks" xml:space="preserve">
+    <value>Getting the list of exported links</value>
+  </data>
+  <data name="BestPerformance" xml:space="preserve">
+    <value>Best Performance</value>
+  </data>
+  <data name="BestQuality" xml:space="preserve">
+    <value>Best Quality</value>
+  </data>
+  <data name="GoodQuality" xml:space="preserve">
+    <value>Good Quality</value>
+  </data>
+  <data name="HighPerformance" xml:space="preserve">
+    <value>High Performance</value>
+  </data>
+  <data name="HighQuality" xml:space="preserve">
+    <value>High Quality</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Info_NotEnoughRightsSyncClashes" xml:space="preserve">
+    <value>You don't have enough rights to sync clashes with the project '{0}'. You must have "Sync clashes" permission for this project. Please contact this project's administrator if you need to perform the clash sync.</value>
+  </data>
+  <data name="Section_box_size" xml:space="preserve">
+    <value>Section box size</value>
+  </data>
+  <data name="StampTab" xml:space="preserve">
+    <value>Stamp</value>
+  </data>
+  <data name="Match_groups_by" xml:space="preserve">
+    <value>Match groups by</value>
+  </data>
+  <data name="Update_screenshots" xml:space="preserve">
+    <value>Update screenshots:</value>
+  </data>
+  <data name="Match_tests_by" xml:space="preserve">
+    <value>Match tests by</value>
+  </data>
+  <data name="Won_t_be_synced_as_per" xml:space="preserve">
+    <value>Won't be synced as per the status mapping settings.</value>
+  </data>
+  <data name="Section_box_height_defined_by" xml:space="preserve">
+    <value>Section box height defined by neighboring levels</value>
+  </data>
+  <data name="Status_mapping_settings" xml:space="preserve">
+    <value>Status mapping settings</value>
+  </data>
+  <data name="Default_stamp_assignee" xml:space="preserve">
+    <value>Default stamp/assignee</value>
+  </data>
+  <data name="GUID_only" xml:space="preserve">
+    <value>GUID only</value>
+  </data>
+  <data name="If_clash_changed" xml:space="preserve">
+    <value>If clash changed</value>
+  </data>
+  <data name="All_except_manual" xml:space="preserve">
+    <value>All except manual</value>
+  </data>
+  <data name="GUID_or_name_iConstruct_Clash" xml:space="preserve">
+    <value>GUID or name (iConstruct Clash)</value>
+  </data>
+  <data name="Subclashes_within_same_test" xml:space="preserve">
+    <value>subclashes within same test</value>
+  </data>
+  <data name="Inherited" xml:space="preserve">
+    <value>&lt;Inherited&gt;</value>
+  </data>
+  <data name="Not_set" xml:space="preserve">
+    <value>&lt;Not set&gt;</value>
+  </data>
+  <data name="No_Category" xml:space="preserve">
+    <value>No Category</value>
+  </data>
+  <data name="Not_set_" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="Inherited_" xml:space="preserve">
+    <value>[Inherited]</value>
+  </data>
+  <data name="All_Tests" xml:space="preserve">
+    <value>All Tests</value>
+  </data>
+  <data name="Areas" xml:space="preserve">
+    <value>Areas</value>
+  </data>
+  <data name="ExportSheetsTo" xml:space="preserve">
+    <value>Export sheets via</value>
+  </data>
+  <data name="ActiveDocumentChanged" xml:space="preserve">
+    <value>The active document was changed or closed. Please re-activate '{0}' before export</value>
+  </data>
+  <data name="PrinterWarning" xml:space="preserve">
+    <value>Selected PDF driver is not found on your system. You have to install it in order to use it for sheet export. Until then, DWFx will be used as replacement method.</value>
+  </data>
+  <data name="MethodPrintHelpTitle" xml:space="preserve">
+    <value>Sheet export methods</value>
+  </data>
+  <data name="MethodsPrintHelp1" xml:space="preserve">
+    <value>Revizto allows you to export vector sheets via different formats. Each format differs in size, speed and quality.</value>
+  </data>
+  <data name="MethodsPrintHelp2" xml:space="preserve">
+    <value>The default method is DWFx. It is using Revit's built-in DWFx exporter. While this method is generally one of the slowest, it doesn't require any additional software to be installed.</value>
+  </data>
+  <data name="MethodsPrintHelp3" xml:space="preserve">
+    <value>Revit 2022 also has the built-in PDF exporter. This should be the fastest method, but since it is new it is not a default option for now.</value>
+  </data>
+  <data name="MethodsPrintHelp4" xml:space="preserve">
+    <value>The fallback method for DWFx is DWF. It is also using a built-in exporter, but works better with Chinese texts. In other cases, DWFx is preferred over DWF.</value>
+  </data>
+  <data name="MethodsPrintHelp5" xml:space="preserve">
+    <value>All non-Revit PDF methods require additional software installed on your computer. PDF export is generally faster than DWFx/DWF. We recommend you to try this method in case you experience long times for sheet export.</value>
+  </data>
+  <data name="ImportInProgress" xml:space="preserve">
+    <value>Import to Revizto in progress</value>
+  </data>
+  <data name="CancellingImport" xml:space="preserve">
+    <value>Cancelling the import. This may take some time...</value>
+  </data>
+  <data name="WorksetsToLoadText" xml:space="preserve">
+    <value>Configure the worksets that should be loaded when the scheduled export is runing.</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="WI_AllWorksets" xml:space="preserve">
+    <value>All worksets</value>
+  </data>
+  <data name="WI_LoadExcept" xml:space="preserve">
+    <value>Load all except selected worksets</value>
+  </data>
+  <data name="WI_LoadSelected" xml:space="preserve">
+    <value>Load selected worksets only</value>
+  </data>
+  <data name="WI_Previously" xml:space="preserve">
+    <value>Previously loaded worksets (default)</value>
+  </data>
+  <data name="CheckoutStatus" xml:space="preserve">
+    <value>Checkout Status</value>
+  </data>
+  <data name="Creator" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="ElementWorksharingInfo" xml:space="preserve">
+    <value>Element Worksharing Info</value>
+  </data>
+  <data name="LastChangedBy" xml:space="preserve">
+    <value>Last Changed By</value>
+  </data>
+  <data name="ModelUpdatesStatus" xml:space="preserve">
+    <value>Model Updates Status</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Additionalfiles" xml:space="preserve">
+    <value>Additional files</value>
+  </data>
+  <data name="TestName" xml:space="preserve">
+    <value>Test name</value>
+  </data>
+  <data name="ClashDetectionStatus" xml:space="preserve">
+    <value>Clash detection status</value>
+  </data>
+  <data name="IssueTrackerSyncStatus" xml:space="preserve">
+    <value>Issue Tracker sync status</value>
+  </data>
+  <data name="LockedBy" xml:space="preserve">
+    <value>Locked by</value>
+  </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="Clashing" xml:space="preserve">
+    <value>Clashing</value>
+  </data>
+  <data name="StampDefault" xml:space="preserve">
+    <value>Stamp default</value>
+  </data>
+  <data name="AssigneeDefault" xml:space="preserve">
+    <value>Assignee default</value>
+  </data>
+  <data name="PriorityDefault" xml:space="preserve">
+    <value>Priority default</value>
+  </data>
+  <data name="DeadlineDefault" xml:space="preserve">
+    <value>Deadline default</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="LastClashRunDate" xml:space="preserve">
+    <value>Last clash run date</value>
+  </data>
+  <data name="LastClashRunBy" xml:space="preserve">
+    <value>Last clash run by</value>
+  </data>
+  <data name="LastIssueSyncDate" xml:space="preserve">
+    <value>Last issue sync date</value>
+  </data>
+  <data name="LastIssueSyncBy" xml:space="preserve">
+    <value>Last issue sync by</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Group name</value>
+  </data>
+  <data name="ClashCount" xml:space="preserve">
+    <value>Clash count</value>
+  </data>
+  <data name="Clashes_New" xml:space="preserve">
+    <value>New</value>
+    <comment>"New" status of single clashes</comment>
+  </data>
+  <data name="ClashGroup_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClashGroup_Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="ClashGroup_Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ClashGroup_Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="ClashGroup_Room" xml:space="preserve">
+    <value>Room</value>
+  </data>
+  <data name="ClashGroup_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="ClashGroup_Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="ClashGroup_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="ClashGroup_Stamp" xml:space="preserve">
+    <value>Stamp</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>Approved by</value>
+  </data>
+  <data name="ApprovedAt" xml:space="preserve">
+    <value>Approved at</value>
+  </data>
+  <data name="FoundAt" xml:space="preserve">
+    <value>Found at</value>
+  </data>
+  <data name="Assignee" xml:space="preserve">
+    <value>Assignee</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="ClashGroup_NewTitle" xml:space="preserve">
+    <value>New</value>
+    <comment>Title of the Excel column</comment>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Up to date</value>
+    <comment>Same as text in Clash Automation panel</comment>
+  </data>
+  <data name="NotUpToDate" xml:space="preserve">
+    <value>Not up to date</value>
+  </data>
+  <data name="ParentGroupName" xml:space="preserve">
+    <value>Parent group name</value>
+  </data>
+  <data name="ParentGroupNumber" xml:space="preserve">
+    <value>Parent group #</value>
+  </data>
+  <data name="ParentGroupStatus" xml:space="preserve">
+    <value>Parent group status</value>
+  </data>
+  <data name="ClashName" xml:space="preserve">
+    <value>Clash name</value>
+  </data>
+  <data name="ClashingStatus" xml:space="preserve">
+    <value>Clashing status</value>
+  </data>
+  <data name="NumberTitle" xml:space="preserve">
+    <value>#</value>
+    <comment>Title of Excel column. Should correspond to ParentGroupNumber</comment>
+  </data>
+  <data name="Clashes_NewTitle" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Clashes_Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Clashes_Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="Clashes_Room" xml:space="preserve">
+    <value>Room</value>
+  </data>
+  <data name="Clashes_Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Clashes_Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="Clashes_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="AuthoringToolIds" xml:space="preserve">
+    <value>Authoring tool IDs</value>
+  </data>
+  <data name="ReviztoIds" xml:space="preserve">
+    <value>Revizto IDs</value>
+  </data>
+  <data name="ClashGroup_NotReviewed" xml:space="preserve">
+    <value>Not Reviewed</value>
+  </data>
+  <data name="ClashGroup_Reviewed" xml:space="preserve">
+    <value>Reviewed</value>
+  </data>
+  <data name="ClashGroup_Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ClashGroup_IssueOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ClashGroup_IssueInProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="ClashGroup_IssueSolved" xml:space="preserve">
+    <value>Solved</value>
+  </data>
+  <data name="ClashGroup_IssueClosed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="ClashTests" xml:space="preserve">
+    <value>Clash Tests</value>
+    <comment>Name of Excel Worksheet</comment>
+  </data>
+  <data name="ClashGroups" xml:space="preserve">
+    <value>Groups</value>
+    <comment>Name of Excel Worksheet</comment>
+  </data>
+  <data name="ClashGroup_New" xml:space="preserve">
+    <value>New</value>
+    <comment>"New" status of clash groups</comment>
+  </data>
+  <data name="AuthoringToolClosedOnTimeout" xml:space="preserve">
+    <value>Authoring tool was closed due to loading timeout</value>
+  </data>
+  <data name="AuthoringToolClosedDuringSceneOpening" xml:space="preserve">
+    <value>Authoring tool was closed during scene opening</value>
+  </data>
+  <data name="AuthoringToolFailedToLaunch" xml:space="preserve">
+    <value>Authoring tool failed to launch</value>
+  </data>
+  <data name="AuthoringToolReturnedIncorrectResponse" xml:space="preserve">
+    <value>Authoring tool returned incorrect response</value>
+  </data>
+  <data name="AuthoringCadNotSupportedByExportHandler" xml:space="preserve">
+    <value>Unsupported scheduled task configuration</value>
+  </data>
+  <data name="ScheduledTaskHasBeenCancelled" xml:space="preserve">
+    <value>Scheduled task has been cancelled</value>
+  </data>
+  <data name="CannotConnectToAuthoringTool" xml:space="preserve">
+    <value>Cannot connect to authoring tool</value>
+  </data>
+  <data name="AuthoringToolClosedWithoutResponse" xml:space="preserve">
+    <value>Authoring tool was closed without sending response on export end</value>
+  </data>
+  <data name="BalancedTriangulation" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="CurveTriangulation" xml:space="preserve">
+    <value>Curve triangulation</value>
+  </data>
+  <data name="HighPerformanceTriangulation" xml:space="preserve">
+    <value>High performance</value>
+  </data>
+  <data name="HighqualityTriangulation" xml:space="preserve">
+    <value>High quality</value>
+  </data>
+  <data name="ExportVIAIFC" xml:space="preserve">
+    <value>Export Model via IFC</value>
+  </data>
+  <data name="ExportModelType" xml:space="preserve">
+    <value>Export Type</value>
+  </data>
+  <data name="Direct_Export" xml:space="preserve">
+    <value>Direct Export</value>
+  </data>
+  <data name="Export_via_IFC" xml:space="preserve">
+    <value>Export via IFC 2x3</value>
+  </data>
+  <data name="Export_via_IFC4" xml:space="preserve">
+    <value>Export via IFC4</value>
+  </data>
+  <data name="ElementId" xml:space="preserve">
+    <value>Element ID</value>
+  </data>
+  <data name="LcOaNat64AttributeValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="SettingsForExportToIfc" xml:space="preserve">
+    <value>Settings for export to IFC</value>
+  </data>
+  <data name="NwOption_ReviztoIdForIFC" xml:space="preserve">
+    <value>ReviztoId for IFC models based solely on IFCGuid</value>
+  </data>
+  <data name="NwOption_ReviztoIdForIFC_Tooltip" xml:space="preserve">
+    <value>Generation of ReviztoId property for objects within IFC models will based solely on object's IFCGuid property value, the same way as Revizto direct IFC import does.
+This option is recommended to be enabled by default.
+For compatibility reasons should be disabled for models created in Revizto before version 5.10.</value>
+  </data>
+  <data name="AdvancedExportOptionsTitle" xml:space="preserve">
+    <value>Advanced export options</value>
+  </data>
+  <data name="AdvancedOptionsButton" xml:space="preserve">
+    <value>Advanced Options...</value>
+  </data>
+  <data name="MatchSheetsBy" xml:space="preserve">
+    <value>Match sheets by:</value>
+  </data>
+  <data name="SheetMatchingTypeCombo" xml:space="preserve">
+    <value>Combination of parameters</value>
+  </data>
+  <data name="SheetMatchingTypeRevitGuid_RevitFileName" xml:space="preserve">
+    <value>Revit GUID + Revit filename</value>
+  </data>
+  <data name="SheetMatchingTypeSheetNumber" xml:space="preserve">
+    <value>Sheet number</value>
+  </data>
+  <data name="SheetMatchingTypeSheetNumber_RevitFileName" xml:space="preserve">
+    <value>Sheet number + Revit filename</value>
+  </data>
+  <data name="SheetMatchingTypeSheetNumber_RevitGuid" xml:space="preserve">
+    <value>Sheet number + Revit GUID</value>
+  </data>
+  <data name="SheetMatchingTypeSheetNumber_SheetName" xml:space="preserve">
+    <value>Sheet number + sheet name</value>
+  </data>
+  <data name="RvtWriteSubmeshesAsNodes" xml:space="preserve">
+    <value>Export parts of objects as separate geometries</value>
+  </data>
+  <data name="RvtWriteSubmeshesAsNodes_Tooltip" xml:space="preserve">
+    <value>Export element subparts as separate geometry nodes in the object tree</value>
+  </data>
+  <data name="SchedulerErrorProjectIsArchived" xml:space="preserve">
+    <value>Cannot export to an archived Revizto project.</value>
+  </data>
+  <data name="SchedulerErrorProjectIsSuspended" xml:space="preserve">
+    <value>Cannot export to the project because the project license is suspended.</value>
+  </data>
+  <data name="SchedulerErrorSceneRemoved" xml:space="preserve">
+    <value>The destination scene is not found in the Revizto project.</value>
+  </data>
+  <data name="SchedulerErrorMissingParams" xml:space="preserve">
+    <value>Please configure the export parameters in the Revizto plug-in.</value>
+  </data>
+  <data name="SchedulerErrorProjectIsDeleted" xml:space="preserve">
+    <value>Cannot export to the project because it is no longer available in the cloud.</value>
+  </data>
+  <data name="SettingsForExportToIfcSubheader" xml:space="preserve">
+    <value>Specify the settings for exporting Revizto models to IFC files.</value>
+  </data>
+  <data name="IfcOptionFederatedExport" xml:space="preserve">
+    <value>Federated export</value>
+  </data>
+  <data name="IfcOptionFederatedExportTooltip" xml:space="preserve">
+    <value>Export all models to a single IFC file. If you clear the checkbox, each model will be exported to a separate IFC file.
+
+This option is available only if you export all models in a single thread (when the "Run in parallel threads" checkbox is cleared).</value>
+  </data>
+  <data name="IfcOptionParallel" xml:space="preserve">
+    <value>Run in parallel threads</value>
+  </data>
+  <data name="IfcOptionParallelTooltip" xml:space="preserve">
+    <value>Export each model in a separate thread. This speeds up the export but requires more RAM.
+
+This option is available only when you export each model to a separate IFC file (when the "Federated export" checkbox is cleared).</value>
+  </data>
+  <data name="IfcOptionExportGuids" xml:space="preserve">
+    <value>Export source GUIDs</value>
+  </data>
+  <data name="IfcOptionExportGuidsTooltip" xml:space="preserve">
+    <value>Export GUIDs of Revizto objects to IFC GUIDs. For each object, Revizto will look for its GUID in the following properties:
+    1. Revizto / Ifc Guid
+    2. Item / GUID
+    3. IFC / GLOBALID
+
+The first GUID that is found will be exported to an IFC GUID.
+
+If you clear the checkbox, Revizto will generate random IFC GUIDs.</value>
+  </data>
+  <data name="IfcOptionHierarchy" xml:space="preserve">
+    <value>Export entire model hierarchy</value>
+  </data>
+  <data name="IfcOptionHierarchyTooltip" xml:space="preserve">
+    <value>Export the entire model hierarchy.
+
+If you clear the checkbox, only geometries and composite objects will be exported. This is how export to IFC was performed in Revizto versions 5.9 and earlier.</value>
+  </data>
+  <data name="IfcOptionRefElevation" xml:space="preserve">
+    <value>Export height to RefElevation</value>
+  </data>
+  <data name="IfcOptionRefElevationTooltip" xml:space="preserve">
+    <value>Export the height of Revizto objects to RefElevation property of IfcSite objects. Use this option if you want to view the resulting files in an authoring tool that requires filling RefElevation.
+
+If you clear the checkbox, the RefElevation property will be blank.</value>
+  </data>
+  <data name="IfcOptionLocalPlacement" xml:space="preserve">
+    <value>Export height to LocalPlacement</value>
+  </data>
+  <data name="IfcOptionLocalPlacementTooltip" xml:space="preserve">
+    <value>Export the height of Revizto objects to the Z-value of the LocalPlacement property of IfcSite objects.
+
+If you clear the checkbox, the Z-value of the LocalPlacement property will be blank. Use this option if you want to view the resulting files in Autodesk Revit and you selected the "Export height to RefElevation" checkbox. </value>
+  </data>
+  <data name="IfcOptionSwapLocalPlacements" xml:space="preserve">
+    <value>Swap local placements of IfcSite and IfcBuilding</value>
+  </data>
+  <data name="IfcOptionSwapLocalPlacementsTooltip" xml:space="preserve">
+    <value>Swap local placement coordinates of IfcSite and IfcBuilding. This is required for correct import of the resulting IFC files to Revit 2022 or earlier.</value>
+  </data>
+  <data name="IfcOptionAssignTypes" xml:space="preserve">
+    <value>Assign object types</value>
+  </data>
+  <data name="IfcOptionAssignTypesTooltip" xml:space="preserve">
+    <value>If you clear the checkbox, all objects will have the default types: IfcBuildingElementProxy for leaf objects and IfcBuildingElementPart for branch objects.
+
+If you clear the checkbox, all objects will have the default types: IfcBuildingElementProxy for leaf objects and IfcBuildingElementPart for branch objects.</value>
+  </data>
+  <data name="eu-south-1" xml:space="preserve">
+    <value>Milan</value>
+  </data>
+  <data name="eu-west-2" xml:space="preserve">
+    <value>Premium Europe (London)</value>
+  </data>
+  <data name="eu-west-3" xml:space="preserve">
+    <value>Europe (Paris)</value>
+  </data>
+  <data name="OptionForceExport" xml:space="preserve">
+    <value>Force Export</value>
+  </data>
+  <data name="ConsoleCommandUsageDescription" xml:space="preserve">
+    <value>Print usage information</value>
+  </data>
+  <data name="ConsoleCommandRevisionsDescription" xml:space="preserve">
+    <value>Retrieve and show all revisions changes in project</value>
+  </data>
+  <data name="ConsoleCommandProjectsDescription" xml:space="preserve">
+    <value>Retrieve and show all revizto projects</value>
+  </data>
+  <data name="ConsoleCommandLocalToCloudDescription" xml:space="preserve">
+    <value>Sync local projects into cloud storage</value>
+  </data>
+  <data name="ConsoleCommandIssuesDescription" xml:space="preserve">
+    <value>Export project issues into file</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesDescription" xml:space="preserve">
+    <value>Import user defined properties from binary files into project</value>
+  </data>
+  <data name="ConsoleCommandExportUserPropertiesDescription" xml:space="preserve">
+    <value>Export user defined properties from project into binary files</value>
+  </data>
+  <data name="ConsoleCommandUsageHelpTitle" xml:space="preserve">
+    <value>Usage: command [--log] [--help] [...command dependent parameters]</value>
+  </data>
+  <data name="ConsoleCommandUsageHelpAccessibleCommands" xml:space="preserve">
+    <value>Accessible commands:</value>
+  </data>
+  <data name="ConsoleCommandUsageAboutHelpFlag" xml:space="preserve">
+    <value>Flag --help as command parameter shows detailed information about commands.</value>
+  </data>
+  <data name="ConsoleCommandProjectsNoKeyDescription" xml:space="preserve">
+    <value>you don't need to provide any additional parameters</value>
+  </data>
+  <data name="ConsoleCommandProjectsMessageNotFound" xml:space="preserve">
+    <value>Projects not found</value>
+  </data>
+  <data name="ConsoleCommandProjectsTableHeadFolder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="ConsoleCommandProjectsTableHeadTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ConsoleCommandIssuesOutFileKeyDescription" xml:space="preserve">
+    <value>specify output file path</value>
+  </data>
+  <data name="ConsoleCommandIssuesMessageExportError" xml:space="preserve">
+    <value>Export error: {0}</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesImportKeyDescription" xml:space="preserve">
+    <value>specify import data array (for instance: link_guid_1 file_1 link_guid_2 file_2 ... link_guid_N file_N ...)</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesReplaceWithImportedKeyDescription" xml:space="preserve">
+    <value>provide if you need replace existing value with new ones (optional flag)</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectOpenError" xml:space="preserve">
+    <value>Unable to open project</value>
+  </data>
+  <data name="ConsoleCommandsMessageOpenPropertiesError" xml:space="preserve">
+    <value>Unable to open user properties data: {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageOpenDbConnectionError" xml:space="preserve">
+    <value>Unable to open database connection: {0}</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesMessageSuccess" xml:space="preserve">
+    <value>File {0} were successfully imported.</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesMessageFail" xml:space="preserve">
+    <value>Problems occurs on data import from file {0}: {1}.</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesMissed" xml:space="preserve">
+    <value>Missed models/links in project number: {0}</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesNotImported" xml:space="preserve">
+    <value>Not imported properties number: {0}</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesImported" xml:space="preserve">
+    <value>Imported properties number: {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectNotFoundError" xml:space="preserve">
+    <value>Project {0} was not found. Please, check if name is correct.</value>
+  </data>
+  <data name="ConsoleCommandsUsageCommonTitle" xml:space="preserve">
+    <value>Simple use of {0}:</value>
+  </data>
+  <data name="ConsoleCommandsCommonHelpKeyDescription" xml:space="preserve">
+    <value>print help</value>
+  </data>
+  <data name="ConsoleCommandsCommonProjectKeyDescription" xml:space="preserve">
+    <value>specify project ID, project folder or full path to it</value>
+  </data>
+  <data name="ConsoleCommandExportUserPropertiesExportKeyDescription" xml:space="preserve">
+    <value>specify export data array (for instance: link_guid_1 file_1 link_guid_2 file_2 ... link_guid_N file_N ...)</value>
+  </data>
+  <data name="ConsoleCommandUserPropertiesRootDirectoryKeyDescription" xml:space="preserve">
+    <value>specify common common root directory path for all files command exporting properties in (optional parameter)</value>
+  </data>
+  <data name="ConsoleCommandExportUserPropertiesMessageSuccess" xml:space="preserve">
+    <value>Document with UUID {0} is successfully exported</value>
+  </data>
+  <data name="ConsoleCommandExportUserPropertiesMessageFail" xml:space="preserve">
+    <value>Document with UUID {0} is not exported: {1}</value>
+  </data>
+  <data name="ConsoleCommandLocalToCloudMessageCopy" xml:space="preserve">
+    <value>Copy {0} to {1}</value>
+  </data>
+  <data name="ConsoleCommandsMessageDuplicateIdError" xml:space="preserve">
+    <value>Duplicate LinkId: {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectLockedError" xml:space="preserve">
+    <value>Project '{0}' is locked by other Revizto app</value>
+  </data>
+  <data name="ConsoleCommandsMessageMarkerApiError" xml:space="preserve">
+    <value>OpenProject: vim.Marker.api.OpenProject error: {0}</value>
+  </data>
+  <data name="ConsoleCommandsRPCError" xml:space="preserve">
+    <value>OpenProject: RPC error: {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageLocalProjectNotFoundError" xml:space="preserve">
+    <value>OpenProject: Local revizto project not found</value>
+  </data>
+  <data name="ConsoleCommandsMessageLocalLowerVersionError" xml:space="preserve">
+    <value>OpenProject: Local revizto project version &lt; {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectOfflineError" xml:space="preserve">
+    <value>OpenProject: Offline</value>
+  </data>
+  <data name="ConsoleCommandsMessageWaitUpdateUserCapsError" xml:space="preserve">
+    <value>OpenProject: WaitUpdateUserCapsInfo error {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageAccessLevelError" xml:space="preserve">
+    <value>OpenProject: GetAccessLevel error {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectArchive" xml:space="preserve">
+    <value>Project is archived</value>
+  </data>
+  <data name="ConsoleCommandsMessageProjectSuspend" xml:space="preserve">
+    <value>Project is suspended</value>
+    <comment>Since Revizto 5.11 message is obsolete and will be removed later</comment>
+  </data>
+  <data name="ConsoleCommandsMessageSyncError" xml:space="preserve">
+    <value>OpenProject: Sync error {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageCloudLowerVersionError" xml:space="preserve">
+    <value>OpenProject: Cloud revizto project version &lt; {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageOpenProjectException" xml:space="preserve">
+    <value>OpenProject: Exception: {0}</value>
+  </data>
+  <data name="ConsoleCommandsMessageModelNotFoundError" xml:space="preserve">
+    <value>No model with Id {0} found</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageProjectLocal" xml:space="preserve">
+    <value>Project '{0}' is local</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageProjectRevisionsCount" xml:space="preserve">
+    <value>Project '{0}' revisions: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChanges" xml:space="preserve">
+    <value>N {0}, type: {1}, autor: {2}, created: {3}, version: {4}, description: {5}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesProjectTitle" xml:space="preserve">
+    <value>Changed: Title</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesHomeViewPoint" xml:space="preserve">
+    <value>Changed: Home View Point</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChanged" xml:space="preserve">
+    <value>Changed:</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageAdded" xml:space="preserve">
+    <value>Added:</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesViewerScene" xml:space="preserve">
+    <value>{0} Viewer Scene</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesSceneDescription" xml:space="preserve">
+    <value>{0} Scene Description</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesEditorSettings" xml:space="preserve">
+    <value>{0} Editor Settings</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesSky" xml:space="preserve">
+    <value>{0} Sky</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesWatermark" xml:space="preserve">
+    <value>{0} Watermark</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesThumb" xml:space="preserve">
+    <value>{0} Thumb</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesRemovedPath" xml:space="preserve">
+    <value>Removed: {0}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesRemovedCadPath" xml:space="preserve">
+    <value>Removed: {0}, cad: {2}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesAddedPath" xml:space="preserve">
+    <value>Added: {0}, cad: {2}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesAddedCadPath" xml:space="preserve">
+    <value>Added: {0}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesChangedPath" xml:space="preserve">
+    <value>Changed: {0}, cad: {2}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageChangesChangedCadPath" xml:space="preserve">
+    <value>Changed: {0}, path: {1}</value>
+  </data>
+  <data name="ConsoleCommandRevisionsMessageError" xml:space="preserve">
+    <value>Revisions error: {0}</value>
+  </data>
+  <data name="IfcOptionExportPointClouds" xml:space="preserve">
+    <value>Export PointCloud models</value>
+  </data>
+  <data name="IfcOptionExportPointCloudsTooltip" xml:space="preserve">
+    <value>Export point cloud models to IFC files.
+
+If you select this option, it is recommended that you turn "Federated export" off to save point clouds separately.</value>
+  </data>
+  <data name="IfcArgumentFromDescription" xml:space="preserve">
+    <value>Source Revizto project path</value>
+  </data>
+  <data name="IfcArgumentToDescription" xml:space="preserve">
+    <value>Destination directory for result IFC files</value>
+  </data>
+  <data name="IfcDocumentVersionDescription" xml:space="preserve">
+    <value>IFC version, provide full name of version or number 4/2x3 (default is IFC4)</value>
+  </data>
+  <data name="IfcArgumentUserFirstNameDescription" xml:space="preserve">
+    <value>User first name for IFC file header</value>
+  </data>
+  <data name="IfcArgumentUserLastNameDescription" xml:space="preserve">
+    <value>User last name for IFC file header</value>
+  </data>
+  <data name="IfcArgumentUserCompanyNameDescription" xml:space="preserve">
+    <value>Company name for IFC file header</value>
+  </data>
+  <data name="IfcArgumentUserDepartmentNameDescription" xml:space="preserve">
+    <value>Company department for IFC file header</value>
+  </data>
+  <data name="IfcCommandDescription" xml:space="preserve">
+    <value>Exporter from Revizto projects to IFC</value>
+  </data>
+  <data name="ConsoleCommandRootDescription" xml:space="preserve">
+    <value>Simple console application to run some commands without running Revizto itself</value>
+  </data>
+  <data name="ConsoleCommandProjectFound" xml:space="preserve">
+    <value>Project is found</value>
+  </data>
+  <data name="ConsoleCommandProjectNotFound" xml:space="preserve">
+    <value>Project is not found</value>
+  </data>
+  <data name="ConsoleCommandProjectOpening" xml:space="preserve">
+    <value>Opening project {0}</value>
+  </data>
+  <data name="ConsoleCommandProjectClosing" xml:space="preserve">
+    <value>Closing project {0} found</value>
+  </data>
+  <data name="ConsoleCommandProjectOpened" xml:space="preserve">
+    <value>Project is opened</value>
+  </data>
+  <data name="CalculateOverrides" xml:space="preserve">
+    <value>Calculating material overrides</value>
+  </data>
+  <data name="CannotOperateFamilyDocument" xml:space="preserve">
+    <value>Can't operate with family document</value>
+  </data>
+  <data name="OptionForceExport_Tooltip" xml:space="preserve">
+    <value>By default, only models for which Revizto can detect changes are exported. However, in some rare cases Revizto is unable to find out if the model has been changed due to authoring tool API constraints. Use this option if Revizto during export does not update a model that actually needs to be updated.</value>
+  </data>
+  <data name="Scheduler_AM" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="Scheduler_Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Scheduler_PM" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="Revit_Error_ScheduledExport_CantOpenTheProject" xml:space="preserve">
+    <value>Can't open the project: {0}</value>
+  </data>
+  <data name="cn-north-1" xml:space="preserve">
+    <value>cn-north-1</value>
+  </data>
+  <data name="cn-shanghai" xml:space="preserve">
+    <value>cn-north-1</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesExportKeyDescription" xml:space="preserve">
+    <value>specify import data array (for instance: link_guid_1 file_1 link_guid_2 file_2 ... link_guid_N file_N ...)</value>
+  </data>
+  <data name="ConsoleCommandImportUserPropertiesRootDirectoryKeyDescription" xml:space="preserve">
+    <value>The directory that stores the source files</value>
+  </data>
+  <data name="ExportClashesToExcel_ColumnTitle_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="SheetsWindow_FilteredCount" xml:space="preserve">
+    <value>{0} sheet(s)</value>
+  </data>
+  <data name="Scheduler_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="PredefinedLanguageRevit" xml:space="preserve">
+    <value>Predefined Language Revit: </value>
+  </data>
+  <data name="Revit_Error_Export_UiDocument" xml:space="preserve">
+    <value>Please run this command in an active project document.</value>
+  </data>
+  <data name="Revit_Error_Export_Select3DView" xml:space="preserve">
+    <value>Please select the 3D View first.</value>
+  </data>
+  <data name="Revit_Error_Export_Rendering3DViewNotSupported" xml:space="preserve">
+    <value>3D view rendering is currently not supported in the running instance of Revit.</value>
+  </data>
+  <data name="Revit_Error_Export_ExceptionSavingDocument" xml:space="preserve">
+    <value>Exception occurred during of saving the document : </value>
+  </data>
+  <data name="Model3dSelection" xml:space="preserve">
+    <value>Selection 3D models for Export</value>
+  </data>
+  <data name="ExportModels" xml:space="preserve">
+    <value>Export 3D Models</value>
+  </data>
+  <data name="Select3DModels" xml:space="preserve">
+    <value>Select 3D Models to Export</value>
+  </data>
+  <data name="Import_CantOpenTheProject" xml:space="preserve">
+    <value>Can't open Revizto Project. Operation aborted</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Revizto 5</value>
+  </data>
+  <data name="Revit_Export_GatheringSheetsInfo" xml:space="preserve">
+    <value>Gathering sheets info...</value>
+  </data>
+  <data name="Revit_Export_GeneratingPreview" xml:space="preserve">
+    <value>Generating preview...</value>
+  </data>
+  <data name="Revit_Export_SheetsImages" xml:space="preserve">
+    <value>Exporting sheets images...</value>
+  </data>
+  <data name="ExportToRevizto5Project" xml:space="preserve">
+    <value>Export to Revizto 5 project</value>
+  </data>
+  <data name="ReviewModelMerge2" xml:space="preserve">
+    <value>Revizto cannot automatically detect mapping between some of exported models and Revizto models in the project. This happens typically when the name of exported model change. Please check the following and change the mapping where required.</value>
+  </data>
+  <data name="Revit_Error_Export_CanNotOpenAndActivateDocument" xml:space="preserve">
+    <value>Can not open and activate document. Exit</value>
+  </data>
+  <data name="Navisworks_ClashSyncButton_DisplayName" xml:space="preserve">
+    <value>Sync Clashes</value>
+  </data>
+  <data name="Navisworks_ClashSyncButton_ToolTip" xml:space="preserve">
+    <value>Sync Clashes with Revizto Issue Tracker</value>
+  </data>
+  <data name="Navisworks_IntersectSearchSetsButton_DisplayName" xml:space="preserve">
+    <value>Intersect search sets</value>
+  </data>
+  <data name="Navisworks_IntersectSearchSetsButton_ToolTip" xml:space="preserve">
+    <value>Create clash tests based on search set intersections</value>
+  </data>
+  <data name="Export_CadTypeIsDifferent" xml:space="preserve">
+    <value>The model was exported from another authoring tool. It can be overwritten only from that authoring tool.</value>
+  </data>
+  <data name="Export_NoRightsToMergeCad" xml:space="preserve">
+    <value>The model was exported by another project member. You not have enough rights to overwrite it.</value>
+  </data>
+  <data name="CubFeetShort" xml:space="preserve">
+    <value>ft³</value>
+  </data>
+  <data name="CubMetersShort" xml:space="preserve">
+    <value>m³</value>
+  </data>
+  <data name="DegreesShort" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="FeetShort" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="InchesShort" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="MetersShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="MillimetersShort" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="RadiansShort" xml:space="preserve">
+    <value>rad</value>
+  </data>
+  <data name="SqrFeetShort" xml:space="preserve">
+    <value>ft²</value>
+  </data>
+  <data name="SqrMetersShort" xml:space="preserve">
+    <value>m²</value>
+  </data>
+  <data name="ca-central-1" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="Status_ProjectIsBlockedByApp" xml:space="preserve">
+    <value>Revizto application is currently opened, and it is blocking the project. Please make sure that the application is not awaiting your input. Data export will proceed automatically once the project is unblocked.</value>
+  </data>
+  <data name="IfcPointCloudImportCaption" xml:space="preserve">
+    <value>Specify the point cloud import quality for the IFC models that contain point clouds:</value>
+  </data>
+  <data name="SchedulerErrorUpdateRevizto" xml:space="preserve">
+    <value>Scheduled export failed! Please update Revizto to be able to export to this project.</value>
+  </data>
+  <data name="SheetsWindow_Ignored" xml:space="preserve">
+    <value>Ignored:</value>
+  </data>
+  <data name="Error_InvalidLicense" xml:space="preserve">
+    <value>You don't have a valid Revizto license</value>
+  </data>
+  <data name="Error_AuthenticationBanned" xml:space="preserve">
+    <value>Too many attempts to sign in. Please try again later.</value>
+  </data>
+  <data name="Export_ColumnName_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Export_ColumnName_CDE" xml:space="preserve">
+    <value>CDE</value>
+  </data>
+  <data name="Export_ColumnName_Hierarchy" xml:space="preserve">
+    <value>Hierarchy</value>
+  </data>
+  <data name="Export_ColumnName_InternalId" xml:space="preserve">
+    <value>Internal Id</value>
+  </data>
+  <data name="Export_ColumnName_LastSync" xml:space="preserve">
+    <value>Last Sync</value>
+  </data>
+  <data name="Export_ColumnName_LineNumber" xml:space="preserve">
+    <value>Line Number</value>
+  </data>
+  <data name="Export_ColumnName_Revision" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="Export_ColumnName_SheetName" xml:space="preserve">
+    <value>Sheet Name</value>
+  </data>
+  <data name="Export_ColumnName_SheetNumber" xml:space="preserve">
+    <value>Sheet Number</value>
+  </data>
+  <data name="Export_ColumnName_SourceFileName" xml:space="preserve">
+    <value>Source File Name</value>
+  </data>
+  <data name="Export_ColumnName_Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="Export_ColumnName_TotalIssues" xml:space="preserve">
+    <value>Total Issues</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RemoveAll" xml:space="preserve">
+    <value>Remove All</value>
+  </data>
+  <data name="ErrorLaunchEditor" xml:space="preserve">
+    <value>Error launch SceneProcessor</value>
+  </data>
+  <data name="AutoCloseDialogs_Tooltip" xml:space="preserve">
+    <value>Ignore model opening errors from Revit plug-ins whenever possible. If this checkbox is cleared, only model opening errors from Revit itself are ignored.</value>
+  </data>
+  <data name="AutoCloseDialogs_Tooltip" xml:space="preserve">
+    <value>Ignore model opening errors from Revit plug-ins whenever possible. If this checkbox is cleared, only model opening errors from Revit itself are ignored.</value>
+  </data>
+  <data name="ClashGroup_OnHold" xml:space="preserve">
+    <value>On Hold</value>
+  </data>
+  <data name="Error_NotSignedRevizto" xml:space="preserve">
+    <value>You are not signed in to Revizto. Please sign in and try again.</value>
+  </data>
+  <data name="ConsoleCommandLocalToCloudProjectKeyDescription" xml:space="preserve">
+    <value>specify project folder or full path it</value>
+  </data>
+  <data name="LinesOption_CompatibilityMode" xml:space="preserve">
+    <value>Compatibility mode</value>
+  </data>
+  <data name="LinesOption_True2dLines" xml:space="preserve">
+    <value>True 2D lines</value>
+  </data>
+  <data name="LinesPopupText" xml:space="preserve">
+    <value>Ensure that all project members use Revizto 5.13 or later before selecting this option.
+
+Lines are not supported in Revizto 5.12 and earlier. Revizto 5.11 and earlier will crash upon opening a project with lines.</value>
+  </data>
+  <data name="LinesSubPopupText" xml:space="preserve">
+    <value>&lt;Bold&gt;Compatibility mode&lt;/Bold&gt;
+Exports lines 3D objects. Compatible With all previous Revizto versions.
+
+&lt;Bold&gt;True 2D lines (may crash older Revizto Versions)&lt;/Bold&gt;
+Exports lines as true 2D lines. Incompitable with Revizto 5.12 and earlier. Before selecting this option, ensure that all project members use Revizto 5.13 or later.</value>
+  </data>
+  <data name="LinesImportSubPopupText" xml:space="preserve">
+    <value>&lt;Bold&gt;Compatibility mode&lt;/Bold&gt;
+Imports lines as 3D objects. Compatible with all previous Revizto versions.
+
+&lt;Bold&gt;Line objects (may crash older Revizto versions)&lt;/Bold&gt;
+Imports lines as line objects. Incompatible with Revizto 5.12 and earlier. Before selecting this option, ensure that all project members use Revizto 5.13 or later.</value>
+  </data>
+  <data name="RvtDoublePropsCompatibilityFormat" xml:space="preserve">
+    <value>Export object properties in the compatibility format</value>
+  </data>
+  <data name="RvtDoublePropsCompatibilityFormat_Tooltip" xml:space="preserve">
+    <value>&lt;Bold&gt;Warning: Changing this option mid-project is not recommended!&lt;/Bold&gt;
+
+If you select this checkbox, object properties will be exported in the same format as in Revizto 5.12 and earlier versions. Some of the numeric object properties might be exported as text, which can cause issues with "&lt;" and "&gt;" comparison operators in search sets. This option is recommended for projects created in Revizto 5.12 or earlier.
+
+If you clear this checkbox, numeric properties will be exported as numbers, resolving the issue with comparison operators in search sets. This option is recommended for projects created in Revizto 5.13 or later.
+
+If you change this option mid-project, ensure that the search sets, favorite properties, and property conditions in appearance templates and clash grouping rules provide correct results. They might need to be recreated.</value>
+  </data>
+  <data name="me-central-1" xml:space="preserve">
+    <value>UAE</value>
+  </data>
+  <data name="RVMWriteSubmeshesAsNodes" xml:space="preserve">
+    <value>Export element subparts as separate geometry nodes in the object tree</value>
+  </data>
+  <data name="RVMWriteSubmeshesAsNodes_Tooltip" xml:space="preserve">
+    <value>Export element subparts as separate geometry nodes in the object tree</value>
+  </data>
+  <data name="Positioning_GeoLocation" xml:space="preserve">
+    <value>Geo Location</value>
+    <comment>Introduced for AutoCAD</comment>
+  </data>
+  <data name="Test_Notification_Simple" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Test_Notification_Multiline" xml:space="preserve">
+    <value>Test
+Test
+{0}</value>
+  </data>
+  <data name="Test_Notification_DoubleQuotes" xml:space="preserve">
+    <value>"Test"</value>
+  </data>
+  <data name="Test_Notification_SpecialCharacters" xml:space="preserve">
+    <value>&lt;Tes’t&gt;</value>
+  </data>
+  <data name="Scheduler_NewTask" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Scheduler_ImportTasks" xml:space="preserve">
+    <value>Import tasks</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_WhenPerformAction" xml:space="preserve">
+    <value>When to perform action?</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_DeleteAction" xml:space="preserve">
+    <value>Delete action</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_BeforeTask" xml:space="preserve">
+    <value>Before task</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_AfterTaskOnSuccess" xml:space="preserve">
+    <value>After task on success</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_AfterTaskOnFailure" xml:space="preserve">
+    <value>After task on failure</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_SyncToRevizto" xml:space="preserve">
+    <value>Sync Revizto project after export</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_SendNotifications" xml:space="preserve">
+    <value>Send notifications</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_WheToNotify" xml:space="preserve">
+    <value>When to notify?</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskFailed" xml:space="preserve">
+    <value>Task failed</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskCanceledOrSkipped" xml:space="preserve">
+    <value>Task skipped or canceled by user</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskCompleted" xml:space="preserve">
+    <value>Task completed successfully</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterEmails" xml:space="preserve">
+    <value>Enter emails comma separated</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_PerformCommandLineActionsBeforeOrAfter" xml:space="preserve">
+    <value>Perform command-line actions before or after the task</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_AddAnotherAction" xml:space="preserve">
+    <value>Add another action</value>
+  </data>
+  <data name="Scheduler_Schedule_DaysOfWeek" xml:space="preserve">
+    <value>Days of week</value>
+  </data>
+  <data name="Scheduler_Schedule_DayOfWeekErrorMessage" xml:space="preserve">
+    <value>Select at least one day of week</value>
+  </data>
+  <data name="Scheduler_Schedule_AddTimeButton" xml:space="preserve">
+    <value>Add time</value>
+  </data>
+  <data name="Scheduler_Schedule_DateAndTime" xml:space="preserve">
+    <value>Date and time</value>
+  </data>
+  <data name="Scheduler_Schedule_NextRunDate" xml:space="preserve">
+    <value>Next run date</value>
+  </data>
+  <data name="Scheduler_Schedule_UpcomingRunDateFormat" xml:space="preserve">
+    <value>Upcoming {0}, {1:d}</value>
+  </data>
+  <data name="Scheduler_Schedule_NextRunDateFormat" xml:space="preserve">
+    <value>Next {0}, {1:d}</value>
+  </data>
+  <data name="Scheduler_Schedule_Header" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Scheduler_Schedule_RunTaskAutomaticallyToggle" xml:space="preserve">
+    <value>Run task automatically on schedule</value>
+  </data>
+  <data name="Scheduler_Schedule_RunTaskAutomaticallyMessage" xml:space="preserve">
+    <value>You can run this task manually via the scheduler app or via the command-line interface. Check command line settings section.</value>
+  </data>
+  <data name="Scheduler_Schedule_Recurrence" xml:space="preserve">
+    <value>Recurrence</value>
+  </data>
+  <data name="Scheduler_Schedule_EndDateCheckBox" xml:space="preserve">
+    <value>Specify the end date for the task</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_Header" xml:space="preserve">
+    <value>Command line settings</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_TaskAlias" xml:space="preserve">
+    <value>Task name for CMD</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_CommandToRunViaCmd" xml:space="preserve">
+    <value>Command to run task in CMD</value>
+  </data>
+  <data name="Scheduler_FilesErrors_MainCaption" xml:space="preserve">
+    <value>Some of the source files were not found. Please specify the folders that contain the files.</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_FilesStatusColumn" xml:space="preserve">
+    <value>Files status</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_OldPathColumn" xml:space="preserve">
+    <value>Old path</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_MissingFilesColumn" xml:space="preserve">
+    <value>Missing files</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_NewPathColumn" xml:space="preserve">
+    <value>New path</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectFolderButton" xml:space="preserve">
+    <value>Select folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_DeleteFilesButtonTooltip" xml:space="preserve">
+    <value>Remove files from the task</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Scheduler_ImportModels_ImportHeader" xml:space="preserve">
+    <value>Source models</value>
+  </data>
+  <data name="Scheduler_ExportModel_SourceModel" xml:space="preserve">
+    <value>Source model</value>
+  </data>
+  <data name="Scheduler_ImportModels_AddModelsButton" xml:space="preserve">
+    <value>Add models</value>
+  </data>
+  <data name="Scheduler_ImportModels_FileNotFoundMessage" xml:space="preserve">
+    <value>Some of the source files cannot be found on this computer</value>
+  </data>
+  <data name="Scheduler_ImportModels_ResolveErrorsButton" xml:space="preserve">
+    <value>Resolve errors</value>
+  </data>
+  <data name="Scheduler_ImportModels_SupportedImportModelsMessage" xml:space="preserve">
+    <value>Supported file formats: IFC, FBX, OBJ, RVM, 12DXML, Point clouds (IFC, Faro, ReCap, LAS).</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskType" xml:space="preserve">
+    <value>Task type</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskName" xml:space="preserve">
+    <value>Task name</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProject" xml:space="preserve">
+    <value>Revizto project</value>
+  </data>
+  <data name="Scheduler_TopBar_ThisComputer" xml:space="preserve">
+    <value>This computer:</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectNewFolderDialogName" xml:space="preserve">
+    <value>Select new folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FilesNotFoundDialogName" xml:space="preserve">
+    <value>Files not found</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FilesNotFoundInNewPath" xml:space="preserve">
+    <value>The specified path "{0}" doesn't contain any of the missing files that were previously stored in "{1}".</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectAnotherFolderButton" xml:space="preserve">
+    <value>Select another folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_RemovedFromTaskMessage" xml:space="preserve">
+    <value>Removed from the task</value>
+  </data>
+  <data name="Scheduler_FilesErrors_MissingCount" xml:space="preserve">
+    <value>{0} missing</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FoundCount" xml:space="preserve">
+    <value>{0} found</value>
+  </data>
+  <data name="Scheduler_FilesErrors_DeletedCount" xml:space="preserve">
+    <value>{0} deleted</value>
+  </data>
+  <data name="Scheduler_Schedule_CustomDatesScheduleName" xml:space="preserve">
+    <value>Custom dates</value>
+  </data>
+  <data name="Scheduler_Schedule_WeeklyScheduleName" xml:space="preserve">
+    <value>Every week</value>
+  </data>
+  <data name="Scheduler_Schedule_BiWeeklyScheduleName" xml:space="preserve">
+    <value>Every two weeks</value>
+  </data>
+  <data name="Scheduler_SourceModels_ResolveFilesErrorsDialogName" xml:space="preserve">
+    <value>Resolve files errors</value>
+  </data>
+  <data name="Scheduler_SourceModels_SelectFilesDialogName" xml:space="preserve">
+    <value>Select files to import</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeImport" xml:space="preserve">
+    <value>Import 3D models from files</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeExport" xml:space="preserve">
+    <value>Publish from {0}</value>
+  </data>
+  <data name="Scheduler_TaskRun_ScheduledStart" xml:space="preserve">
+    <value>Scheduled start</value>
+  </data>
+  <data name="Scheduler_TaskRun_Elapsed" xml:space="preserve">
+    <value>Elapsed</value>
+  </data>
+  <data name="Scheduler_TaskRun_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Scheduler_TaskRun_AverageDuration" xml:space="preserve">
+    <value>Average duration</value>
+  </data>
+  <data name="Scheduler_TaskRun_CurrentStep" xml:space="preserve">
+    <value>Current step</value>
+  </data>
+  <data name="Scheduler_TaskRun_ViewLogsButton" xml:space="preserve">
+    <value>View logs</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_Header" xml:space="preserve">
+    <value>Task run history</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_NoTasksCompletedMessage" xml:space="preserve">
+    <value>No tasks completed yet.</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_StartedColumn" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_StatusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Scheduler_TasksTable_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Scheduler_TasksTable_ProjectColumn" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Scheduler_TasksTable_TaskTypeColumn" xml:space="preserve">
+    <value>Task type</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_ScheduledStartColumn" xml:space="preserve">
+    <value>Scheduled start</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_DelayColumn" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_DurationColumn" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Scheduler_TasksTable_Header" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Scheduler_TasksTable_SelectedTasks" xml:space="preserve">
+    <value>({0} of {1} selected)</value>
+  </data>
+  <data name="Scheduler_TasksTable_CreateTaskButton" xml:space="preserve">
+    <value>Create task</value>
+  </data>
+  <data name="Scheduler_TasksTable_ScheduleColumn" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Scheduler_TasksTable_AverageDurationColumn" xml:space="preserve">
+    <value>Average duration</value>
+  </data>
+  <data name="Scheduler_TasksTable_NextRunDateColumn" xml:space="preserve">
+    <value>Next run date</value>
+  </data>
+  <data name="Scheduler_TasksTable_LastRunDateColumn" xml:space="preserve">
+    <value>Last run date</value>
+  </data>
+  <data name="Scheduler_TasksTable_LastRunStatusColumn" xml:space="preserve">
+    <value>Last run status</value>
+  </data>
+  <data name="Scheduler_TasksTable_NoTasksCreatedMessage" xml:space="preserve">
+    <value>No tasks created yet.</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Header" xml:space="preserve">
+    <value>Upcoming schedule</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_StartColumn" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_ActionsColumn" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_NoTasksScheduledMessage" xml:space="preserve">
+    <value>No tasks scheduled yet.</value>
+  </data>
+  <data name="Scheduler_TabView_TasksButton" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Scheduler_TabView_UpcomingScheduleButton" xml:space="preserve">
+    <value>Upcoming schedule</value>
+  </data>
+  <data name="Scheduler_TabView_HistoryButton" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Scheduler_MainWindow_Title" xml:space="preserve">
+    <value>Revizto Task Scheduler</value>
+  </data>
+  <data name="Scheduler_TasksTable_OnDemandTask" xml:space="preserve">
+    <value>On demand</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskNameEmptyErrorMessage" xml:space="preserve">
+    <value>Enter the task name</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProjectEmptyErrorMessage" xml:space="preserve">
+    <value>Enter the task name</value>
+  </data>
+  <data name="Scheduler_PublishSettings_SelectAnyOptionMessage" xml:space="preserve">
+    <value>Select at least one publishing option</value>
+  </data>
+  <data name="Scheduler_PublishSettings_Header" xml:space="preserve">
+    <value>Publish settings</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterEmailsErrorMessage" xml:space="preserve">
+    <value>Enter email addresses</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterValidEmailsErrorMessage" xml:space="preserve">
+    <value>Enter valid email addresses</value>
+  </data>
+  <data name="Scheduler_AdditionalOptions_NoNotificationTypeSelectedErrorMessage" xml:space="preserve">
+    <value>Select at least one option</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_EnterCommandErrorMessage" xml:space="preserve">
+    <value>Enter the command</value>
+  </data>
+  <data name="Scheduler_Schedule_EnterEndDateErrorMessage" xml:space="preserve">
+    <value>Enter the end date</value>
+  </data>
+  <data name="Scheduler_Schedule_SelectDateErrorMessage" xml:space="preserve">
+    <value>Select the date</value>
+  </data>
+  <data name="Scheduler_Schedule_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Scheduler_TaskDetails_NewTaskHeader" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Scheduler_ImportModels_SelectSourceFilesError" xml:space="preserve">
+    <value>Select source files</value>
+  </data>
+  <data name="Scheduler_PublishSettings_RevitLinesWarning" xml:space="preserve">
+    <value>Ensure that all project members use Revizto 5.13 or later.
+
+Lines are not supported in Revizto 5.12 and earlier. Revizto 5.11 and earlier will crash upon opening a project with lines.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LinesCompabilityMode" xml:space="preserve">
+    <value>Compability mode</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LinesCompabilityModeTooltip" xml:space="preserve">
+    <value>Export lines as 3D objects. Compatible with all previous Revizto versions.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjects" xml:space="preserve">
+    <value>Line objects</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjectsTooltip" xml:space="preserve">
+    <value>Export lines as line objects</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjectsWarning" xml:space="preserve">
+    <value>May crash older Revizto versions.
+
+Incompatible with Revizto 5.12 and earlier. Ensure that all project members use Revizto 5.13 or later.</value>
+  </data>
+  <data name="Scheduler_TaskRun_RunNow" xml:space="preserve">
+    <value>Run now</value>
+  </data>
+  <data name="Scheduler_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_UndoSkip" xml:space="preserve">
+    <value>Undo Skip</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Scheduler_ExportModel_Unlink" xml:space="preserve">
+    <value>Unlink</value>
+  </data>
+  <data name="Scheduler_SourceModels_UnlinkMessageTitle" xml:space="preserve">
+    <value>Confirm unlinking</value>
+  </data>
+  <data name="Scheduler_ExportModel_UnlinkApproveMessage" xml:space="preserve">
+    <value>Do you want to &lt;Bold&gt;unlink the task "{0}"&lt;/Bold&gt;[{1}] from the model &lt;Bold&gt;{2}&lt;/Bold&gt;?
+
+To link the task to another model:
+  1. Open the new model in {3}.
+  2. Go to the &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+  3. In section &lt;Bold&gt;Publish tasks not linked to {3},&lt;/Bold&gt; find this task.
+  4. Click the &lt;Bold&gt;Link to current model&lt;/Bold&gt; button.</value>
+  </data>
+  <data name="Scheduler_SourceModels_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Scheduler_ExportModel_ImportModelIsUnlinkedWarning" xml:space="preserve">
+    <value>Cannot run the task because it is not linked to a {0} model.
+
+To link the task to another model:
+  1. Open the new model in {0}.
+  2. Go to the &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+  3. In section &lt;Bold&gt;Publish tasks not linked to {0},&lt;/Bold&gt; find this task.
+  4. Click the &lt;Bold&gt;Link to current model&lt;/Bold&gt; button.</value>
+  </data>
+  <data name="Scheduler_Plugin_EmptyTasksListCaption" xml:space="preserve">
+    <value>&lt;Bold&gt;No tasks created yet&lt;/Bold&gt;
+
+There are no tasks for publishing this model from Revit to Revizto.
+
+To get started, you can:
+● Create a task
+● Import tasks from files
+You can run tasks manually or schedule them to run while you are away from the computer.</value>
+  </data>
+  <data name="Scheduler_TopBar_EditDeviceNameTitle" xml:space="preserve">
+    <value>Change computer name</value>
+  </data>
+  <data name="Scheduler_TopBar_EditDeviceNameMessage" xml:space="preserve">
+    <value>This name will be displayed in the task list at Revizto Workspace.</value>
+  </data>
+  <data name="Scheduler_TasksList_SomethingWrong" xml:space="preserve">
+    <value>Something wrong.</value>
+  </data>
+  <data name="Scheduler_TasksList_Queued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="Scheduler_TasksList_Running" xml:space="preserve">
+    <value>Running...</value>
+  </data>
+  <data name="Scheduler_SelectScene_Label" xml:space="preserve">
+    <value>Link the model to a Revizto project.</value>
+  </data>
+  <data name="Scheduler_ImportModels_NoFilesFoundInTreeMessage" xml:space="preserve">
+    <value>No files match your search</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProjectNotSpecified" xml:space="preserve">
+    <value>Not specified</value>
+  </data>
+  <data name="Scheduler_TasksTable_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Scheduler_TasksTable_ImportTaskMessage" xml:space="preserve">
+    <value>A task to import 3D models of the following types: IFC, FBX, OBJ, RVM, 12DXML, and point clouds (FARO, ReCap, and LAS).</value>
+  </data>
+  <data name="Scheduler_TasksTable_ExportTaskMessage" xml:space="preserve">
+    <value>&lt;Bold&gt;Tasks of this type can be created only in {0}.&lt;/Bold&gt;
+
+Perform the following steps:
+1. Start {0}.
+2. Open the source {0} model.
+3. Go to &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+4. Create a task from there.</value>
+  </data>
+  <data name="Scheduler_TasksTable_ClashAutomationPermissionsMessage" xml:space="preserve">
+    <value>You don't have enough rights to create this type of task</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeClashDetection" xml:space="preserve">
+    <value>Clash Automation</value>
+  </data>
+  <data name="Active_Clash_Singular" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Navisworks_SyncClashes_ButtonImport" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Navisworks_SyncClashes_ButtonExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Navisworks_SyncClashes_ButtonReset" xml:space="preserve">
+    <value>Reset Default Settings</value>
+  </data>
+  <data name="Navisworks_SyncClashes_ButtonSimpleView" xml:space="preserve">
+    <value>Simple View</value>
+  </data>
+  <data name="Navisworks_SyncClashes_ButtonAdvancedView" xml:space="preserve">
+    <value>Advanced View</value>
+  </data>
+  <data name="Navisworks_SyncClashes_CloseMissing" xml:space="preserve">
+    <value>Close issues missing in Navisworks</value>
+  </data>
+  <data name="Navisworks_SyncClashes_TestRepeat" xml:space="preserve">
+    <value>Validate geometric conditions after sync</value>
+  </data>
+  <data name="Navisworks_SyncClashes_Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Navisworks_SyncClashes_WindowTitle" xml:space="preserve">
+    <value>Sync Options</value>
+  </data>
+  <data name="NavisworksLicense_AdLM" xml:space="preserve">
+    <value>AdLM</value>
+  </data>
+  <data name="NavisworksLicense_BIM360" xml:space="preserve">
+    <value>BIM360</value>
+  </data>
+  <data name="SelectViewInBrackets" xml:space="preserve">
+    <value>(Select view)</value>
+  </data>
+  <data name="Scheduler_PublishSettings_ChangingSourceModel" xml:space="preserve">
+    <value>Changing this setting requires the source model to be opened in {0}.
+After the model is loaded in {0}, all settings will become available for editing.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_ActionRequired" xml:space="preserve">
+    <value>Action required</value>
+  </data>
+  <data name="Scheduler_PublishSettings_OpenCadModel" xml:space="preserve">
+    <value>Open {0} model</value>
+  </data>
+  <data name="Scheduler_PublishSettings_WaitSourceModel" xml:space="preserve">
+    <value>After the source {0} model is fully loaded, you will be able to change sheet settings, worksets, and a 3D view for publishing.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_Launching" xml:space="preserve">
+    <value>Launching {0}</value>
+  </data>
+  <data name="Filter_AllSheets" xml:space="preserve">
+    <value>All sheets</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_NoTasksCreatedYet" xml:space="preserve">
+    <value>&lt;Bold&gt;No tasks created yet&lt;/Bold&gt;
+
+Create a publishing task or import a task from another device. You can run tasks manually or schedule them.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_TasksCreatedOtherVersions" xml:space="preserve">
+    <value>Tasks created in other {0} versions</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_TasksNotLinked" xml:space="preserve">
+    <value>Tasks not linked to {0}</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_CheckFollowingTasksBeRunOn" xml:space="preserve">
+    <value>Check if the following tasks must be run on {0}.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_CheckFollowingTasksRelateModel" xml:space="preserve">
+    <value>Check if the following tasks relate to this model.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_UseCad" xml:space="preserve">
+    <value>Use {0}</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_LinkCurrentModel" xml:space="preserve">
+    <value>Link to current model</value>
+  <data name="Scheduler_NewTask" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Scheduler_ImportTasks" xml:space="preserve">
+    <value>Import tasks</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_WhenPerformAction" xml:space="preserve">
+    <value>When to perform action?</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_DeleteAction" xml:space="preserve">
+    <value>Delete action</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_BeforeTask" xml:space="preserve">
+    <value>Before task</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_AfterTaskOnSuccess" xml:space="preserve">
+    <value>After task on success</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_AfterTaskOnFailure" xml:space="preserve">
+    <value>After task on failure</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_SyncToRevizto" xml:space="preserve">
+    <value>Sync Revizto project after export</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_SendNotifications" xml:space="preserve">
+    <value>Send notifications</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_WheToNotify" xml:space="preserve">
+    <value>When to notify?</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskFailed" xml:space="preserve">
+    <value>Task failed</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskCanceledOrSkipped" xml:space="preserve">
+    <value>Task skipped or canceled by user</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_NotifyOnTaskCompleted" xml:space="preserve">
+    <value>Task completed successfully</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterEmails" xml:space="preserve">
+    <value>Enter emails comma separated</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_PerformCommandLineActionsBeforeOrAfter" xml:space="preserve">
+    <value>Perform command-line actions before or after the task</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_AddAnotherAction" xml:space="preserve">
+    <value>Add another action</value>
+  </data>
+  <data name="Scheduler_Schedule_DaysOfWeek" xml:space="preserve">
+    <value>Days of week</value>
+  </data>
+  <data name="Scheduler_Schedule_DayOfWeekErrorMessage" xml:space="preserve">
+    <value>Select at least one day of week</value>
+  </data>
+  <data name="Scheduler_Schedule_AddTimeButton" xml:space="preserve">
+    <value>Add time</value>
+  </data>
+  <data name="Scheduler_Schedule_DateAndTime" xml:space="preserve">
+    <value>Date and time</value>
+  </data>
+  <data name="Scheduler_Schedule_NextRunDate" xml:space="preserve">
+    <value>Next run date</value>
+  </data>
+  <data name="Scheduler_Schedule_UpcomingRunDateFormat" xml:space="preserve">
+    <value>Upcoming {0}, {1:d}</value>
+  </data>
+  <data name="Scheduler_Schedule_NextRunDateFormat" xml:space="preserve">
+    <value>Next {0}, {1:d}</value>
+  </data>
+  <data name="Scheduler_Schedule_Header" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Scheduler_Schedule_RunTaskAutomaticallyToggle" xml:space="preserve">
+    <value>Run task automatically on schedule</value>
+  </data>
+  <data name="Scheduler_Schedule_RunTaskAutomaticallyMessage" xml:space="preserve">
+    <value>You can run this task manually via the scheduler app or via the command-line interface. Check command line settings section.</value>
+  </data>
+  <data name="Scheduler_Schedule_Recurrence" xml:space="preserve">
+    <value>Recurrence</value>
+  </data>
+  <data name="Scheduler_Schedule_EndDateCheckBox" xml:space="preserve">
+    <value>Specify the end date for the task</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_Header" xml:space="preserve">
+    <value>Command line settings</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_TaskAlias" xml:space="preserve">
+    <value>Task name for CMD</value>
+  </data>
+  <data name="Scheduler_CommandLineSettings_CommandToRunViaCmd" xml:space="preserve">
+    <value>Command to run task in CMD</value>
+  </data>
+  <data name="Scheduler_FilesErrors_MainCaption" xml:space="preserve">
+    <value>Some of the source files were not found. Please specify the folders that contain the files.</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_FilesStatusColumn" xml:space="preserve">
+    <value>Files status</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_OldPathColumn" xml:space="preserve">
+    <value>Old path</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_MissingFilesColumn" xml:space="preserve">
+    <value>Missing files</value>
+  </data>
+  <data name="Scheduler_FilesErrorsTable_NewPathColumn" xml:space="preserve">
+    <value>New path</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectFolderButton" xml:space="preserve">
+    <value>Select folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_DeleteFilesButtonTooltip" xml:space="preserve">
+    <value>Remove files from the task</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Scheduler_ImportModels_ImportHeader" xml:space="preserve">
+    <value>Source models</value>
+  </data>
+  <data name="Scheduler_ExportModel_SourceModel" xml:space="preserve">
+    <value>Source model</value>
+  </data>
+  <data name="Scheduler_ImportModels_AddModelsButton" xml:space="preserve">
+    <value>Add models</value>
+  </data>
+  <data name="Scheduler_ImportModels_FileNotFoundMessage" xml:space="preserve">
+    <value>Some of the source files cannot be found on this computer</value>
+  </data>
+  <data name="Scheduler_ImportModels_ResolveErrorsButton" xml:space="preserve">
+    <value>Resolve errors</value>
+  </data>
+  <data name="Scheduler_ImportModels_SupportedImportModelsMessage" xml:space="preserve">
+    <value>Supported file formats: IFC, FBX, OBJ, RVM, 12DXML, Point clouds (IFC, Faro, ReCap, LAS).</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskType" xml:space="preserve">
+    <value>Task type</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskName" xml:space="preserve">
+    <value>Task name</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProject" xml:space="preserve">
+    <value>Revizto project</value>
+  </data>
+  <data name="Scheduler_TopBar_ThisComputer" xml:space="preserve">
+    <value>This computer:</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectNewFolderDialogName" xml:space="preserve">
+    <value>Select new folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FilesNotFoundDialogName" xml:space="preserve">
+    <value>Files not found</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FilesNotFoundInNewPath" xml:space="preserve">
+    <value>The specified path "{0}" doesn't contain any of the missing files that were previously stored in "{1}".</value>
+  </data>
+  <data name="Scheduler_FilesErrors_SelectAnotherFolderButton" xml:space="preserve">
+    <value>Select another folder</value>
+  </data>
+  <data name="Scheduler_FilesErrors_RemovedFromTaskMessage" xml:space="preserve">
+    <value>Removed from the task</value>
+  </data>
+  <data name="Scheduler_FilesErrors_MissingCount" xml:space="preserve">
+    <value>{0} missing</value>
+  </data>
+  <data name="Scheduler_FilesErrors_FoundCount" xml:space="preserve">
+    <value>{0} found</value>
+  </data>
+  <data name="Scheduler_FilesErrors_DeletedCount" xml:space="preserve">
+    <value>{0} deleted</value>
+  </data>
+  <data name="Scheduler_Schedule_CustomDatesScheduleName" xml:space="preserve">
+    <value>Custom dates</value>
+  </data>
+  <data name="Scheduler_Schedule_WeeklyScheduleName" xml:space="preserve">
+    <value>Every week</value>
+  </data>
+  <data name="Scheduler_Schedule_BiWeeklyScheduleName" xml:space="preserve">
+    <value>Every two weeks</value>
+  </data>
+  <data name="Scheduler_SourceModels_ResolveFilesErrorsDialogName" xml:space="preserve">
+    <value>Resolve files errors</value>
+  </data>
+  <data name="Scheduler_SourceModels_SelectFilesDialogName" xml:space="preserve">
+    <value>Select files to import</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeImport" xml:space="preserve">
+    <value>Import 3D models from files</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeExport" xml:space="preserve">
+    <value>Publish from {0}</value>
+  </data>
+  <data name="Scheduler_TaskRun_ScheduledStart" xml:space="preserve">
+    <value>Scheduled start</value>
+  </data>
+  <data name="Scheduler_TaskRun_Elapsed" xml:space="preserve">
+    <value>Elapsed</value>
+  </data>
+  <data name="Scheduler_TaskRun_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Scheduler_TaskRun_AverageDuration" xml:space="preserve">
+    <value>Average duration</value>
+  </data>
+  <data name="Scheduler_TaskRun_CurrentStep" xml:space="preserve">
+    <value>Current step</value>
+  </data>
+  <data name="Scheduler_TaskRun_ViewLogsButton" xml:space="preserve">
+    <value>View logs</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_Header" xml:space="preserve">
+    <value>Task run history</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_NoTasksCompletedMessage" xml:space="preserve">
+    <value>No tasks completed yet.</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_StartedColumn" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_StatusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Scheduler_TasksTable_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Scheduler_TasksTable_ProjectColumn" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="Scheduler_TasksTable_TaskTypeColumn" xml:space="preserve">
+    <value>Task type</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_ScheduledStartColumn" xml:space="preserve">
+    <value>Scheduled start</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_DelayColumn" xml:space="preserve">
+    <value>Delay</value>
+  </data>
+  <data name="Scheduler_TaskRunsTable_DurationColumn" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Scheduler_TasksTable_Header" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Scheduler_TasksTable_SelectedTasks" xml:space="preserve">
+    <value>({0} of {1} selected)</value>
+  </data>
+  <data name="Scheduler_TasksTable_CreateTaskButton" xml:space="preserve">
+    <value>Create task</value>
+  </data>
+  <data name="Scheduler_TasksTable_ScheduleColumn" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Scheduler_TasksTable_AverageDurationColumn" xml:space="preserve">
+    <value>Average duration</value>
+  </data>
+  <data name="Scheduler_TasksTable_NextRunDateColumn" xml:space="preserve">
+    <value>Next run date</value>
+  </data>
+  <data name="Scheduler_TasksTable_LastRunDateColumn" xml:space="preserve">
+    <value>Last run date</value>
+  </data>
+  <data name="Scheduler_TasksTable_LastRunStatusColumn" xml:space="preserve">
+    <value>Last run status</value>
+  </data>
+  <data name="Scheduler_TasksTable_NoTasksCreatedMessage" xml:space="preserve">
+    <value>No tasks created yet.</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Header" xml:space="preserve">
+    <value>Upcoming schedule</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_StartColumn" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_ActionsColumn" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_NoTasksScheduledMessage" xml:space="preserve">
+    <value>No tasks scheduled yet.</value>
+  </data>
+  <data name="Scheduler_TabView_TasksButton" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="Scheduler_TabView_UpcomingScheduleButton" xml:space="preserve">
+    <value>Upcoming schedule</value>
+  </data>
+  <data name="Scheduler_TabView_HistoryButton" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Scheduler_MainWindow_Title" xml:space="preserve">
+    <value>Revizto Task Scheduler</value>
+  </data>
+  <data name="Scheduler_TasksTable_OnDemandTask" xml:space="preserve">
+    <value>On demand</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskNameEmptyErrorMessage" xml:space="preserve">
+    <value>Enter the task name</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProjectEmptyErrorMessage" xml:space="preserve">
+    <value>Enter the task name</value>
+  </data>
+  <data name="Scheduler_PublishSettings_SelectAnyOptionMessage" xml:space="preserve">
+    <value>Select at least one publishing option</value>
+  </data>
+  <data name="Scheduler_PublishSettings_Header" xml:space="preserve">
+    <value>Publish settings</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterEmailsErrorMessage" xml:space="preserve">
+    <value>Enter email addresses</value>
+  </data>
+  <data name="Scheduler_AdditionalActions_EnterValidEmailsErrorMessage" xml:space="preserve">
+    <value>Enter valid email addresses</value>
+  </data>
+  <data name="Scheduler_AdditionalOptions_NoNotificationTypeSelectedErrorMessage" xml:space="preserve">
+    <value>Select at least one option</value>
+  </data>
+  <data name="Scheduler_CommandLineActions_EnterCommandErrorMessage" xml:space="preserve">
+    <value>Enter the command</value>
+  </data>
+  <data name="Scheduler_Schedule_EnterEndDateErrorMessage" xml:space="preserve">
+    <value>Enter the end date</value>
+  </data>
+  <data name="Scheduler_Schedule_SelectDateErrorMessage" xml:space="preserve">
+    <value>Select the date</value>
+  </data>
+  <data name="Scheduler_Schedule_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Scheduler_TaskDetails_NewTaskHeader" xml:space="preserve">
+    <value>New task</value>
+  </data>
+  <data name="Scheduler_ImportModels_SelectSourceFilesError" xml:space="preserve">
+    <value>Select source files</value>
+  </data>
+  <data name="Scheduler_PublishSettings_RevitLinesWarning" xml:space="preserve">
+    <value>Ensure that all project members use Revizto 5.13 or later.
+
+Lines are not supported in Revizto 5.12 and earlier. Revizto 5.11 and earlier will crash upon opening a project with lines.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LinesCompabilityMode" xml:space="preserve">
+    <value>Compability mode</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LinesCompabilityModeTooltip" xml:space="preserve">
+    <value>Export lines as 3D objects. Compatible with all previous Revizto versions.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjects" xml:space="preserve">
+    <value>Line objects</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjectsTooltip" xml:space="preserve">
+    <value>Export lines as line objects</value>
+  </data>
+  <data name="Scheduler_PublishSettings_LineObjectsWarning" xml:space="preserve">
+    <value>May crash older Revizto versions.
+
+Incompatible with Revizto 5.12 and earlier. Ensure that all project members use Revizto 5.13 or later.</value>
+  </data>
+  <data name="Scheduler_TaskRun_RunNow" xml:space="preserve">
+    <value>Run now</value>
+  </data>
+  <data name="Scheduler_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_UndoSkip" xml:space="preserve">
+    <value>Undo Skip</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Scheduler_UpcomingSchedule_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Scheduler_ExportModel_Unlink" xml:space="preserve">
+    <value>Unlink</value>
+  </data>
+  <data name="Scheduler_SourceModels_UnlinkMessageTitle" xml:space="preserve">
+    <value>Confirm unlinking</value>
+  </data>
+  <data name="Scheduler_ExportModel_UnlinkApproveMessage" xml:space="preserve">
+    <value>Do you want to &lt;Bold&gt;unlink the task "{0}"&lt;/Bold&gt;[{1}] from the model &lt;Bold&gt;{2}&lt;/Bold&gt;?
+
+To link the task to another model:
+  1. Open the new model in {3}.
+  2. Go to the &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+  3. In section &lt;Bold&gt;Publish tasks not linked to {3},&lt;/Bold&gt; find this task.
+  4. Click the &lt;Bold&gt;Link to current model&lt;/Bold&gt; button.</value>
+  </data>
+  <data name="Scheduler_SourceModels_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Scheduler_ExportModel_ImportModelIsUnlinkedWarning" xml:space="preserve">
+    <value>Cannot run the task because it is not linked to a {0} model.
+
+To link the task to another model:
+  1. Open the new model in {0}.
+  2. Go to the &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+  3. In section &lt;Bold&gt;Publish tasks not linked to {0},&lt;/Bold&gt; find this task.
+  4. Click the &lt;Bold&gt;Link to current model&lt;/Bold&gt; button.</value>
+  </data>
+  <data name="Scheduler_Plugin_EmptyTasksListCaption" xml:space="preserve">
+    <value>&lt;Bold&gt;No tasks created yet&lt;/Bold&gt;
+
+There are no tasks for publishing this model from Revit to Revizto.
+
+To get started, you can:
+● Create a task
+● Import tasks from files
+You can run tasks manually or schedule them to run while you are away from the computer.</value>
+  </data>
+  <data name="Scheduler_TopBar_EditDeviceNameTitle" xml:space="preserve">
+    <value>Change computer name</value>
+  </data>
+  <data name="Scheduler_TopBar_EditDeviceNameMessage" xml:space="preserve">
+    <value>This name will be displayed in the task list at Revizto Workspace.</value>
+  </data>
+  <data name="Scheduler_TasksList_SomethingWrong" xml:space="preserve">
+    <value>Something wrong.</value>
+  </data>
+  <data name="Scheduler_TasksList_Queued" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+  <data name="Scheduler_TasksList_Running" xml:space="preserve">
+    <value>Running...</value>
+  </data>
+  <data name="Scheduler_SelectScene_Label" xml:space="preserve">
+    <value>Link the model to a Revizto project.</value>
+  </data>
+  <data name="Scheduler_ImportModels_NoFilesFoundInTreeMessage" xml:space="preserve">
+    <value>No files match your search</value>
+  </data>
+  <data name="Scheduler_TaskHeader_ReviztoProjectNotSpecified" xml:space="preserve">
+    <value>Not specified</value>
+  </data>
+  <data name="Scheduler_TasksTable_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Scheduler_TasksTable_ImportTaskMessage" xml:space="preserve">
+    <value>A task to import 3D models of the following types: IFC, FBX, OBJ, RVM, 12DXML, and point clouds (FARO, ReCap, and LAS).</value>
+  </data>
+  <data name="Scheduler_TasksTable_ExportTaskMessage" xml:space="preserve">
+    <value>&lt;Bold&gt;Tasks of this type can be created only in {0}.&lt;/Bold&gt;
+
+Perform the following steps:
+1. Start {0}.
+2. Open the source {0} model.
+3. Go to &lt;Bold&gt;Revizto 5&lt;/Bold&gt; tab → &lt;Bold&gt;Publish to Revizto.&lt;/Bold&gt;
+4. Create a task from there.</value>
+  </data>
+  <data name="Scheduler_TasksTable_ClashAutomationPermissionsMessage" xml:space="preserve">
+    <value>You don't have enough rights to create this type of task</value>
+  </data>
+  <data name="Scheduler_TaskHeader_TaskTypeClashDetection" xml:space="preserve">
+    <value>Clash Automation</value>
+  </data>
+  <data name="Scheduler_PublishSettings_ChangingSourceModel" xml:space="preserve">
+    <value>Changing this setting requires the source model to be opened in {0}.
+After the model is loaded in {0}, all settings will become available for editing.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_ActionRequired" xml:space="preserve">
+    <value>Action required</value>
+  </data>
+  <data name="Scheduler_PublishSettings_OpenCadModel" xml:space="preserve">
+    <value>Open {0} model</value>
+  </data>
+  <data name="Scheduler_PublishSettings_WaitSourceModel" xml:space="preserve">
+    <value>After the source {0} model is fully loaded, you will be able to change sheet settings, worksets, and a 3D view for publishing.</value>
+  </data>
+  <data name="Scheduler_PublishSettings_Launching" xml:space="preserve">
+    <value>Launching {0}</value>
+  </data>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_NoTasksCreatedYet" xml:space="preserve">
+    <value>&lt;Bold&gt;No tasks created yet&lt;/Bold&gt;
+
+Create a publishing task or import a task from another device. You can run tasks manually or schedule them.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_TasksCreatedOtherVersions" xml:space="preserve">
+    <value>Tasks created in other {0} versions</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_TasksNotLinked" xml:space="preserve">
+    <value>Tasks not linked to {0}</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_CheckFollowingTasksBeRunOn" xml:space="preserve">
+    <value>Check if the following tasks must be run on {0}.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_CheckFollowingTasksRelateModel" xml:space="preserve">
+    <value>Check if the following tasks relate to this model.</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_UseCad" xml:space="preserve">
+    <value>Use {0}</value>
+  </data>
+  <data name="Scheduler_SchedulerTasksListsView_LinkCurrentModel" xml:space="preserve">
+    <value>Link to current model</value>
+  </data>
+  <data name="ClashTest_IssueTypeDefault" xml:space="preserve">
+    <value>Issue type default</value>
+  </data>
+  <data name="Scheduler_TimeFormatForDuration" xml:space="preserve">
+    <value>{0}d {1}h {2}m {3}s</value>
+  </data>
+  <data name="SheetsWindow_NoSheetInProject" xml:space="preserve">
+    <value>There are no sheets in this project</value>
+  </data>
+  <data name="ConsoleCommandsCommonTaskIdDescription" xml:space="preserve">
+    <value>Specify task id</value>
+  </data>
+  <data name="ConsoleCommandSchedulerDescription" xml:space="preserve">
+    <value>Scheduler task</value>
+  </data>
+  <data name="ConsoleCommandSchedulerRunDescription" xml:space="preserve">
+    <value>Run scheduler task</value>
+  </data>
+  <data name="Scheduler_TaskHeader_SelectProjectButton" xml:space="preserve">
+    <value>Select project</value>
+  </data>
+  <data name="Scheduler_Import_SourceFilesNotFound" xml:space="preserve">
+    <value>Source files not found</value>
+  </data>
+  <data name="Scheduler_Import_SomeFilesNotFound" xml:space="preserve">
+    <value>Some of the source files were not found on this computer.</value>
+  </data>
+  <data name="Scheduler_ClashDetectionTableSelection_NameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Scheduler_ClashDetectionTableSelection_PriorityColumn" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Scheduler_ClashDetectionTableSelection_StampColumn" xml:space="preserve">
+    <value>Stamp</value>
+  </data>
+  <data name="Scheduler_ClashDetectionTableSelection_AssigneeColumn" xml:space="preserve">
+    <value>Assignee</value>
+  </data>
+  <data name="SheetDonePrinting" xml:space="preserve">
+    <value>done</value>
+  </data>
+  <data name="SheetGeneratingPreviews" xml:space="preserve">
+    <value>generating {0} previews</value>
+  </data>
+  <data name="SheetStartPrinting" xml:space="preserve">
+    <value>starting export to {0} {1} sheets</value>
+  </data>
+  <data name="Scheduler_ImportModels_SelectFileFormatDiloagTitle" xml:space="preserve">
+    <value>Select file format</value>
+  </data>
+  <data name="Scheduler_SceneMerge_SelectDestModelModalTitle" xml:space="preserve">
+    <value>Select destination model</value>
+  </data>
+  <data name="Scheduler_SceneMerge_ModelMappingModalTitle" xml:space="preserve">
+    <value>Model mapping</value>
+  </data>
+  <data name="Scheduler_SaveTasksErrorDialog_Title" xml:space="preserve">
+    <value>Cannot save task</value>
+  </data>
+  <data name="Scheduler_SaveTasksErrorDialog_Message" xml:space="preserve">
+    <value>There are some mistake in the input data, please fix them to save the task.</value>
+  </data>
+</root>

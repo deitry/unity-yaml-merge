@@ -228,6 +228,30 @@
     <ProjectReference Include="..\unity-yaml-merge.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="examples\18_exception\base.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_exception\ours.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_exception\theirs.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_duplicate_resx_entries\base.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_duplicate_resx_entries\ours.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_duplicate_resx_entries\theirs.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="examples\18_duplicate_resx_entries\expected.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
 
 
 </Project>

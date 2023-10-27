@@ -4,3 +4,6 @@ end_of_line = lf
 
 [*.yml]
 trim_trailing_whitespace = false
+
+[*.cs]
+trim_trailing_whitespace = true
